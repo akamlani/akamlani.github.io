@@ -1,0 +1,111 @@
+/** Set the backgrounds for the different sections **/
+
+#wrap {min-height: 100%;}
+
+#footer {
+   background-color: #2d465c;
+   color: #fff;
+   min-height: 40px;
+   clear: both;
+   position: relative;
+   margin-top: -40px;      /* negative value of footer height */
+   padding: 20px 0 0 0;
+}
+
+#header{
+   background-color: #2d465c;
+   min-height: 100px;
+}
+
+
+
+body {
+   background-color: #ccc; 
+   //background-image: url(/packages/images/assets/icehotel_sweden_exterior.jpg);
+   //background-repeat: no-repeat;
+   font-family: Helvetica, sans-serif;
+}
+
+.core-panels {
+   font-family:"Times New Roman", Times, serif;
+   font-size:20px;
+}
+
+.div-panels {
+   font-family:"Times New Roman", Times, serif;
+   font-size:20px;
+   background-color:grey;
+}
+
+.side-panels {
+   background-color: gray;
+}
+
+.media-gallery {
+   width:700px;
+   height:500px;
+}
+
+.media-snapshots {
+   width:250px;
+   height:150px;
+}
+
+.book-snaphsots {
+   width:200px;
+   height:300px;
+}
+
+.tag-box.inline li {
+  float: left;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 2.5;
+}
+
+
+
+.main {
+   //background-color: #008CBA;
+   border: 1px solid #eee;
+   border-radius: 3px;
+   height:auto;
+   padding-bottom:2.5%;
+
+   //http://www.cssmatic.com/gradient-generator
+   background: rgba(251,253,254,1);
+   background: -moz-linear-gradient(left, rgba(251,253,254,1) 0%, rgba(179,227,244,1) 25%, rgba(88,195,228,1) 51%, rgba(251,253,254,1) 100%);
+   background: -webkit-gradient(left top, right top, color-stop(0%, rgba(251,253,254,1)), color-stop(25%, rgba(179,227,244,1)), color-stop(51%, rgba(88,195,228,1)), color-stop(100%, rgba(251,253,254,1)));
+   background: -webkit-linear-gradient(left, rgba(251,253,254,1) 0%, rgba(179,227,244,1) 25%, rgba(88,195,228,1) 51%, rgba(251,253,254,1) 100%);
+   background: -o-linear-gradient(left, rgba(251,253,254,1) 0%, rgba(179,227,244,1) 25%, rgba(88,195,228,1) 51%, rgba(251,253,254,1) 100%);
+   background: -ms-linear-gradient(left, rgba(251,253,254,1) 0%, rgba(179,227,244,1) 25%, rgba(88,195,228,1) 51%, rgba(251,253,254,1) 100%);
+   background: linear-gradient(to right, rgba(251,253,254,1) 0%, rgba(179,227,244,1) 25%, rgba(88,195,228,1) 51%, rgba(251,253,254,1) 100%);
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfdfe', endColorstr='#fbfdfe', GradientType=1 );
+}
+
+
+.orbit-container {
+   width:  85%;
+   //height: auto;
+   margin: auto;
+}
+
+
+.panel-section {
+   padding-bottom:2%;
+   font-weight:bold;
+   font-style:italic;
+}
+
+
+.full-width {min-width:100%; position: relative;}
+.size-12 { font-size: 12px; }
+.size-14 { font-size: 14px; }
+.size-16 { font-size: 16px; }
+.size-18 { font-size: 18px; }
+.size-21 { font-size: 21px; }
+.size-24 { font-size: 24px; }
+.size-36 { font-size: 36px; }
+.size-48 { font-size: 48px; }
+.size-60 { font-size: 60px; }
+.size-72 { font-size: 72px; }

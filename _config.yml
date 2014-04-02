@@ -1,0 +1,17 @@
+
+title: Kamlani, Ari R.
+simple_search: http://google.com/search
+description: Personal Site of Ari R. Kamlani
+
+author: 
+   name: Ari R. Kamlani
+
+paginate: 1
+
+
+lsi: false
+pygments: true
+permalink: /blogs/jekyll/:year/:month/:day/:title
+markdown: rdiscount
+
+

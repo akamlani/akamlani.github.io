@@ -1,0 +1,68 @@
+---
+layout: basic
+---
+
+   <h5 class="panel-section"><u>Blog Posts</u></h5>
+   <div id="entries"></div>
+
+
+   <ul class="posts">
+    {% for post in site.posts %}
+      <li> 
+      <span>{{ post.date | date_to_string }}</span> &raquo;
+      <a href="{{ post.url }}#disqus_thread" >{{ post.title }}</a>
+      </li>
+    {% endfor %}
+   </ul>
+
+<!--
+{% for category in site.categories %}
+    <li>
+    <a href="/{{ category | first | slugize }}/">
+        {{ category | first }}
+    </a>
+    </li>
+{% endfor %}
+-->
+
+
+
+
+
+<!--
+{% for tags in site.tags %}
+    <a href="/{{ tags | first | slugize }}/">
+        {{ tags | first }}
+    </a>
+{% endfor %}
+-->
+
+
+<!--
+{% for post in site.posts offset: 0 limit: 10 %}
+    <h2>
+        <a href="{{ site.prefix }}{{ post.url }}">{{ post.title }}</a>
+    </h2>
+    {{ post.date | date_to_string }}
+    {{ post.content }}
+    <hr />
+{% endfor %}
+
+-->
+ 
+
+<!--
+<ul>
+{% for post in site.posts %}
+    <li>
+        <div class="date">{{ post.date | date_to_string }}</div>
+        <a href="{{ site.prefix  }}{{ post.url }}">{{ post.title }}</a>
+    </li>
+{% endfor %}
+</ul>
+-->
+
+
+
+
+
