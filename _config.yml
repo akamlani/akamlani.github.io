@@ -8,7 +8,7 @@ author:
 
 paginate: 1
 
-
+safe: false
 lsi: false
 pygments: true
 permalink: /blogs/jekyll/:year/:month/:day/:title
