@@ -20,8 +20,8 @@
 
 
 body {
-   background-color: #ccc; 
-   //background-image: url(/packages/images/assets/icehotel_sweden_exterior.jpg);
+   background-image: url(/images/bkgd/texture07.jpg);
+   //background-color: #ccc; 
    //background-repeat: no-repeat;
    font-family: Helvetica, sans-serif;
 }
@@ -56,21 +56,25 @@ body {
    height:300px;
 }
 
-.tag-box.inline li {
+.tag-box {
   float: left;
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 2.5;
+  border:5px solid grey;
 }
 
 
 
+
+
 .main {
-   //background-color: #008CBA;
    border: 1px solid #eee;
    border-radius: 3px;
    height:auto;
    padding-bottom:2.5%;
+   background-color: #ccc; 
+
 
    //http://www.cssmatic.com/gradient-generator
    background: rgba(251,253,254,1);
@@ -97,6 +101,17 @@ body {
    font-style:italic;
 }
 
+
+.wrap-section {
+   padding-top: 20px;
+   padding-bottom: 2.25px;
+   padding-right: 10px;
+}
+
+p.wrap-section {padding-top:20px;}
+
+
+.ari {}
 
 .full-width {min-width:100%; position: relative;}
 .size-12 { font-size: 12px; }

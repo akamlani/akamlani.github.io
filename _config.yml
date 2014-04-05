@@ -1,7 +1,9 @@
 
-title: Kamlani, Ari R.
+name: Ari R. Kamlani
+title: Ari R. Kamlani
 simple_search: http://google.com/search
 description: Personal Site of Ari R. Kamlani
+base_url: http://arikamlani.com
 
 author: 
    name: Ari R. Kamlani
@@ -14,4 +16,12 @@ pygments: true
 permalink: /blogs/jekyll/:year/:month/:day/:title
 markdown: rdiscount
 
+tag_page_layout: tag_page
+tag_page_dir: blogs/jekyll/tag
+
+tag_feed_layout: tag_feed
+tag_feed_dir: blogs/jekyll/feeds
+
+
+languages: [en]
 
