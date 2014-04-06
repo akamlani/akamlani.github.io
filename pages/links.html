@@ -41,6 +41,10 @@ layout: default
          <li><a href="http://ideo.com/">IDEO</a></li>
          <hr>
 
+         <h7 class="subheader topic-subheader">Data</h7>
+         <li><a href="http://fivethirtyeight.com/datalab/">FiveThirtyEight DataLab</a></li>
+         <hr>
+
          <h7 class="subheader topic-subheader">Energy</h7>
          <li><a href="http://techportal.eere.energy.gov/">US Department of Energy</a></li>
          <hr>
@@ -62,9 +66,16 @@ layout: default
       <div class="small-6 columns">
          <h5 class="topic-header" align="center">Popular Articles</h5>
          <div class="container-margin-column">
-         <h7 class="subheader topic-subheader">Intelligence</h7>
+         
+         <ul class="top">
+         <li class="parent expand"><h7 class="subheader topic-subheader">Intelligence</h7>
+         <ul class="child items">
          <li><a href="http://www.theregister.co.uk/2014/03/29/hawkins_ai_feature/">Jeff Hawkins - The Register</a></li>
          <li><a href="http://gigaom.com/2014/03/30/the-frightening-truth-about-the-security-of-our-healthcare-data/">The Frightening truth about security of healthcare data</a></li>
+         </ul>
+         </li>
+         </ul>
+
          </div>
       </div>
 
@@ -73,5 +84,21 @@ layout: default
 
    </div> <!-- end margins -->
    </div> <!-- end main content -->
+
+
+
+
+
+   <script type="text/javascript">
+   $(document).ready(function() {
+      $('.child').hide();
+      $('.parent').click(function() {
+          $(this).siblings('.parent').find('ul').slideUp();
+          $(this).find('ul').slideToggle();
+      });
+   });
+   </script>
+
+
 
 

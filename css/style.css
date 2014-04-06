@@ -66,7 +66,7 @@ body {
 }
 
 .media-snapshots {
-   width:220px;
+   width:200px;
    height:175px;
 }
 
@@ -74,6 +74,25 @@ body {
    width:200px;
    height:300px;
 }
+
+/* actions */
+ul.top {
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+
+ul.items {
+    list-style: disc;
+    padding-left:1em;
+}
+
+
+li.expand:before {
+    content: "\2192 \0020";
+
+}
+
 
 
 /* containers */
@@ -132,23 +151,47 @@ p.wrap-section {padding-top:20px;}
 /* headers */
 .topic-header {
    color:white; 
-   background-color:grey;
-   padding-bottom:1em;
+   /* background-color:grey; */
+   padding-bottom:0.5em;
+   padding-top:0.5em;
    font-weight:bold;
    font-style:italic;   
-}
 
+   background: rgba(226,226,226,1);
+   background: -moz-linear-gradient(left, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 7%, rgba(0,0,0,1) 51%, rgba(254,254,254,1) 100%);
+   background: -webkit-gradient(left top, right top, color-stop(0%, rgba(226,226,226,1)), color-stop(7%, rgba(219,219,219,1)), 
+   color-stop(51%, rgba(0,0,0,1)), color-stop(100%, rgba(254,254,254,1)));
+   background: -webkit-linear-gradient(left, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 7%, rgba(0,0,0,1) 51%, rgba(254,254,254,1) 100%);
+   background: -o-linear-gradient(left, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 7%, rgba(0,0,0,1) 51%, rgba(254,254,254,1) 100%);
+   background: -ms-linear-gradient(left, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 7%, rgba(0,0,0,1) 51%, rgba(254,254,254,1) 100%);
+   background: linear-gradient(to right, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 7%, rgba(0,0,0,1) 51%, rgba(254,254,254,1) 100%);
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe', GradientType=1 );
+}
 
 .topic-subheader {
    padding-top:1em;
 }
-
 
 .basic-header {
    font-weight:bold;
    font-style:italic;   
    padding-bottom:0.5em; 
 }
+
+/* shader divisions */
+.small-content {
+background: rgba(242,246,248,1);
+background: -moz-linear-gradient(left, rgba(242,246,248,1) 0%, rgba(181,198,208,1) 31%, rgba(160,195,219,1) 66%, rgba(224,239,249,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(242,246,248,1)), color-stop(31%, rgba(181,198,208,1)), 
+color-stop(66%, rgba(160,195,219,1)), color-stop(100%, rgba(224,239,249,1)));
+background: -webkit-linear-gradient(left, rgba(242,246,248,1) 0%, rgba(181,198,208,1) 31%, rgba(160,195,219,1) 66%, rgba(224,239,249,1) 100%);
+background: -o-linear-gradient(left, rgba(242,246,248,1) 0%, rgba(181,198,208,1) 31%, rgba(160,195,219,1) 66%, rgba(224,239,249,1) 100%);
+background: -ms-linear-gradient(left, rgba(242,246,248,1) 0%, rgba(181,198,208,1) 31%, rgba(160,195,219,1) 66%, rgba(224,239,249,1) 100%);
+background: linear-gradient(to right, rgba(242,246,248,1) 0%, rgba(181,198,208,1) 31%, rgba(160,195,219,1) 66%, rgba(224,239,249,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#e0eff9', GradientType=1 );
+}
+
+
 
 /* sizes */
 .full-width {min-width:100%; position: relative;}
