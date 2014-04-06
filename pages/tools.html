@@ -5,84 +5,88 @@ layout: default
    <!-- Magellan Navigation -->
    <div class="magellan-container" data-magellan-expedition="fixed" data-options="destination_threshold:65;throttle_delay:0;">
       <dl class="sub-nav sticky">
-         <dd data-magellan-arrival="embedded"><a href="#embedded">Embedded</a></dd>
+         <dd data-magellan-arrival="utilities"><a href="#utilities">Utilities</a></dd>
          <dd data-magellan-arrival="frameworks"><a href="#frameworks">Frameworks</a></dd>
          <dd data-magellan-arrival="data"><a href="#data">Data</a></dd>
          <dd data-magellan-arrival="languages"><a href="#languages">Languages</a></dd>
       </dl>      
    </div>
 
-   <!-- embedded -->
-   <div class="row core-panels" data-equalizer style="padding-top:20px">
-      <a name="embedded" data-magellan-destination="embedded"></a>
-      <div class="small-2 columns panel side-panels" data-equalizer-watch>
-      </div>
-      <div class="small-10 columns panel" data-equalizer-watch>
-         <h5 class="panel-section">Embedded</h5>
-         <h7 class="subheader">Utilities</h7>
-         <li>git</li>
-         <li>gcc, gdb, Eclipse</li>
-      </div>
+
+   <div id="container" class="row main">
+   <div class="container-margin-outer">
+      <div class="row container-large-spacer">
+         <h5 class="basic-header" style="margin-left:2em">Some items in my toolkit...</h5>
+         <!-- Utilities-->
+         <div class="small-6 columns">
+            <a name="utilities" data-magellan-destination="utilities"></a>
+            <h5 class="topic-header" align="center">Utilities</h5>
+            <div class="container-margin-column">
+            <h7 class="subheader topic-subheader">Misc</h7>
+            <li>git</li>
+            <li>gcc, gdb, Eclipse</li>
+            <li>Sublime-Text</li>
+            </div>
+         </div><!-- end column -->
+         
+
+         <!-- Frameworks -->
+         <div class="small-6 columns">
+            <a name="frameworks" data-magellan-destination="frameworks"></a>
+            <h5 class="topic-header" align="center">Frameworks</h5>
+
+            <div class="container-margin-column">
+            <h7 class="subheader topic-subheader">Mixin'</h7>
+            <li>docker</li>
+            <li>Zorb Foundation (5)</li>
+            <li>Jekyll</li>
+            <hr>
+            <h7 class="subheader topic-subheader">Mockups</h7>
+            <li>Webflow (Responsive)</li>
+            <hr>
+            <h7 class="subheader topic-subheader">Presentations</h7>
+            <li>Bracket.io</li>
+            <li><a href="http://slid.es/">Slides</a></li>
+            <li><a href="http://lab.hakim.se/reveal-js/#/">Reveal</a></li>
+           
+            </div>
+
+         </div> <!-- end column -->
+      </div><!-- end row-->
+
+
+      <div class="row container-medium-spacer" style="font">
+         <!-- Big Data-->
+         <div class="small-6 columns">
+            <a name="data" data-magellan-destination="data"></a>
+            <h5 class="topic-header" align="center">Data</h5>
+            <div class="container-margin-column">
+            <h7 class="subheader topic-subheader">Data Management</h7>
+            <li>Hadoop</li>
+            <li>MongoDB</li>
+            <li>SQLite</li>
+            <hr>
+            <h7 class="subheader topic-subheader">Analytics</h7>
+            <li>New Relic</li>
+            <hr>
+            <h7 class="subheader topic-subheader">Dashboard</h7>
+            <li>Ducksboard</li>
+            </div>
+         </div><!-- end column -->
+
+         <!-- Languages-->
+         <div class="small-6 columns">
+            <a name="languages" data-magellan-destination="languages"></a>
+            <h5 class="topic-header" align="center">Languages</h5>
+            <div class="container-margin-column">
+            <h7 class="subheader topic-subheader">Python</h7>
+            <li>flask (python microframework)</li>
+            </div>
+         </div><!-- end column -->
+
+      </div><!-- end row -->
+
+
    </div>
-
-   <!-- frameworks -->
-   <div class="row core-panels" data-equalizer>
-      <a name="frameworks" data-magellan-destination="frameworks"></a>
-      <div class="small-2 columns panel side-panels" data-equalizer-watch>
-      </div>
-      <div class="small-10 columns panel" data-equalizer-watch>
-         <h5 class="panel-section">Frameworks</h5>
-         <h7 class="subheader">Mixin'</h7>
-         <li>docker</li>
-         <li>Zorb Foundation (5)</li>
-         <li>Jekyll</li>
-
-         <h7 class="subheader">Mockups</h7>
-         <li>Webflow (Responsive)</li>
-
-         <h7 class="subheader">Presentations</h7>
-         <li>Bracket.io</li>
-         <li>Slides (http://slid.es/)</li>
-         <li>Reveal (http://lab.hakim.se/reveal-js/#/)</li>
-
-         <h7 class="subheader">General</h7>
-         <li>Sublime Text Editor</li>
-
-      </div>
    </div>
-
-
-   <!-- Data Centric -->
-   <div class="row core-panels" data-equalizer>
-      <a name="data" data-magellan-destination="data"></a>
-      <div class="small-2 columns panel side-panels" data-equalizer-watch>
-      </div>
-      <div class="small-10 columns panel" data-equalizer-watch>
-         <h5 class="panel-section">Big Data</h5>
-         <h7 class="subheader">Data Management</h7>
-         <li>Hadoop</li>
-         <li>MongoDB</li>
-         <li>SQLite</li>
-         <br>
-         <h7 class="subheader">Analytics</h7>
-         <li>New Relic</li>
-         <br>
-         <h7 class="subheader">Dashboard</h7>
-         <li>Ducksboard</li>
-      </div>
-   </div>
-
-
-   <!-- languages -->
-   <div class="row core-panels" data-equalizer>
-      <a name="languages" data-magellan-destination="languages"></a>
-      <div class="small-2 columns panel side-panels" data-equalizer-watch>
-      </div>
-      <div class="small-10 columns panel" data-equalizer-watch>
-         <h5 class="panel-section">Python</h5>
-         <h7 class="subheader">Libraries, Modules</h7>
-         <li>flask (python microframework)</li>
-      </div>
-   </div>
-
 

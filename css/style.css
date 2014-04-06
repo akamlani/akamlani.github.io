@@ -1,11 +1,9 @@
 /** Set the backgrounds for the different sections **/
 
-#wrap {min-height: 100%;}
-
 #footer {
    background-color: #2d465c;
    color: #fff;
-   min-height: 40px;
+   min-height: 60px;
    clear: both;
    position: relative;
    margin-top: -40px;      /* negative value of footer height */
@@ -18,65 +16,26 @@
 }
 
 
-
 body {
    background-image: url(/images/bkgd/texture07.jpg);
-   //background-color: #ccc; 
-   //background-repeat: no-repeat;
-   font-family: Helvetica, sans-serif;
-}
-
-.core-panels {
+   /*background-color: #ccc; 
+   background-repeat: no-repeat;
+   font-family: Helvetica, sans-serif; 
    font-family:"Times New Roman", Times, serif;
    font-size:20px;
+*/
+   font-family: Helvetica, sans-serif; 
 }
-
-.div-panels {
-   font-family:"Times New Roman", Times, serif;
-   font-size:20px;
-   background-color:grey;
-}
-
-.side-panels {
-   background-color: gray;
-}
-
-.media-gallery {
-   width:700px;
-   height:500px;
-}
-
-.media-snapshots {
-   width:250px;
-   height:150px;
-}
-
-.book-snaphsots {
-   width:200px;
-   height:300px;
-}
-
-.tag-box {
-  float: left;
-  font-size: 14px;
-  font-size: 0.875rem;
-  line-height: 2.5;
-  border:5px solid grey;
-}
-
-
-
-
 
 .main {
    border: 1px solid #eee;
    border-radius: 3px;
    height:auto;
-   padding-bottom:2.5%;
+   padding-bottom:10em;
    background-color: #ccc; 
 
 
-   //http://www.cssmatic.com/gradient-generator
+   /* http://www.cssmatic.com/gradient-generator */
    background: rgba(251,253,254,1);
    background: -moz-linear-gradient(left, rgba(251,253,254,1) 0%, rgba(179,227,244,1) 25%, rgba(88,195,228,1) 51%, rgba(251,253,254,1) 100%);
    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(251,253,254,1)), color-stop(25%, rgba(179,227,244,1)), color-stop(51%, rgba(88,195,228,1)), color-stop(100%, rgba(251,253,254,1)));
@@ -88,6 +47,11 @@ body {
 }
 
 
+
+
+
+
+/* orbit containers */
 .orbit-container {
    width:  85%;
    //height: auto;
@@ -95,14 +59,68 @@ body {
 }
 
 
-.panel-section {
-   padding-bottom:2%;
-   font-weight:bold;
-   font-style:italic;
+/* media sizes */
+.media-gallery {
+   width:700px;
+   height:500px;
+}
+
+.media-snapshots {
+   width:220px;
+   height:175px;
+}
+
+.book-snaphsots {
+   width:200px;
+   height:300px;
 }
 
 
-.wrap-section {
+/* containers */
+#wrap {min-height: 100%;}
+
+.container-margin-outer {
+   margin-left:0.5em; 
+   margin-right:0.5em;
+}
+.container-margin-column {
+   margin-left:1em; 
+   margin-right:1em;
+}
+
+.container-full-row {
+    margin-left:1em; 
+    margin-right:1em;
+}
+
+
+ul.container-box {
+   padding-left:1em;
+}
+
+ul.container-shift-right-box {
+   padding-left:8em;
+   padding-top:1em;
+}
+
+
+/* spacers */
+.container-spacer {
+   padding-top:1em;
+}
+
+.container-medium-spacer {
+   padding-top:2em;
+}
+
+
+.container-large-spacer {
+   padding-top:3.5em;
+}
+
+
+/* wrapping */
+img.wrap-section {
    padding-top: 20px;
    padding-bottom: 2.25px;
    padding-right: 10px;
@@ -111,8 +129,28 @@ body {
 p.wrap-section {padding-top:20px;}
 
 
-.ari {}
+/* headers */
+.topic-header {
+   color:white; 
+   background-color:grey;
+   padding-bottom:1em;
+   font-weight:bold;
+   font-style:italic;   
+}
 
+
+.topic-subheader {
+   padding-top:1em;
+}
+
+
+.basic-header {
+   font-weight:bold;
+   font-style:italic;   
+   padding-bottom:0.5em; 
+}
+
+/* sizes */
 .full-width {min-width:100%; position: relative;}
 .size-12 { font-size: 12px; }
 .size-14 { font-size: 14px; }

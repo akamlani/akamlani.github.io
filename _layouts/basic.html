@@ -11,14 +11,20 @@
       <!-- Include Navigation -->
       {% include navie.html %}
 
+
       <!-- Container Main Content -->
-      <div id="container" class="row main" style="auto">
-         <div class="row core-panels" style="padding-top:50px" data-equalizer>
-            <div class="small-10 small-offset-1 columns panel end" data-equalizer-watch>
-               {{content}}              
+      <div id="container" class="row main" style="height:100%">
+        <div class="container-margin-outer">
+
+          <div class="row container-large-spacer">
+            <div class="small-10 small-offset-1 columns end">
+              {{content}}              
             </div>
-         </div>
-      </div>
+          </div>
+
+        </div>  <!-- end outer margins for container -->
+      </div> <!-- end contain main -->
+
    </div>  <!-- end wrap -->
 
    <!-- Include Footer -->
