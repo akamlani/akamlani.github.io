@@ -1,18 +1,19 @@
 ---
-layout: basic
+layout: page-archives
 ---
 
-<h4 class="basic-header" style="padding-bottom:20px">Blog Posts</h4>
 
 
-<ul class="posts">
-{% for post in site.posts %}
-  <li><a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date_to_string }} | Tags: {{ post | tags  }} )</li>
-  <!--{{ post.summary }} -->
-  <!--<p>{{ post.excerpt | before_fold }}</p>-->
-{% endfor %}
-</ul>
 
+
+    <h5 class="basic-header" style="padding-bottom:20px;">Blog Posts</h5> 
+    <ul class="posts">
+    {% for post in site.posts %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date_to_string }} | Tags: {{ post | tags  }} )</li>
+      {{ post.summary }} 
+      <!--<p>{{ post.excerpt | before_fold }}</p>-->
+    {% endfor %}
+    </ul>
 
 
 

@@ -4,6 +4,7 @@ title: is innovation an overused word
 comments: true
 categories: innovation
 tags: innovation strategic
+date: 2014-03-29
 summary: what is all the hype about innovation, is it too commonly used?
 ---
 

@@ -137,6 +137,11 @@ ul.container-shift-right-box {
    padding-top:3.5em;
 }
 
+/* lines */
+.verticalLine {
+    border-left: thin solid #ff0000;
+}
+
 
 /* wrapping */
 img.wrap-section {

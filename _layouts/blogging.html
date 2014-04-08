@@ -16,10 +16,33 @@
       <div id="container" class="row main" style="height:100%">
         <div class="container-margin-outer">
           <div class="row container-large-spacer">
-              <div class="small-9 columns end">
-                {{content}}              
+              <div style="margin-left:3em"></div>    
+
+              <div class="small-2 columns" style="margin-left:2em">    
+                
+                <!-- Monthly Archives -->
+                <h5 class="basic-header">Monthly Archives</h5>
+                <a href="/blogs/jekyll/archives/">archives</a><br>
+                <hr>
+                <!-- capture sorted tags and output -->
+                <h5 class="basic-header">Tags</h5>
+                {% capture tags %}
+                {% for tag in site.tags %}
+                  {{ tag[0] }}
+                {% endfor %}
+                {% endcapture %}
+                {% assign sortedtags = tags | split:' ' | sort %}
+
+                {% for tag in sortedtags %}
+                  <a href="/blogs/jekyll/tag/{{ tag }}.html">{{ tag }}</a><br>
+                {% endfor %}                
               </div>
-          </div>
+              <div class="small-9 columns end">                
+              <div class="verticalLine" style="padding-left:1em">
+                {{content}}
+              </div> <!-- end vertical line -->              
+              </div>                
+          </div><!-- end row -->
 
         </div>  <!-- end outer margins for container -->
       </div> <!-- end contain main -->

@@ -1,7 +1,7 @@
 ---
-layout: basic
+layout: page-archives
 ---
-<h2 style="padding-bottom:20px"><u>{{ page.tag }}</u></h2>
+<h4 class="basic-header" style="padding-bottom:20px"><u>{{ page.tag }}</u></h4>
 <ul>
 {% for post in page.posts %}
   <li><a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date_to_string }} | Tags: {{ post | tags  }})</li>
