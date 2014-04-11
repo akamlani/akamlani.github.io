@@ -138,8 +138,15 @@ ul.container-shift-right-box {
 }
 
 /* lines */
-.verticalLine {
-    border-left: thin solid #ff0000;
+.sidebar:after {
+  content: '';
+  width: 0;
+  height: 100%;
+  position: absolute;
+  border: thin solid grey;
+  padding-bottom:20em;
+  top: 0;
+  left: 150px;
 }
 
 

@@ -123,48 +123,61 @@
    </nav>
 
 
+      <!-- Content -->
+        <!-- Container Main Content -->
+  <div id="container" class="row main" style="height:100%">
+  <div class="container-margin-outer">
 
-
-      <!-- Container Main Content -->
-      <div id="container" class="row main" style="height:100%">
-        <div class="container-margin-outer">
           <div class="row container-large-spacer">
-              <div style="margin-left:3em"></div>    
+            <div style="margin-left:3em"></div>    
+            <div class="small-2 columns" style="margin-left:2em"> 
+              <div class="sidebar">   
+              <!-- Monthly Archives -->
+              <h5 class="basic-header">Monthly Archives</h5>
+              <a href="/blogs/jekyll/archives/">archives</a><br>
+              <hr>
+              <!-- capture sorted tags and output -->
+              <h5 class="basic-header">Tags</h5>
+              
+              
 
-              <div class="small-2 columns" style="margin-left:2em">    
-                
-                <!-- Monthly Archives -->
-                <h5 class="basic-header">Monthly Archives</h5>
-                <a href="/blogs/jekyll/archives/">archives</a><br>
-                <hr>
-                <!-- capture sorted tags and output -->
-                <h5 class="basic-header">Tags</h5>
-                
-                
-
-                
-                  <a href="/blogs/jekyll/tag/basketball.html">basketball</a><br>
-                
-                  <a href="/blogs/jekyll/tag/initial.html">initial</a><br>
-                
-                  <a href="/blogs/jekyll/tag/innovation.html">innovation</a><br>
-                
-                  <a href="/blogs/jekyll/tag/march-madness.html">march-madness</a><br>
-                
-                  <a href="/blogs/jekyll/tag/strategic.html">strategic</a><br>
-                
-                  <a href="/blogs/jekyll/tag/tools.html">tools</a><br>
-                                
-              </div>
-              <div class="small-9 columns end">                
-              <div class="verticalLine" style="padding-left:1em">
+              
+                <a href="/blogs/jekyll/tag/basketball.html">basketball</a><br>
+              
+                <a href="/blogs/jekyll/tag/initial.html">initial</a><br>
+              
+                <a href="/blogs/jekyll/tag/innovation.html">innovation</a><br>
+              
+                <a href="/blogs/jekyll/tag/march-madness.html">march-madness</a><br>
+              
+                <a href="/blogs/jekyll/tag/site.html">site</a><br>
+              
+                <a href="/blogs/jekyll/tag/strategic.html">strategic</a><br>
+              
+                <a href="/blogs/jekyll/tag/tools.html">tools</a><br>
+                  
+              </div>            
+            </div> <!-- end column -->
+            <div class="small-9 columns end">                
                 <div id="post">
 <h4>ideo tools we like</h4>
 
-<p class="meta">A list of tools used and liked by Ideo</p>
+<p>I love Ideo and Ideo Labs.  Ideo labs recently published a couple articles regarding some
+of their favorite building and prototyping tools in tools we like referenced <a href="http://labs.ideo.com/2014/02/12/tools-we-like/">here</a> and <a href="http://labs.ideo.com/2014/02/12/tools-we-like-2/">here</a>.  Looks like they will be making "Tools We Like" a regular occurence.</p>
+
+<p>I do like Foundation over Bootstrap, since it was designed with the nature of Responsive, rather
+than later added as a feature.  I use it more for the grid layout, rather than all the other
+bells and whistles.  A couple of the items on my list:</p>
+
+<ul>
+<li><a href="https://daneden.me/toast/">Daniel Eden's Toast</a> for a bare-bones framework</li>
+<li><a href="http://quojs.tapquo.com/">Quo.js library</a> yet to add gesturial interaction</li>
+<li><a href="http://xscopeapp.com/">xScope</a> for measuring pixels of assets</li>
+</ul>
 
 
-
+<p>Looking forward to more editions, maybe for some of the hardware and data science prototyping
+tools as well...</p>
 
     <div id="disqus_thread"></div>
     <script type="text/javascript">
@@ -185,12 +198,16 @@
 </div>
 
 
-              </div> <!-- end vertical line -->              
-              </div>                
+            </div><!-- end column -->
+            </div><!-- end left margin -->                
           </div><!-- end row -->
 
-        </div>  <!-- end outer margins for container -->
-      </div> <!-- end contain main -->
+  </div>  <!-- end outer margins for container -->
+  </div> <!-- end contain main -->
+
+
+
+
 
    </div>  <!-- end wrap -->
 
@@ -233,23 +250,6 @@
    });
    </script>
 
-
-
-
-
-    <script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'arirkamlani'; // required: replace example with your forum shortname
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-    </script>
-    
 
 </body>
 </html>
