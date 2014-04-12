@@ -12,12 +12,13 @@
 
 #header{
    background-color: #2d465c;
-   min-height: 100px;
+   min-height: 50px;
 }
 
 
 body {
-   background-image: url(/images/bkgd/texture07.jpg);
+   /*background-image: url(/images/bkgd/texture07.jpg);*/
+   background-color:grey;
    /*background-color: #ccc; 
    background-repeat: no-repeat;
    font-family: Helvetica, sans-serif; 
@@ -32,10 +33,12 @@ body {
    border-radius: 3px;
    height:auto;
    padding-bottom:10em;
-   background-color: #ccc; 
+   background-color: #ccc;
+
 
 
    /* http://www.cssmatic.com/gradient-generator */
+   /*
    background: rgba(251,253,254,1);
    background: -moz-linear-gradient(left, rgba(251,253,254,1) 0%, rgba(179,227,244,1) 25%, rgba(88,195,228,1) 51%, rgba(251,253,254,1) 100%);
    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(251,253,254,1)), color-stop(25%, rgba(179,227,244,1)), color-stop(51%, rgba(88,195,228,1)), color-stop(100%, rgba(251,253,254,1)));
@@ -44,6 +47,7 @@ body {
    background: -ms-linear-gradient(left, rgba(251,253,254,1) 0%, rgba(179,227,244,1) 25%, rgba(88,195,228,1) 51%, rgba(251,253,254,1) 100%);
    background: linear-gradient(to right, rgba(251,253,254,1) 0%, rgba(179,227,244,1) 25%, rgba(88,195,228,1) 51%, rgba(251,253,254,1) 100%);
    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfdfe', endColorstr='#fbfdfe', GradientType=1 );
+   */
 }
 
 
@@ -149,6 +153,23 @@ ul.container-shift-right-box {
   left: 150px;
 }
 
+/* circles */
+.circle {
+   border-radius: 50%/50%; 
+   width: 100%;
+   height: 30%;
+   padding-top:10%;
+   border: 1px solid black;
+   background: grey;
+
+}
+
+.circle-element.round.label {
+   padding:1em; 
+   font-size:15;
+   margin-bottom:1em;
+}
+
 
 /* wrapping */
 img.wrap-section {
@@ -163,11 +184,12 @@ p.wrap-section {padding-top:20px;}
 /* headers */
 .topic-header {
    color:white; 
-   /* background-color:grey; */
+   /*background-color:grey;*/ 
    padding-bottom:0.5em;
    padding-top:0.5em;
    font-weight:bold;
    font-style:italic;   
+
 
    background: rgba(226,226,226,1);
    background: -moz-linear-gradient(left, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 7%, rgba(0,0,0,1) 51%, rgba(254,254,254,1) 100%);
@@ -178,6 +200,7 @@ p.wrap-section {padding-top:20px;}
    background: -ms-linear-gradient(left, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 7%, rgba(0,0,0,1) 51%, rgba(254,254,254,1) 100%);
    background: linear-gradient(to right, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 7%, rgba(0,0,0,1) 51%, rgba(254,254,254,1) 100%);
    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe', GradientType=1 );
+   
 }
 
 .topic-subheader {
