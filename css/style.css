@@ -51,19 +51,30 @@ body {
 }
 
 
-
-
+/* override default styles */
+li {
+   font-size:inherit;
+   font-family: inherit;
+   line-height:1.6;
+} 
+  
 
 
 /* orbit containers */
 .orbit-container {
    width:  85%;
-   //height: auto;
    margin: auto;
 }
 
 
 /* media sizes */
+img.media-icons {
+   max-width:60px;
+   max-height:50px;
+   padding-bottom:10px;
+   padding-right:10px;
+}
+
 .media-gallery {
    width:700px;
    height:500px;
@@ -74,10 +85,24 @@ body {
    height:175px;
 }
 
+img.media-thumbs {
+   width:110px;
+}
+
 .book-snaphsots {
    width:200px;
    height:300px;
 }
+
+.book-slide {
+   padding-left:22.5%; 
+}
+
+.book-carousel {
+   margin-left:-30%; 
+}
+
+
 
 /* actions */
 ul.top {
@@ -91,12 +116,9 @@ ul.items {
     padding-left:1em;
 }
 
-
 li.expand:before {
     content: "\2192 \0020";
-
 }
-
 
 
 /* containers */
@@ -141,16 +163,33 @@ ul.container-shift-right-box {
    padding-top:3.5em;
 }
 
+/* shifters */
+.margin-shift-1 {
+   margin-left:10%;
+}
+
+
+
+/* maps */
+.map {
+   width:425; 
+   height:400;
+}
+
 /* lines */
+.sidebar {
+   margin-left:5%;
+}
+
 .sidebar:after {
-  content: '';
-  width: 0;
-  height: 100%;
-  position: absolute;
-  border: thin solid grey;
-  padding-bottom:20em;
-  top: 0;
-  left: 150px;
+   content: '';
+   width: 0;
+   height: 100%;
+   position: absolute;
+   border: thin solid grey;
+   padding-bottom:20em;
+   top: 0;
+   left: 100%;
 }
 
 /* circles */
@@ -160,7 +199,7 @@ ul.container-shift-right-box {
    height: 30%;
    padding-top:10%;
    border: 1px solid black;
-   background: grey;
+   background: none;
 
 }
 
@@ -168,6 +207,10 @@ ul.container-shift-right-box {
    padding:1em; 
    font-size:15;
    margin-bottom:1em;
+}
+
+.ven-shift {
+   margin-left:-10%;
 }
 
 

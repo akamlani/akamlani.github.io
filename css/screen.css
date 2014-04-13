@@ -1,7 +1,7 @@
 /* screen.cs */
 /*
 <link rel="stylesheet" type="text/css" href="style.css" media="screen, handheld" />
-<link rel="stylesheet" type="text/css" href="enhanced.css" media="screen  and (min-width: 40.5em)" />
+<link rel="stylesheet" type="text/css" href="mobile.css" media="screen  and (min-width: 40.5em)" />
 */
 
 /*
@@ -11,3 +11,128 @@
     Just Mobile Landscape: Between 480px and 767px
     Just Mobile Portrait: Less than 479px
 */
+
+
+
+
+.main {
+   border: 1px solid #eee;
+   border-radius: 3px;
+   height:auto;
+   padding-bottom:10em;
+   background-color: #ccc;
+}
+
+
+/* default font sizes, styles */
+a  {  font-size:12px; font-family: Helvetica, sans-serif;  }
+p  {  font-size:12px; font-family: Helvetica, sans-serif;  }
+li {  font-size:12px; font-family: Helvetica, sans-serif;  }
+ul {  font-size:12px; font-family: Helvetica, sans-serif;  }
+h5 {  font-size:12px; font-family: Helvetica, sans-serif;  }
+h6 {  font-size:12px; font-family: Helvetica, sans-serif;  }
+h7 {  font-size:12px; font-family: Helvetica, sans-serif;  }
+
+
+
+/* shifters */
+.margin-shift-1 {
+	margin-left:5%;
+}
+
+
+/* maps */
+.map {
+	width:200px; 
+	height:175px; 
+}
+
+/* lines */
+.sidebar:after {
+	content: '';
+	width: 0;
+	height: 100%;
+	position: absolute;
+	border: thin solid grey;
+	padding-bottom:20em;
+	top: 0;
+	left: 105%;
+}
+
+/* circles */
+.circle {
+	border-radius: 50%/50%; 
+	width: 160%;
+	height: 30%;
+	padding-top:10%;
+	border: 1px solid black;
+	background: none;
+}
+
+.circle-element.round.label {
+	padding:1em; 
+	font-size:15;
+	margin-bottom:1em;
+}
+
+.ven-shift {
+	margin-left:1%;
+}
+
+/* wrapping */
+img.wrap-section {
+   padding-top: 20px;
+   padding-bottom: 1px;
+   padding-right: 5px;
+}
+
+p.wrap-section {padding-top:20px;}
+
+
+/* containers */
+.container-margin-column {
+	margin-left:0.5em; 
+	margin-right:0.5em;
+}
+
+
+/* media icons */
+img.media-icons {
+	max-width:40px;
+	max-height:30px;
+	padding-bottom:10px;
+}
+
+
+/* media sizes */
+.media-gallery {
+	width:400px;
+	height:200px;
+}
+
+.media-snapshots {
+	width:100px;
+	height:85px;
+}
+
+img.media-thumbs {
+	width:75px;
+}
+
+.book-snaphsots {
+	width:200px;
+	height:175px;
+}
+
+.book-slide {
+	margin-left:-20%; 
+}
+
+.book-carousel {
+	margin-left:-30%; 
+}
+
+
+
+
+
