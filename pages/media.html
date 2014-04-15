@@ -12,7 +12,8 @@
    <link rel="stylesheet" href="/css/normalize.css">
    <link rel="stylesheet" href="/css/foundation.css">
    <link rel="stylesheet" href="/css/style.css">
-   <link rel="stylesheet" type="text/css" media="screen and (max-width:768px)" href="/css/screen.css" />
+   <link rel="stylesheet" type="text/css" media="only screen and (min-width: 321px) and (orientation:portrait)"  href="/css/screen.css" />
+   <link rel="stylesheet" type="text/css" media="only screen and (max-width: 780px) and (orientation:landscape)" href="/css/landscape.css" />
 
 
    <!-- If you are using the gem version, you need this only 
@@ -33,11 +34,11 @@
    <!-- Row Section, Header -->
    <div id="header">
       <div class="row" style="padding-top:2%; padding-bottom:2%">
-         <div class="small-3 push-2 columns" style="margin-left:5%">
+         <div class="small-3 push-2 columns">
             <!-- http://cooltext.com/ Image-->
             <!--<a href="http://arikamlani.com/"><img src="/images/assets/akamlani_logo.png" title="Ari Kamlani" width=350 style="margin-top:20px"/></a>-->
             <a href="http://arikamlani.com/">
-            <img src="/images/logos/ak_logo_00.png" title="Ari Kamlani" width=125px height=60px/>
+            <img class="media-logo-ak" src="/images/logos/ak_logo_00.png" title="Ari Kamlani" width=125px height=60px/>
             </a>- 
          </div>
          <div class="small-6 push-1 columns end">         
@@ -152,98 +153,98 @@
 
    <!-- Media Gallery -->
    <div class="row container-large-spacer">
-      <h5 class="basic-header" align="left" style="color:black;  
-      padding-left:2em; padding-bottom:2em; margin-left:5em; margin-right:5em"><i>Along my Travels...</i><h5>
 
-      <div class="small-9 small-offset-1 columns end">
-         <ul data-orbit>
-            <li data-orbit-slide="IceHotelDraw">
-               <img class="media-gallery" src="/images/akamlani_icehotel_sculpt_draw.jpg"/>
-               <div class="orbit-caption">Ice Hotel - Sweden</div>
+      <div class="small-11 small-offset-1 small-centered columns">
+         <h5 class="basic-header" align="left" style="color:black;padding-bottom:5%"><i>Along my Travels...</i><h5>
+
+         <ul class="small-block-grid large-block-grid clearing-feature clearing-thumbs" data-clearing >
+            <li class="clearing-featured-img">
+            <a href="/images/akamlani_icehotel_sculpt_draw.jpg">
+            <img class="media-gallery" src="/images/akamlani_icehotel_sculpt_draw.jpg" data-caption="Icehotel - Sweden" class="th"></a>
             </li>
 
-            <li data-orbit-slide="IceHotel">
-               <img class="media-gallery" src="/images/akamlani_icehotel_sculpt.jpg"/>
-               <div class="orbit-caption">Ice Hotel - Sweden</div>
+            <li class="clearing-featured-img">
+            <a href="/images/akamlani_icehotel_sculpt.jpg">
+            <img class="media-gallery" src="/images/akamlani_icehotel_sculpt.jpg" data-caption="Icehotel - sweden" class="th"></a>
             </li>
 
-            <li data-orbit-slide="IceHotelSled">
-               <img class="media-gallery" src="/images/akamlani_icehotel_dogsled.jpg"/>
-               <div class="orbit-caption">Dogsled - Ice Hotel - Sweden</div>
+            <li class="clearing-featured-img">
+            <a href="/images/akamlani_icehotel_dogsled.jpg">
+            <img class="media-gallery" src="/images/akamlani_icehotel_dogsled.jpg" data-caption="Icehotel Dogsled - Sweden" class="th"></a>
             </li>
 
-            <li data-orbit-slide="IceHotelBar">
-               <img class="media-gallery" src="/images/akamlani_icebar_johanna.jpg"/>
-               <div class="orbit-caption">Icebar - Ice Hotel - Sweden</div>
+            <li class="clearing-featured-img">
+            <a href="/images/akamlani_icebar_johanna.jpg">
+            <img class="media-gallery" src="/images/akamlani_icebar_johanna.jpg" data-caption="Icehotel Icebar, Sweden" class="th"></a>
             </li>
 
-            <li data-orbit-slide="Everest">
-               <img class="media-gallery" src="/images/akamlani_everest_basecamp.jpg"/>
-               <div class="orbit-caption">Mount Everest Basecamp Trek - Nepal</div>
+            <li class="clearing-featured-img">
+            <a href="/images/akamlani_everest_basecamp.jpg">
+            <img class="media-gallery" src="/images/akamlani_everest_basecamp.jpg" data-caption="Everest Basecamp - Nepal" class="th"></a>
             </li>
 
-            <li data-orbit-slide="Greatwall">
-               <img class="media-gallery" src="/images/akamlani_greatwall_badaling.jpg"/>
-               <div class="orbit-caption">Great Wall - Badaling, China</div>
+            <li class="clearing-featured-img">
+            <a href="/images/akamlani_greatwall_badaling.jpg">
+            <img class="media-gallery" src="/images/akamlani_greatwall_badaling.jpg" data-caption="GreatWall Badaling - China" class="th"></a>
             </li>
 
-            <li data-orbit-slide="AFF">
-               <img class="media-gallery" src="/images/akamlani_aff_nz.jpg"/>
-               <div class="orbit-caption">AFF Skydiving - New Zealand</div>
+            <li class="clearing-featured-img">
+            <a href="/images/akamlani_aff_nz.jpg">
+            <img class="media-gallery" src="/images/akamlani_aff_nz.jpg" data-caption="AFF - New Zealand" class="th"></a>
             </li>
 
-            <li data-orbit-slide="Scuba">
-               <img class="media-gallery" src="/images/akamlani_scuba.jpg"/>
-               <div class="orbit-caption">Scuba - Great Barrier Reef, Australia</div>
+            <li class="clearing-featured-img">
+            <a href="/images/akamlani_scuba.jpg">
+            <img class="media-gallery" src="/images/akamlani_scuba.jpg" data-caption="Scuba Diving - Great Barrier Reef, Australia" class="th"></a>
             </li>
 
-            <li data-orbit-slide="Pyramids">
-               <img class="media-gallery" src="/images/akamlani_pyramids_egypt.jpg"/>
-               <div class="orbit-caption">Pyramids - Cairo, Egypt</div>
+            <li class="clearing-featured-img">
+            <a href="/images/akamlani_pyramids_egypt.jpg">
+            <img class="media-gallery" src="/images/akamlani_pyramids_egypt.jpg" data-caption="Pyramids - Egypt" class="th"></a>
             </li>
 
-            <li data-orbit-slide="AyersRock">
-               <img class="media-gallery" src="/images/akamlani_ayersrock_aussie.jpg"/>
-               <div class="orbit-caption">Ayers Rock, Australia</div>
+            <li class="clearing-featured-img">
+            <a href="/images/akamlani_ayersrock_aussie.jpg">
+            <img class="media-gallery" src="/images/akamlani_ayersrock_aussie.jpg" data-caption="Ayers Rock - Australia" class="th"></a>
             </li>
 
-            <li data-orbit-slide="Greece">
-               <img class="media-gallery" src="/images/akamlani_parthenon_greece.jpg"/>
-               <div class="orbit-caption">Parthenon - Athens, Greece</div>
+            <li class="clearing-featured-img">
+            <a href="/images/akamlani_parthenon_greece.jpg">
+            <img class="media-gallery" src="/images/akamlani_parthenon_greece.jpg" data-caption="Parthenon - Athens, Greece" class="th"></a>
             </li>
 
-            <li data-orbit-slide="Sailing">
-               <img class="media-gallery" src="/images/akamlani_sailing_sf.jpg"/>
-               <div class="orbit-caption">Sailing, San Francisco</div>
+            <li class="clearing-featured-img">
+            <a href="/images/akamlani_sailing_sf.jpg">
+            <img class="media-gallery" src="/images/akamlani_sailing_sf.jpg" data-caption="Sailing - SF" class="th"></a>
             </li>
 
-            <!--
-            <li data-orbit-slide="Abseiling">
-               <img class="media-gallery" src="/images/akamlani_abseiling_nz.jpg"/>
-               <div class="orbit-caption">Abseiling - New Zealand</div>
+<!--
+            <li class="clearing-featured-img">
+            <a href="/images/akamlani_abseiling_nz.jpg"><img class="media-gallery" src="/images/akamlani_abseiling_nz.jpg"></a>
             </li>
 
-            <li data-orbit-slide="Juggling">
-               <img class="media-gallery" src="/images/akamlani_juggling.jpg"/>
-               <div class="orbit-caption">Juggling</div>
+            <li class="clearing-featured-img">
+            <a href="/images/akamlani_juggling.jpg"><img class="media-gallery" src="/images/akamlani_juggling.jpg"></a>
             </li>
 
-            <li data-orbit-slide="BigSexy">
-               <img class="media-gallery" src="/images/akamlani_bigsexy.jpg"/>
-               <div class="orbit-caption">Big Sexy, South Carolina</div>
+            <li class="clearing-featured-img">
+            <a href="/images/akamlani_bigsexy.jpg"><img class="media-gallery" src="/images/akamlani_bigsexy.jpg"></a>
             </li>
 
-            <li data-orbit-slide="Climbing">
-               <img class="media-gallery" src="/images/akamlani_climbing.jpg"/>
-               <div class="orbit-caption">Indoor Rock Climbing - Mission Cliffs</div>
-            </li>
-            -->
+            <li class="clearing-featured-img">
+            <a href="/images/akamlani_climbing.jpg"><img class="media-gallery" src="/images/akamlani_climbing.jpg"></a>
+            </li>            
+-->
          </ul>
+      </div><!--end column -->
+   </div> <!--end row-->
 
-      </div> <!-- end column -->
-      </div> <!-- end row -->
+
+
    </div> <!-- end margins -->
    </div> <!-- end main content -->
+
+
 
    </div>  <!-- end wrap -->
 

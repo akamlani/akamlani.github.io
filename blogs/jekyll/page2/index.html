@@ -12,7 +12,8 @@
    <link rel="stylesheet" href="/css/normalize.css">
    <link rel="stylesheet" href="/css/foundation.css">
    <link rel="stylesheet" href="/css/style.css">
-   <link rel="stylesheet" type="text/css" media="screen and (max-width:768px)" href="/css/screen.css" />
+   <link rel="stylesheet" type="text/css" media="only screen and (min-width: 321px) and (orientation:portrait)"  href="/css/screen.css" />
+   <link rel="stylesheet" type="text/css" media="only screen and (max-width: 780px) and (orientation:landscape)" href="/css/landscape.css" />
 
 
    <!-- If you are using the gem version, you need this only 
@@ -33,11 +34,11 @@
    <!-- Row Section, Header -->
    <div id="header">
       <div class="row" style="padding-top:2%; padding-bottom:2%">
-         <div class="small-3 push-2 columns" style="margin-left:5%">
+         <div class="small-3 push-2 columns">
             <!-- http://cooltext.com/ Image-->
             <!--<a href="http://arikamlani.com/"><img src="/images/assets/akamlani_logo.png" title="Ari Kamlani" width=350 style="margin-top:20px"/></a>-->
             <a href="http://arikamlani.com/">
-            <img src="/images/logos/ak_logo_00.png" title="Ari Kamlani" width=125px height=60px/>
+            <img class="media-logo-ak" src="/images/logos/ak_logo_00.png" title="Ari Kamlani" width=125px height=60px/>
             </a>- 
          </div>
          <div class="small-6 push-1 columns end">         
@@ -174,7 +175,7 @@
    <div id = "highlights1" class="row container-medium-spacer">
    <a name="highlights" data-magellan-destination="highlights"></a>
    <!-- Expertise -->
-   <div class="small-6 large-4 columns">
+   <div class="small-6 medium-4 large-4 columns">
       <h5 class="topic-header" align="center">Professional Expertise</h5>
       <div class="container-margin-column container-medium-spacer">
       <p> Well traveled and have lived in many different locations.  Along the way, I have gathered
@@ -196,7 +197,7 @@
 
 
    <!-- Project Highlights -->
-   <div class="small-6 large-4 columns">
+   <div class="small-6 medium-4 large-4 columns">
       <h5 class="topic-header" align="center">Popular Projects</h5> 
       <div class="container-margin-column container-medium-spacer">
       <ul data-orbit style="align:center; margin-left:1em">
@@ -231,7 +232,7 @@
 
 
    <!-- twitter feed --> 
-   <div class="large-4  hide-for-small-only columns">
+   <div class="medium-4 large-4 show-for-medium-up columns">
       <h5 class="topic-header" align="center">News</h5> 
       <div class="container-margin-column container-medium-spacer">
             <a class="twitter-timeline" href="https://twitter.com/akamlani" data-widget-id="435314448044027905">Tweets by @akamlani</a>
@@ -250,7 +251,7 @@
       <div class="small-6 large-6 columns">
          <h5 class="topic-header" align="center">Book Recommendations</h5> 
          <div class="container-margin-column container-medium-spacer">
-         <ul class="book-carousel" data-orbit>
+         <ul class="book-carousel" style="margin-left:10%" data-orbit>
             <li class="book-slide" data-orbit-slide="Abundance">
                <a href="http://www.amazon.com/Abundance-Future-Better-Than-Think/dp/1451614217/">
                   <img class="book-snaphsots" src="http://ecx.images-amazon.com/images/I/51wCZoVxdSL.jpg"/>

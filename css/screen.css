@@ -1,8 +1,4 @@
 /* screen.cs */
-/*
-<link rel="stylesheet" type="text/css" href="style.css" media="screen, handheld" />
-<link rel="stylesheet" type="text/css" href="mobile.css" media="screen  and (min-width: 40.5em)" />
-*/
 
 /*
     Smaller than 960: Smaller than the standard base grid
@@ -107,8 +103,14 @@ img.media-icons {
 
 /* media sizes */
 .media-gallery {
-	width:400px;
-	height:200px;
+	width:100px;
+	height:70px;
+    margin-bottom:10%;
+}
+
+.media-logo-ak {
+   margin-left:5%;
+   margin-top:10%;
 }
 
 .media-snapshots {
@@ -125,6 +127,7 @@ img.media-thumbs {
 	height:175px;
 }
 
+/*
 .book-slide {
 	margin-left:-20%; 
 }
@@ -132,7 +135,7 @@ img.media-thumbs {
 .book-carousel {
 	margin-left:-30%; 
 }
-
+*/
 
 
 

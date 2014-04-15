@@ -12,7 +12,8 @@
    <link rel="stylesheet" href="/css/normalize.css">
    <link rel="stylesheet" href="/css/foundation.css">
    <link rel="stylesheet" href="/css/style.css">
-   <link rel="stylesheet" type="text/css" media="screen and (max-width:768px)" href="/css/screen.css" />
+   <link rel="stylesheet" type="text/css" media="only screen and (min-width: 321px) and (orientation:portrait)"  href="/css/screen.css" />
+   <link rel="stylesheet" type="text/css" media="only screen and (max-width: 780px) and (orientation:landscape)" href="/css/landscape.css" />
 
 
    <!-- If you are using the gem version, you need this only 
@@ -33,11 +34,11 @@
    <!-- Row Section, Header -->
    <div id="header">
       <div class="row" style="padding-top:2%; padding-bottom:2%">
-         <div class="small-3 push-2 columns" style="margin-left:5%">
+         <div class="small-3 push-2 columns">
             <!-- http://cooltext.com/ Image-->
             <!--<a href="http://arikamlani.com/"><img src="/images/assets/akamlani_logo.png" title="Ari Kamlani" width=350 style="margin-top:20px"/></a>-->
             <a href="http://arikamlani.com/">
-            <img src="/images/logos/ak_logo_00.png" title="Ari Kamlani" width=125px height=60px/>
+            <img class="media-logo-ak" src="/images/logos/ak_logo_00.png" title="Ari Kamlani" width=125px height=60px/>
             </a>- 
          </div>
          <div class="small-6 push-1 columns end">         
@@ -158,8 +159,9 @@
 
 
 
-      <!-- Smartphone Portrait version -->
+      <!-- Smartphone Portrait version  --> 
       <div class="show-for-small-only">
+      <div class="show-for-portrait">
       <div class="row container-large-spacer">
          <div class="small-4 small-offset-1 columns">
             <div class="circle">
@@ -176,7 +178,7 @@
                </div>
             </div>
          </div> 
-      </div><!-- end row -->
+      </div>
 
       <div class="row container-large-spacer" >
          <div class="small-4 small-offset-3 columns" style="margin-top:-30%">
@@ -186,12 +188,46 @@
                </div>
             </div>
          </div>
-      </div><!-- end row -->
+      </div>
+      </div>
+      </div>
+
+      <!-- Smartphone Landscape version -->
+      <div class="show-for-touch">
+      <div class="show-for-landscape">
+      <div class="row container-large-spacer">
+         <div class="small-4 small-offset-1 columns">
+            <div class="circle">
+               <div style="margin-top:30%">
+               <h7 class="basic-header" style="margin-left:20%">Design & Innovation</h7>
+               </div> 
+            </div> 
+         </div>
+
+         <div class="small-4 push-1 columns ven-shift end">
+            <div class="circle">
+               <div style="margin-top:27.5%">
+               <h7 class="basic-header" style="margin-left:40%">Strategy</h7>
+               </div>
+            </div>
+         </div> 
+      </div>
+
+      <div class="row container-large-spacer" >
+         <div class="small-4 small-offset-3 columns" style="margin-top:-22.5%">
+            <div class="circle">
+               <div style="margin-top:40%">
+               <h7 class="basic-header" style="margin-left:35%">Intelligence</h7>
+               </div>
+            </div>
+         </div>
+      </div>
+      </div>
       </div>
 
 
       <!-- Large Screen Version -->
-      <div class="hide-for-small-only">
+      <div class="show-for-large-up">
       <div class="row container-large-spacer">
          <div class="large-4 large-offset-2 columns">
             <div class="circle">
@@ -208,7 +244,7 @@
                </div>
             </div>
          </div>
-      </div><!--end row -->
+      </div>
 
       <div class="row container-large-spacer" >
          <div class="large-4 large-offset-4 columns" style="margin-top:-17.5%">
@@ -218,11 +254,8 @@
                </div>
             </div>
          </div>
-      </div><!-- end row -->
-
       </div>
-
-
+      </div>
 
 
 
