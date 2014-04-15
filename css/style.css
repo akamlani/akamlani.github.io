@@ -125,14 +125,7 @@ a:active {
    text-decoration: underline;
 }
 
-  
-/* orbit containers */
-.orbit-container {
-   width:  85%;
-   margin: auto;
-}
-
-
+ 
 /* media sizes */
 img.media-icons {
    max-width:60px;
@@ -152,8 +145,8 @@ img.media-icons {
 }
 
 .media-snapshots {
-   width:200px;
-   height:175px;
+   width:250px;
+   height:200px;
 }
 
 img.media-thumbs {
@@ -161,19 +154,10 @@ img.media-thumbs {
 }
 
 .book-snaphsots {
-   width:200px;
+   width:250px;
    height:300px;
+   margin-left:22.5%;
 }
-
-/*
-.book-slide {
-   padding-left:22.5%; 
-}
-
-.book-carousel {
-   margin-left:-30%; 
-}
-*/
 
 
 /* actions */
@@ -209,7 +193,6 @@ li.expand:before {
     margin-left:1em; 
     margin-right:1em;
 }
-
 
 ul.container-box {
    padding-left:1em;
