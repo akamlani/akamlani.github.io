@@ -116,6 +116,14 @@ img.media-icons {
 	height:120px;
 }
 
+img.news-snapshots {
+	min-width:100px;
+	min-height:100px;
+	max-height:250px;
+	padding-bottom:5%;   
+}
+
+
 img.media-thumbs {
 	width:75px;
 }

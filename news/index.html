@@ -108,7 +108,8 @@
                </ul>
             </li><li class="divider"></li>
             <!-- Blog -->            
-            <li><a href="/pages/blog.html">Blog</a></li><li class="divider"></li>
+            <li><a href="/blog/">Blog</a></li><li class="divider"></li>
+            <li><a href="/news/">News</a></li><li class="divider"></li>
             <!-- Projects -->
             <li class="has-dropdown">
                <a href="#">Projects</a>
@@ -123,7 +124,6 @@
                <a href="#">Resources</a>
                <ul class="dropdown">
                   <li><label>At my Hands</label></li><li class="divider"></li>
-                  <li><a href="/pages/news.html">News</a></li><li class="divider"></li>
                   <li><a href="/pages/tools.html">Tools</a></li><li class="divider"></li>
                   <li><a href="/pages/links.html">Links</a></li>  
                </ul>
@@ -148,18 +148,106 @@
 
 
       <!-- Content -->
-      	<div id="container" class="row main" style="height:100%">
+      	<div id="container" class="row main">
 	<div class="container-margin-outer">
+
 
 	<!-- about content -->
 	<div class="row container-large-spacer">
-		<div class="small-11 small-offset-1 columns">   
-			<h5 class="basic-header">Under Construction, Check Back Soon...</h5>
-		</div>
-	</div>
+		<!-- Div tag for stories results --> 
+		<script src="http://cdn.embed.ly/jquery.embedly-3.1.1.min.js" type="text/javascript"></script>
+		<!--<script src="//cdn.embedly.com/widgets/platform.js"></script> -->
+		<div id="news" class="container-margin-column container-medium-spacer"></div>		
 
-	</div>
-	</div>
+	</div> <!-- end row -->
+
+	
+			<!-- https://developer.yahoo.com/yql/-->  
+			<!-- https://github.com/embedly/embedly-jquery ; http://github.com/embedly/embedly-docs/blob/master/tutorials/jquery.rst
+			-->
+			
+			<script language="javascript" type="text/javascript">
+			$(document).ready(function() {		
+			var url = encoded_url = api_url = "";
+			var base_url = "https://api.embed.ly/1/oembed"
+			var key = "fb12f698ada845769e60861180a23d35";
+			
+			$.embedly.defaults.key = key;
+			$.getJSON('data_sources.json')
+    			.done(function (data) {
+  					headline = data.headline;
+        			articlesObject = data.articles;
+        			$.each(articlesObject, function(idx, obj) {
+        				//build url for each request 
+        				url = obj.url;
+      					encoded_url = encodeURIComponent(url);
+        				api_url = base_url + "?key=" + key + "&url=" + encoded_url;
+        				//get list of categories and tags
+        				categories = obj.categories;        				
+        				tags = obj.tags;
+        				//make request  and parse json data from embed.ly
+        				$.getJSON(api_url, function(data) {
+        					link  = "<a class=\"embedly-card\" href=\""  + data.url + "\"" + ">" + data.title + "</a>";
+							//image = "<img width=" + "\"" + "300px" + "\"" +  " height=" + "\"" + "200px" + "\"" + " src=" +
+							//"\"" + data.thumbnail_url + "\"" +  "/>";
+							image = "<img class=" + "\"" + "news-snapshots" + "\"" + " src=" + "\"" + data.thumbnail_url + "\"" +  "/>";
+							
+							image_url = "<a href=\"" + data.url + "\"" + ">" + image + "</a>";
+							title = "<h6 style=color:black><b><i>" + data.title + "</i></b></h6>";
+							read_more = "<a href=\"" + data.url + "\"" + ">" + "Read the article on " + data.provider_name +"\t>" + "</a>";
+ 							
+
+							base_section = "<div class=" + "\"" + "small-4 columns" +  "\"" +  ">";
+							base_section_desc = "<div class=" + "\"" + "small-8 columns" +  "\"" +  ">"; 
+							end_section = "</div>"
+							  			
+							//console.log(data);
+							//console.log(base_section + image_url + end_section);
+							$("#news").append(base_section + image_url + end_section);
+							$("#news").append(base_section_desc + title + "<p>" + data.description + "</p>" + read_more + "<br><br>" + end_section);
+							$("#news").append("<hr>");
+							
+							
+							//$("#news").append("<li>" + link + "</li>") ;
+							//$('#news').embedly();
+							//$('#news').html('<img width="35%" height="30%" src=' + data.thumbnail_url +'/>');
+						});        					
+
+        			});
+				});
+			});
+ 
+			</script>
+
+
+
+<!--
+<a class="embedly-button" href="http://embed.ly/code">Embed</a>
+-->
+
+
+
+<!--
+			<script language="javascript" type="text/javascript">
+(function(a){
+	var b="embedly-platform",c="script";
+	if(!a.getElementById(b)){var d=a.createElement(c);d.id=b;d.async=true;
+	d.src=("https:"===docum.location.protocol?"https":"http")+"://cdn.embedly.com/widgets/platform.js";
+	var e=document.getElementsByTagName(c)[0];
+	e.parentNode.insertBefore(d,e)}})(document);
+</script>
+			
+
+-->
+
+
+
+
+
+
+	</div> <!-- end container margin -->
+	</div> <!-- end main container row -->
+
 
    </div>  <!-- end wrap -->
 
@@ -184,25 +272,15 @@
    <script src="/js/vendor/fastclick.js"></script>
    <script src="/js/foundation.min.js"></script>
    
-   <!-- Load Base Sections -->
-   
-   <script type="text/javascript">
-   $(document).ready(function(){
-      $("#header").load("/base.html #header", function(){$(document).foundation('reflow', 'equalizer');});
-      $("#navie").load("/base.html #navigation", function(){$(document).foundation('reflow', 'equalizer');});
-      $("#footer").load("/base.html #footer", function(){$(document).foundation('reflow', 'equalizer');});
-   });
-   </script>
-   
 
-   <script type="text/javascript">
+   <script type="text/javascript">   
    $(document).ready(function() {
-      foundation({
-      dropdown: {active_class: 'open'},      
-      dropdown: {is_hover: true},
-      'equalizer',
-      'reflow'
-      });
+      $(document).foundation({
+         dropdown: {active_class: 'open'}, 
+         dropdown: {is_hover: true}  }, 
+         'equalizer',
+         'reflow'
+      );
    });
    </script>
 

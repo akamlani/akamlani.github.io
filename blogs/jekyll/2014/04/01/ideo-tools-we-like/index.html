@@ -108,7 +108,8 @@
                </ul>
             </li><li class="divider"></li>
             <!-- Blog -->            
-            <li><a href="/pages/blog.html">Blog</a></li><li class="divider"></li>
+            <li><a href="/blog/">Blog</a></li><li class="divider"></li>
+            <li><a href="/news/">News</a></li><li class="divider"></li>
             <!-- Projects -->
             <li class="has-dropdown">
                <a href="#">Projects</a>
@@ -123,7 +124,6 @@
                <a href="#">Resources</a>
                <ul class="dropdown">
                   <li><label>At my Hands</label></li><li class="divider"></li>
-                  <li><a href="/pages/news.html">News</a></li><li class="divider"></li>
                   <li><a href="/pages/tools.html">Tools</a></li><li class="divider"></li>
                   <li><a href="/pages/links.html">Links</a></li>  
                </ul>
@@ -256,25 +256,15 @@ tools as well...</p>
    <script src="/js/vendor/fastclick.js"></script>
    <script src="/js/foundation.min.js"></script>
    
-   <!-- Load Base Sections -->
-   
-   <script type="text/javascript">
-   $(document).ready(function(){
-      $("#header").load("/base.html #header", function(){$(document).foundation('reflow', 'equalizer');});
-      $("#navie").load("/base.html #navigation", function(){$(document).foundation('reflow', 'equalizer');});
-      $("#footer").load("/base.html #footer", function(){$(document).foundation('reflow', 'equalizer');});
-   });
-   </script>
-   
 
-   <script type="text/javascript">
+   <script type="text/javascript">   
    $(document).ready(function() {
-      foundation({
-      dropdown: {active_class: 'open'},      
-      dropdown: {is_hover: true},
-      'equalizer',
-      'reflow'
-      });
+      $(document).foundation({
+         dropdown: {active_class: 'open'}, 
+         dropdown: {is_hover: true}  }, 
+         'equalizer',
+         'reflow'
+      );
    });
    </script>
 
