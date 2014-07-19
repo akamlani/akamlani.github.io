@@ -1,71 +1,71 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://arikamlani.com/blogs/jekyll/2014/03/28/initial-post</loc>
-        <lastmod>2014-05-05T18:32:04-07:00</lastmod>
-    </url>
-    <url>
         <loc>http://arikamlani.com/blogs/jekyll/2014/03/29/is-innovation-an-overused-word</loc>
-        <lastmod>2014-05-05T18:32:04-07:00</lastmod>
+        <lastmod>2014-07-19T15:21:55-07:00</lastmod>
     </url>
     <url>
         <loc>http://arikamlani.com/blogs/jekyll/2014/03/30/march-madness-sports-analytics</loc>
-        <lastmod>2014-05-05T18:32:04-07:00</lastmod>
+        <lastmod>2014-07-19T15:21:55-07:00</lastmod>
     </url>
     <url>
         <loc>http://arikamlani.com/blogs/jekyll/2014/04/01/ideo-tools-we-like</loc>
-        <lastmod>2014-05-05T18:32:04-07:00</lastmod>
+        <lastmod>2014-07-19T15:21:55-07:00</lastmod>
     </url>
     <url>
         <loc>http://arikamlani.com/blogs/jekyll/2014/04/19/flexible-chair-assignment</loc>
-        <lastmod>2014-05-05T18:32:04-07:00</lastmod>
+        <lastmod>2014-07-19T15:21:55-07:00</lastmod>
     </url>
     <url>
         <loc>http://arikamlani.com/blogs/jekyll/2014/05/07/searching-within-video</loc>
-        <lastmod>2014-05-07T15:43:41-07:00</lastmod>
+        <lastmod>2014-07-19T15:21:55-07:00</lastmod>
     </url>
     <url>
         <loc>http://arikamlani.com/blog/</loc>
-        <lastmod>2014-05-05T18:32:04-07:00</lastmod>
-    </url>
-    <url>
-        <loc>http://arikamlani.com/news/</loc>
-        <lastmod>2014-05-05T18:32:04-07:00</lastmod>
-    </url>
-    <url>
-        <loc>http://arikamlani.com/</loc>
-        <lastmod>2014-05-07T15:43:41-07:00</lastmod>
-    </url>
-    <url>
-        <loc>http://arikamlani.com/pages/research.html</loc>
-        <lastmod>2014-05-05T18:32:04-07:00</lastmod>
-    </url>
-    <url>
-        <loc>http://arikamlani.com/pages/contact.html</loc>
-        <lastmod>2014-05-05T18:32:04-07:00</lastmod>
-    </url>
-    <url>
-        <loc>http://arikamlani.com/pages/media.html</loc>
-        <lastmod>2014-05-05T18:32:04-07:00</lastmod>
+        <lastmod>2014-07-19T15:21:55-07:00</lastmod>
     </url>
     <url>
         <loc>http://arikamlani.com/pages/tools.html</loc>
-        <lastmod>2014-05-05T18:32:04-07:00</lastmod>
+        <lastmod>2014-07-19T15:21:55-07:00</lastmod>
     </url>
     <url>
-        <loc>http://arikamlani.com/pages/apps.html</loc>
-        <lastmod>2014-05-05T18:32:04-07:00</lastmod>
+        <loc>http://arikamlani.com/pages/research.html</loc>
+        <lastmod>2014-07-19T15:21:55-07:00</lastmod>
     </url>
     <url>
         <loc>http://arikamlani.com/pages/links.html</loc>
-        <lastmod>2014-05-05T18:32:04-07:00</lastmod>
+        <lastmod>2014-07-19T15:21:55-07:00</lastmod>
     </url>
     <url>
         <loc>http://arikamlani.com/pages/visual.html</loc>
-        <lastmod>2014-05-05T18:32:04-07:00</lastmod>
+        <lastmod>2014-07-19T15:21:55-07:00</lastmod>
+    </url>
+    <url>
+        <loc>http://arikamlani.com/pages/media.html</loc>
+        <lastmod>2014-07-19T15:21:55-07:00</lastmod>
     </url>
     <url>
         <loc>http://arikamlani.com/pages/portfolio.html</loc>
-        <lastmod>2014-05-05T18:32:04-07:00</lastmod>
+        <lastmod>2014-07-19T15:21:55-07:00</lastmod>
+    </url>
+    <url>
+        <loc>http://arikamlani.com/pages/apps.html</loc>
+        <lastmod>2014-07-19T15:21:55-07:00</lastmod>
+    </url>
+    <url>
+        <loc>http://arikamlani.com/pages/contact.html</loc>
+        <lastmod>2014-07-19T15:21:55-07:00</lastmod>
+    </url>
+    <url>
+        <loc>http://arikamlani.com/news/pocket.html</loc>
+        <lastmod>2014-07-19T15:21:55-07:00</lastmod>
+    </url>
+    <url>
+        <loc>http://arikamlani.com/news/</loc>
+        <lastmod>2014-07-19T15:21:55-07:00</lastmod>
+    </url>
+    <url>
+        <loc>http://arikamlani.com/</loc>
+        <lastmod>2014-07-19T15:25:10-07:00</lastmod>
     </url>
 </urlset>
