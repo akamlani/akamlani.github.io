@@ -1,34 +1,64 @@
 {
-  "articles": [
-    {
-      "url": "http://www.brookings.edu/blogs/techtank/posts/2014/04/15-three-lessons-promote-civic-innovation-gilman",
-      "categories": ["innovation", "civic"],
-      "tags": ["civic", "social goodness", "innovation"]
-    },
-    {
-      "url": "http://espn.go.com/los-angeles/nba/story/_/id/10857580/donald-sterling-los-angeles-clippers-owner-receives-life-ban-nba",
-      "categories": ["sports", "culture"],
-      "tags": ["nba", "ban",  "clippers"]
-    },
-    {
-      "url": "http://venturebeat.com/2014/05/03/coding-bootcamps-will-graduate-6000-people-in-2014-3x-as-many-as-last-year",
-      "categories": ["bootcamps", "growth"],
-      "tags": ["bootcamps", "coding", "engineering"]
-    },
-    {
-      "url": "http://www.crainsnewyork.com/article/20140414/NONPROFITS/304139986/new-funding-tool-could-spur-nonprofit-innovation",
-      "categories": ["funding", "nonprofit"],
-      "tags": ["tools", "nonprofit", "innovation"]
-    },
-    {
-      "url": "http://economix.blogs.nytimes.com/2014/04/14/equal-opportunity-and-social-innovation-obamas-policy-agenda/",
-      "categories": ["policy", "innovation"],
-      "tags": ["equal opportunity", "obama", "government"]
-    }
-
-
-
-
-  ],
-  "headline": "Around The World"
+    "headline": "News AutoReel", 
+    "articles": [
+        {
+            "url": "http://www.r-bloggers.com/weekly-variability-simulation-of-fantasy-football-projections/", 
+            "tags": [
+                "datascience", 
+                "sportsds"
+            ], 
+            "categories": [], 
+            "title": "Weekly Variability Simulation of Fantasy Football Projections"
+        }, 
+        {
+            "url": "https://github.com/josephmisiti/awesome-machine-learning", 
+            "tags": [
+                "datascience"
+            ], 
+            "categories": [], 
+            "title": "josephmisiti/awesome-machine-learning \u00b7 GitHub"
+        }, 
+        {
+            "url": "http://labs.ideo.com/2014/06/11/information-overload/", 
+            "tags": [
+                "datascience"
+            ], 
+            "categories": [
+                "prototype"
+            ], 
+            "title": "Information Overload"
+        }, 
+        {
+            "url": "https://github.com/onurakpolat/awesome-bigdata", 
+            "tags": [
+                "datascience"
+            ], 
+            "categories": [], 
+            "title": "onurakpolat/awesome-bigdata \u00b7 GitHub"
+        }, 
+        {
+            "url": "http://phys.org/news/2013-09-machine-stories-wearable-cameras.html", 
+            "tags": [
+                "datascience"
+            ], 
+            "categories": [], 
+            "title": "Researchers use machine learning to boil down the stories that wearable cameras are telling"
+        }, 
+        {
+            "url": "http://phys.org/news/2014-06-algorithm-automatically-videos.html", 
+            "tags": [
+                "datascience"
+            ], 
+            "categories": [], 
+            "title": "Algorithm automatically cuts boring parts from long videos"
+        }, 
+        {
+            "url": "http://labs.ideo.com/2014/07/24/tools-we-like-v3/", 
+            "tags": [
+                "tools"
+            ], 
+            "categories": [], 
+            "title": "Tools We Like v3"
+        }
+    ]
 }
