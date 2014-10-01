@@ -104,7 +104,7 @@
                   <li><label>About Me</label></li><li class="divider"></li>
                   <li><a href="/docs/ResumeAKamlani.pdf">Resume</a></li><li class="divider"></li>
                   <li><a href="/pages/media.html">Gallery</a></li><li class="divider"></li>
-                  <li><a href="/pages/visual.html">Visual</a></li>
+                  <!--<li><a href="/pages/visual.html">Visual</a></li>-->
                </ul>
             </li><li class="divider"></li>
             <!-- Blog -->            
@@ -148,7 +148,9 @@
 
 
       <!-- Content -->
-         <div id="container" class="row main">
+         <script src="http://d3js.org/d3.v3.min.js"></script>
+
+   <div id="container" class="row main">
    <div class="container-margin-outer">
 
 
@@ -161,10 +163,27 @@
 
       <div class="row container-large-spacer" >
          <div class="small-12 small-offset-1 columns">
+            <script>
+               var width  =;
+               var height =; 
+                   
+               var dataset = [[25,95], [15,92]];
+               var svg = d3.select("body").append("svg")
+
+            </script>
+             
+         </div>
+      </div>
+       
+       
+       
+<!--
+      <div class="row container-large-spacer" >
+         <div class="small-12 small-offset-1 columns">
          <img src="/images/symbols/venn_diagram.png" width=80% height=80%/>
          </div>
       </div>
-   
+-->   
 
    </div>
    </div>

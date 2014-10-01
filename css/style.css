@@ -80,6 +80,7 @@ body {
 
    font-family:"ronnia"; 
 
+   
    /* http://www.cssmatic.com/gradient-generator */
    background: rgba(183,222,237,1);
    background: -moz-linear-gradient(-45deg, rgba(183,222,237,1) 0%, rgba(162,178,184,1) 31%, rgba(33,180,226,1) 54%, rgba(141,159,166,1) 72%, 
@@ -95,6 +96,20 @@ body {
    background: linear-gradient(135deg, rgba(183,222,237,1) 0%, rgba(162,178,184,1) 31%, rgba(33,180,226,1) 54%, rgba(141,159,166,1) 72%, 
    rgba(128,218,245,1) 93%, rgba(128,218,245,1) 100%);
    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b7deed', endColorstr='#80daf5', GradientType=1 );
+}
+
+
+/* posts */
+.posts {
+   font-size: 18px;
+}
+
+.label-tag {
+   display: inline-block; 
+   font-size: 16px; 
+   margin-bottom: 5%; 
+   background-color:gray; 
+   border:1px solid black;
 }
 
 
@@ -228,6 +243,16 @@ ul.container-shift-right-box {
 .margin-shift-1 {
    margin-left:10%;
 }
+
+.margin-shift-min {
+   padding-left:7%;
+}
+
+.margin-shift-2-min {
+   padding-left:14%;
+}
+
+
 
 
 /* maps */
