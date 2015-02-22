@@ -101,7 +101,7 @@ body {
 
 /* posts */
 .posts {
-   font-size: 18px;
+   border:1px solid grey;   
 }
 
 .label-tag {

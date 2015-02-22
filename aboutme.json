@@ -1,0 +1,68 @@
+var bio = {
+	"name" : "Ari Kamlani",
+	"role" : "Technologist",
+	"contacts" : {
+		"mobile": 	"919-522-2242",
+		"email": 	"akamlani@gmail.com",
+		"github": 	"akamlani",
+		"twitter": 	"@akamlani",
+		"location": "San Francisco"
+	},
+	"welcomeMessage": "My Two Cents",
+	"skills": ["Data Science", "Analysis", "Open Source"],
+	"bioPic": "images/akamlani.jpg"
+};
+
+var work = {
+	"jobs": [
+		{
+			"position": "Innovator In Residence",
+			"employer": "Nagra Kudelski Group",
+			"years": "2+",
+			"description": ""
+		},
+		{
+			"position": "Embedded Software Consultant",
+			"employer": "Sportvision",
+			"years": "1",
+			"description": ""
+		}
+	]
+};
+
+var education = {
+	"schools" : {
+		"name":  	"Lehigh University",
+		"url":		"http://www.lehigh.edu"
+		"years": 	"1995-1999",
+		"degree": 	"BS",
+		"majors": 	"EE"
+		"city":  	"Bethlehem, PA. US"
+	}, 
+	"online courses": [
+		{
+			"title":  "Javascript Syntax",
+			"school": "Udacity",
+			"dates":  "2014",
+			"url":    "http://www.udacity.com/course/ud804"
+		}
+	]
+
+};
+
+var projects = {
+	"projects": [
+		{
+			"title": "Pocket Api",
+			"dates": "2014",
+			"description": "",
+			"images": ["images/pocket.jpg", "images/server.jpg"]
+		}
+	]	
+};
+
+
+//$("#main").append(bio.name)
+//$("#main").append(work["position"])
+//$("#main").append(work["education.schools[0].name"])
+
