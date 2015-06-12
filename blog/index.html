@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<!-- Tag Cloud -->
+<div class="row" style="margin-top:2.5%">
+<div class="col-xs-6 col-xs-push-1">
+<h5 class="small-title-spacer">Tag Cloud</h5>
+<div class="tag-cloud">
+{% for tag in site.tags %}
+    <a class="tag-instance" style="color:grey" href="/tags/{{ tag | first | slugize }}/">{{ tag | first }}</a>
+{% endfor %}
+</div>
+</div>
+</div>
+
+
+<!-- Blog Posts -->
+<div class="row" style="margin-top:2.5%">
+    <div class="col-xs-12 col-xs-push-1">
+        {% for post in site.posts %}
+        <div class="col-xs-3" style="cursor:pointer" onclick="document.location='{{ post.url }}'">
+            <div class="box-posts">
+                <div class="box-posts-header" align="center">
+                        <a style="color:orange" href={{ post.url }}>{{ post.title}}</a><br>
+                        <p style="font-size:14px">{{ post.date| date: "%m-%d-%Y" }}</p>
+                </div>
+                <div class="box-posts-description" align="center">
+                    {{ post.content }}
+                    <div style="padding-top:5%">
+                        <hr style="border-color:grey">
+                        {% for tag in post.tags %}
+                            <a class="tag-instance" style="margin-right:5%" href="/tags/{{ tag }}">{{ tag }}</a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+

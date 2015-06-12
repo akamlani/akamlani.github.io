@@ -1,0 +1,214 @@
+---
+layout: default
+---
+<!-- picture highlight -->
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-xs-3 col-xs-offset-1">
+            <img width=300 src="/assets/main/akamlani_icehotel.png" class="img-responsive"/>
+        </div>
+        <div class="col-xs-6">
+            <img src="/assets/main/footprints.png" style="margin-top:5%" class="img-responsive"/>
+            <h4 style="font-style:italic;color:grey" align="center">Driven by New Adventures, Experiences, & Knowledge</h4>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+<!-- Professional Expertise-->
+<div class="col-md-4 col-xs-5">
+    <h5 class="topic-title" align="center"><strong>Professional Expertise</strong></h5>
+    <div class="col-md-offset-1 col-xs-offset-1">
+        <div itemprop="description">
+        <p><strong>Consultant | Technologist | Designer | Group Innovator</strong></p>
+        </div>
+        <ul style="color:black">
+            <li>Strategic Consulting</li>
+            <li>Research and Innovation</li>
+            <li>Proof of Concepts (POC)</li>
+            <li>Systems Architecture</li>
+            <li>Data Science</li>
+            <li>Open Source</li>
+            <li>RF, Wireless</li>
+            <li>Embedded Software</li>
+            <li>Software Development</li>
+        </ul>
+        <p>Highly Skilled Professional, with a diverse set of experiences.  Most recently I held a position in
+        an Innovation Research Group incubating new ideas and initiatives.</p>
+    </div>
+</div>
+
+<!--Highlights -->
+<div id="highlights" class="col-md-4 col-xs-6">
+    <h5 class= "topic-title" align="center"><strong>Popular Projects</strong></h5>
+    <div>
+        <div id="highlights_carousel" class="carousel slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators" id="card_id_highlights"></ol>
+            <div class="carousel-inner" id="card_inner_highlights"></div>
+            <a class="left carousel-control" href="#highlights-carousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#highlights-carousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div>
+        <p style="margin-top:5%"><a href="/pages/portfolio.html" style="color:grey"><b><i>Portfolio > </i></b></a></p>
+    </div>
+</div>
+
+<!-- Twitter Feed -->
+<aside>
+<div class="col-md-3 visible-md visible-lg">
+    <h5 class= "topic-title" align="center"><strong>News</strong></h5>
+    <div class="col-md-offset-2">
+    {% include twitter.html %}
+    </div>
+</div>
+</aside>
+</div> <!--end row -->
+
+
+<div class="row" style="background:#4B4848; margin-top:5%; margin-bottom:5%">
+    <div class="container col-xs-7 col-xs-push-2" style="padding:2%">
+    <blockquote>
+    <p><i>We are what we repeatedly do.  Excellence, then, is not an act, but a habit.</i></p>
+    <footer style="color:white;font-style:italic;">Aristotle</footer>
+    </blockquote>
+    </div>
+</div>
+
+<div class="row">
+<!-- recommended books -->
+<div class="col-md-3 col-md-push-2 col-xs-5">
+    <h5 class= "topic-title" align="center"><strong>Book Recommendations</strong></h5>
+    <div class="col-xs-offset-1">
+        <div id="books_carousel" class="carousel slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators" id="card_id_books"></ol>
+            <div class="carousel-inner" id="card_inner_books"></div>
+            <a class="left carousel-control" href="#books_carousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#books-carousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div>
+        <p style="margin-top:5%"><b><i>A few inspiring books to jump on...</i></b></p>
+    </div>
+</div>
+
+<!-- courses/programs -->
+<div class="col-md-4 col-md-push-3 col-xs-6">
+    <h5 class= "topic-title" align="center"><strong>Recent Coursework, Workshops</strong></h5>
+    <div class="col-md-offset-1 col-xs-offset-3">
+        <img class="course-icons" src="/assets/main/course/ga.png" title="GA"/>
+        <img class="course-icons" src="/assets/main/course/stanford.png" title="Stanford"/>
+        <img class="course-icons" src="/assets/main/course/udacity.png" title="UDACITY"/>
+        <img class="course-icons" src="/assets/main/course/edxlogo.png" title="edX"/>
+        <img class="course-icons" src="/assets/main/course/coursera.png" title="coursera"/>
+        <img class="course-icons" src="/assets/main/course/novaed.png" title="Novaed"/>
+        <ul>
+            <li>Design Thinking Lab</li>
+            <li>Data Science - General Assembly</li>
+            <li>Sabermetrics - Baseball Statistical Analysis</li>
+            <li>Machine Learning</li>
+            <li>Big Data - Apache Spark</li>
+            <li>Artificial Intelligence</li>
+        </ul>
+        <hr>
+        <img class="course-icons" style="margin-top:-2.5%" src="/assets/main/course/lightbulb.png" title="Creativity"/>
+        <img class="course-icons" src="/assets/main/course/linux.png" title="Linux"/>
+        <img class="course-icons" src="/assets/main/course/android.png" title="Android"/>
+        <ul>
+            <li>Creativity & Innovation, Bruno Poirier</li>
+            <li>RFID Journal Live</li>
+            <li>Internet of Things (IoT) Developers Conference</li>
+            <li>Embedded Linux, Linux Foundation</li>
+            <li>Android Builders Summit, Linux Foundation</li>
+        </ul>
+    </div>
+</div>
+</div> <!-- end row -->
+
+
+
+
+
+<script language="javascript" type="text/javascript">
+    function attach_carousel_links(carousel_id, element_id, idx) {
+        var li = document.createElement("li");
+        li.setAttribute("data-target", '#' + carousel_id);
+        li.setAttribute("data-slide-to", idx.toString());
+        $(element_id).append(li);
+    }
+
+    function attach_carousel_data(carousel_id, element_id, obj, params) {
+        var div_item = document.createElement("div");
+        div_item.setAttribute('class', 'item');
+
+        var div_bkgd = document.createElement("img");
+        div_bkgd.setAttribute("src", obj.asset);
+        if(params.dimensions == "highlights") {
+            div_bkgd.setAttribute("style", "margin:0 auto;width:500px;height:300px;");
+        }
+        else if(params.dimensions == "books") {
+            div_bkgd.setAttribute("style", "margin:0 auto;width:350px;height:400px;");
+        }
+
+        if(params.show_carousel_data) {
+            var div_data = document.createElement("div");
+            div_data.setAttribute('class', "carousel-caption");
+            attach_data(div_data, obj, params);
+            div_bkgd.appendChild(div_data);
+        }
+        div_item.appendChild(div_bkgd);
+        $(element_id).append(div_item);
+    }
+
+
+    function attach_data(div_data, obj, params) {
+        var heading_data = document.createElement("h3");
+        heading_data.setAttribute("style", "color:black;")
+        heading_data.innerHTML = obj.title;
+        div_data.appendChild(heading_data);
+        var text = document.createElement("p");
+        text.setAttribute("style", "color:red;")
+        text.innerHTML = obj.headline;
+        div_data.appendChild(text);
+    }
+
+    function parse_books(data) {
+        var params = {'dimensions': 'books', 'show_carousel_data': 0, 'show_data': 0}
+        var id_field = "books-carousel";
+        $("#" + id_field).carousel("pause").removeData();
+        $.each(data, function (i, obj) {
+            attach_carousel_links(id_field, '#card_id_books', i);
+            attach_carousel_data(id_field, '#card_inner_books', obj, params);
+        });
+        $('#card_inner_books .item').first().addClass('active');
+        $('#card_id_books > li').first().addClass('active');
+        $('#' + id_field).carousel();
+    }
+
+    function parse_highlights(data) {
+        var params = {'dimensions': 'highlights', 'show_carousel_data': 0, 'show_data': 1}
+        var id_field = "highlights_carousel";
+        $("#" + id_field).carousel("pause").removeData();
+        $.each(data, function (i, obj) {
+            attach_carousel_links(id_field, '#card_id_highlights', i);
+            attach_carousel_data(id_field, '#card_inner_highlights', obj, params);
+        });
+        $('#card_inner_highlights .item').first().addClass('active');
+        $('#card_id_highlights > li').first().addClass('active');
+        $('#' + id_field).carousel();
+    }
+
+    $(document).ready(function() {
+        //parse file for creation of carousels
+        $.getJSON("/js/main.json", function(data) {
+            parse_highlights(data.highlights);
+            parse_books(data.books);
+        });
+    });
+
+</script>
+

@@ -1,0 +1,121 @@
+{
+    "highlights": [
+        {
+            "asset": "/assets/portfolio/nascar_trucks.jpg",
+            "title": "Nascar Trucks",
+            "headline": "Performance Sensor Tracking",
+            "description": "Improving Performance and Stabilization of Sensor Tracking for Nascar Trucks"
+        },
+        {
+            "asset": "/assets/portfolio/openfda_logo.jpg",
+            "title": "OpenFDA",
+            "headline": "Datascience Analysis of Multiple Drugs & Reactions Taken",
+            "description": "Datascience Analysis of Multiple Drugs & Reaction Occurences"
+        },
+        {
+            "asset": "/assets/portfolio/snapdragon.jpeg",
+            "title": "Qualcomm SnapDragon",
+            "headline": "Reference Designs for Smartphones",
+            "description": "Reference Designs for Smartphones"
+        },
+        {
+            "asset": "/assets/portfolio/wifi_alliance.jpg",
+            "title": "Wi-Fi Alliance",
+            "headline": "Wi-Fi Stack for Smartphones",
+            "description": "Wi-Fi Stack for Smartphones"
+        },
+        {
+            "asset": "/assets/portfolio/rfid_alliance.jpg",
+            "title": "Next Gen UHF RFID",
+            "headline": "POC Low Cost Long Range RFID",
+            "description": "Achieving Active RFID range with a BAP RFID at a minimized cost"
+        }
+    ],
+
+    "coursework": {
+        "courses": [
+            {"title": "Design Thinking Lab"},
+            {"title": "Data Science, General Assembly"},
+            {"title": "Sabermetrics - Baseball Statistical Analysis"},
+            {"title": "Machine Learning"},
+            {"title": "Artificial Intelligence"}
+        ],
+        "conferences": [
+            {"title": "RFID Journal Live"},
+            {"title": "Internet of Things (IoT) Developers Conference"},
+            {"title": "Embedded Linux, Linux Foundation"},
+            {"title": "Android Builders Summit, Linux Foundation"}
+        ],
+        "workshops": [
+            {"title": "Creativity & Innovation, Bruno Poirier"}
+        ]
+    },
+
+    "books": [
+        {
+            "title": "Abundance",
+            "url": "http://www.amazon.com/Abundance-Future-Better-Than-Think/dp/1451614217/",
+            "asset": "http://ecx.images-amazon.com/images/I/51wCZoVxdSL.jpg"
+        },
+        {
+            "title": "Change By Design",
+            "url": "http://www.amazon.com/Change-Design-Transforms-Organizations-Innovation/dp/0061766089",
+            "asset": "http://ecx.images-amazon.com/images/I/415Dg4tlBBL.jpg"
+        },
+        {
+            "title": "Creative Confidence",
+            "url": "http://www.amazon.com/Creative-Confidence-Unleashing-Potential-Within/dp/038534936X",
+            "asset": "http://ecx.images-amazon.com/images/I/81MYu9bX1YL._SL1500_.jpg"
+        },
+        {
+            "title": "Democratizing Innovation",
+            "url": "http://www.amazon.com/Democratizing-Innovation-Eric-von-Hippel-ebook/dp/B001C4PTLS/",
+            "asset": "http://ecx.images-amazon.com/images/I/5170056r4zL.jpg"
+        },
+        {
+            "title": "On Intelligence",
+            "url": "http://www.amazon.com/On-Intelligence-Jeff-Hawkins/dp/0805078533",
+            "asset": "http://ecx.images-amazon.com/images/I/41RX7302GNL.jpg"
+        },
+        {
+            "title": "The Singularity Is Near",
+            "url": "http://www.amazon.com/The-Singularity-Is-Near-Transcend/dp/0143037889",
+            "asset": "http://ecx.images-amazon.com/images/I/416MhqJ2SWL.jpg"
+        },
+        {
+            "title": "How To Create A Mind",
+            "url": "http://www.amazon.com/How-Create-Mind-Thought-Revealed/dp/0143124048",
+            "asset": "http://www.howtocreateamind.com/images/how-to-create-a-mind.png"
+        },
+        {
+            "title": "A Whole New Mind",
+            "url": "http://www.amazon.com/Whole-New-Mind-Right-Brainers-Future/dp/1594481717",
+            "asset": "http://ecx.images-amazon.com/images/I/510jyMCbgIL.jpg"
+        },
+        {
+            "title": "The Signal and the Noise",
+            "url": "http://www.amazon.com/The-Signal-Noise-Many-Predictions/dp/159420411X",
+            "asset": "http://ecx.images-amazon.com/images/I/51S-UVpM0RL.jpg"
+        },
+        {
+            "title": "Python for Data Analysis",
+            "url": "http://www.amazon.com/Python-Data-Analysis-Wrangling-IPython/dp/1449319793",
+            "asset": "http://ecx.images-amazon.com/images/I/51smfdODNfL.jpg"
+        },
+        {
+            "title": "Steve Jobs",
+            "url": "http://www.amazon.com/Steve-Jobs-Walter-Isaacson/dp/1451648537/",
+            "asset": "http://ecx.images-amazon.com/images/I/417jkYxrKWL.jpg"
+        }
+    ]
+}
+
+
+
+
+
+
+
+
+
+

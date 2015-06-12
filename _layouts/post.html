@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<div id="post" class="row">
+<div class="col-xs-9 col-xs-push-1" style="padding-top:5%">
+
+<h5 style="text-decoration:underline" align="left">{{ page.title }} | {{ page.date | date_to_string  }}</h5>
+
+{{ content }}
+
+<div style="padding-top:2%;padding-bottom:2%">
+<a href="/blog"><span class="glyphicon glyphicon-arrow-left"></span> Back  to Posts</a>
+</div>
+{% include comments.html %}
+</div>

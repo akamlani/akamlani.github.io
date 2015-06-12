@@ -1,0 +1,19 @@
+---
+layout : default
+---
+
+<div class="row">
+<div class="col-xs-9 col-xs-push-1" style="padding-top:5%">
+<h5>{{ page.tag }}</h5>
+
+<ul>
+{% for post in site.tags[page.tag] %}
+    <li>
+        {{ post.date | date: "%B %d, %Y" }}: <a href="{{ post.url }}">{{ post.title }}</a>
+        <div> {{ post.excerpt }} </div>
+    </li>
+{% endfor %}
+</ul>
+
+</div>
+</div>

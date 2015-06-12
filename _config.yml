@@ -1,0 +1,22 @@
+
+name: Ari R. Kamlani
+title: Ari R. Kamlani
+simple_search: http://google.com/search
+description: Personal Site of Ari R. Kamlani
+url: http://arikamlani.com
+
+author: 
+   name: Ari R. Kamlani
+   email: akamlani@gmail.com
+
+safe: false
+lsi: false
+highlighter: pygments
+permalink: /blog/:year/:month/:day/:title
+markdown: rdiscount
+
+languages: [en]
+
+exclude:
+- README.md
+

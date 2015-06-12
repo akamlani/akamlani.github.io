@@ -1,0 +1,55 @@
+{
+    "name": "Grid",
+    "value": 100,
+    "children": [
+        {
+            "name": "Project_Id",
+            "value": 75,
+            "children": [
+                {"name": "Projects", "value": 25}
+            ]
+        },
+        {
+            "name": "Technologies_Id",
+            "value": 75,
+            "children": [
+                {"name": "Technologies", "value": 25}
+            ]
+        },
+        {
+            "name": "Platforms_Id",
+            "value": 75,
+            "children": [
+                {"name": "Platforms", "value": 25}
+            ]
+        },
+        {
+            "name": "Patents_Id",
+            "value": 75,
+            "children": [
+                {"name": "Patents", "value": 25}
+            ]
+        },
+        {
+            "name": "Skills_Id",
+            "value": 75,
+            "children": [
+                {"name": "Skills", "value": 25}
+            ]
+        },
+        {
+            "name": "Funding_Id",
+            "value": 75,
+            "children": [
+                {"name": "Funding Projects", "value": 25}
+            ]
+        },
+        {
+            "name": "Experience_Id",
+            "value": 75,
+            "children": [
+                {"name": "Experience", "value": 25}
+            ]
+        }
+    ]
+}
