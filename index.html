@@ -5,18 +5,25 @@ layout: default
 <div class="jumbotron">
     <div class="row">
         <div class="col-xs-3 col-xs-offset-1">
-            <img width=300 src="/assets/main/akamlani_icehotel.png" class="img-responsive"/>
+            <img src="/assets/main/akamlani_icehotel.png" class="img-responsive banner-logo"/>
         </div>
         <div class="col-xs-6">
-            <img src="/assets/main/footprints.png" style="margin-top:5%" class="img-responsive"/>
-            <h4 style="font-style:italic;color:grey" align="center">Driven by New Adventures, Experiences, & Knowledge</h4>
+            <img src="/assets/main/footprints.png" style="margin-top:10%" class="img-responsive"/>
         </div>
+    </div>
+    <div class="row" style="margin-top:2.5%" align=center>
+        <h3 style="font-style:italic;color:grey" class="visible-md visible-lg" align="center">
+            Driven by New Adventures, Experiences, & Knowledge
+        </h3>
+        <h5 style="font-style:italic;color:grey" class="visible-xs visible-sm" align="center">
+            Driven by New Adventures, Experiences, & Knowledge
+        </h5>
     </div>
 </div>
 
 <div class="row">
 <!-- Professional Expertise-->
-<div class="col-md-4 col-xs-5">
+<div class="col-md-4 col-sm-5">
     <h5 class="topic-title" align="center"><strong>Professional Expertise</strong></h5>
     <div class="col-md-offset-1 col-xs-offset-1">
         <div itemprop="description">
@@ -39,10 +46,10 @@ layout: default
 </div>
 
 <!--Highlights -->
-<div id="highlights" class="col-md-4 col-xs-6">
+<div id="highlights" class="col-md-4 col-sm-6 col-xs-11">
     <h5 class= "topic-title" align="center"><strong>Popular Projects</strong></h5>
-    <div>
-        <div id="highlights_carousel" class="carousel slide carousel-fade" data-ride="carousel">
+    <div class="col-xs-offset-1">
+        <div id="highlights-carousel" class="carousel slide carousel-fade" data-ride="carousel">
             <ol class="carousel-indicators" id="card_id_highlights"></ol>
             <div class="carousel-inner" id="card_inner_highlights"></div>
             <a class="left carousel-control" href="#highlights-carousel" data-slide="prev">
@@ -69,7 +76,7 @@ layout: default
 
 
 <div class="row" style="background:#4B4848; margin-top:5%; margin-bottom:5%">
-    <div class="container col-xs-7 col-xs-push-2" style="padding:2%">
+    <div class="container col-sm-7 col-sm-push-2" style="padding:2%">
     <blockquote>
     <p><i>We are what we repeatedly do.  Excellence, then, is not an act, but a habit.</i></p>
     <footer style="color:white;font-style:italic;">Aristotle</footer>
@@ -77,29 +84,13 @@ layout: default
     </div>
 </div>
 
+
 <div class="row">
-<!-- recommended books -->
-<div class="col-md-3 col-md-push-2 col-xs-5">
-    <h5 class= "topic-title" align="center"><strong>Book Recommendations</strong></h5>
-    <div class="col-xs-offset-1">
-        <div id="books_carousel" class="carousel slide carousel-fade" data-ride="carousel">
-            <ol class="carousel-indicators" id="card_id_books"></ol>
-            <div class="carousel-inner" id="card_inner_books"></div>
-            <a class="left carousel-control" href="#books_carousel" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-            </a>
-            <a class="right carousel-control" href="#books-carousel" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-            </a>
-        </div>
-        <p style="margin-top:5%"><b><i>A few inspiring books to jump on...</i></b></p>
-    </div>
-</div>
 
 <!-- courses/programs -->
-<div class="col-md-4 col-md-push-3 col-xs-6">
+<div class="col-md-4 col-md-push-2 col-sm-6">
     <h5 class= "topic-title" align="center"><strong>Recent Coursework, Workshops</strong></h5>
-    <div class="col-md-offset-1 col-xs-offset-3">
+    <div class="col-md-offset-2 col-sm-offset-3 col-xs-offset-1">
         <img class="course-icons" src="/assets/main/course/ga.png" title="GA"/>
         <img class="course-icons" src="/assets/main/course/stanford.png" title="Stanford"/>
         <img class="course-icons" src="/assets/main/course/udacity.png" title="UDACITY"/>
@@ -127,6 +118,26 @@ layout: default
         </ul>
     </div>
 </div>
+
+
+<!-- recommended books -->
+<div class="col-md-3 col-md-push-3 col-sm-5 col-xs-11">
+    <h5 class= "topic-title" align="center"><strong>Book Recommendations</strong></h5>
+    <div class="col-xs-offset-1">
+        <div id="books-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators" id="card_id_books"></ol>
+            <div class="carousel-inner" id="card_inner_books"></div>
+            <a class="left carousel-control" href="#books-carousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#books-carousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div>
+        <p style="margin-top:5%"><b><i>A few inspiring books to jump on...</i></b></p>
+    </div>
+</div>
+
 </div> <!-- end row -->
 
 
@@ -148,10 +159,17 @@ layout: default
         var div_bkgd = document.createElement("img");
         div_bkgd.setAttribute("src", obj.asset);
         if(params.dimensions == "highlights") {
-            div_bkgd.setAttribute("style", "margin:0 auto;width:500px;height:300px;");
+            //large: div_bkgd.setAttribute("style", "margin:0 auto;width:500px;height:300px;");
+            //360: div_bkgd.setAttribute("style", "margin:0 auto;width:350px;height:250px;");
+            //414: div_bkgd.setAttribute("style", "margin:0 auto;width:415px;height:250px;");
+            div_bkgd.setAttribute("class", "highlights-icons");
+
         }
         else if(params.dimensions == "books") {
-            div_bkgd.setAttribute("style", "margin:0 auto;width:350px;height:400px;");
+            //large: div_bkgd.setAttribute("style", "margin:0 auto;width:350px;height:400px;");
+            //360: div_bkgd.setAttribute("style", "margin:0 auto;width:325px;height:350px;");
+            //414: div_bkgd.setAttribute("style", "margin:0 auto;width:340px;height:400px;");
+            div_bkgd.setAttribute("class", "books-icons")
         }
 
         if(params.show_carousel_data) {
@@ -191,7 +209,7 @@ layout: default
 
     function parse_highlights(data) {
         var params = {'dimensions': 'highlights', 'show_carousel_data': 0, 'show_data': 1}
-        var id_field = "highlights_carousel";
+        var id_field = "highlights-carousel";
         $("#" + id_field).carousel("pause").removeData();
         $.each(data, function (i, obj) {
             attach_carousel_links(id_field, '#card_id_highlights', i);
@@ -211,4 +229,5 @@ layout: default
     });
 
 </script>
+
 

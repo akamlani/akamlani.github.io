@@ -1,15 +1,6 @@
 body {
-    padding-top:180px;
     padding-bottom: 100px;
     background-color:rgb(255,255,255,0.4);
-}
-
-@media screen and (max-width: 767px) {
-    body {
-        padding-top:160px;
-        padding-bottom: 100px;
-        background-color:rgb(255,255,255,0.4);
-    }
 }
 
 
@@ -20,11 +11,34 @@ body {
 }
 
 /* banner (header) */
+.top-banner-title {
+    color:#222;
+    text-shadow: 0px 2px 3px #555;
+    font-size: 26px;
+}
+
+.top-banner-subtitle {
+    color: white;
+    text-shadow: 0px 2px 3px #555;
+    font-size: 24px;
+    font-style:italic;
+}
+
 .banner {
     padding-top:2.5%;
     padding-bottom:2%;
     background-image: url("/assets/main/blurred_banner.jpg");
 }
+
+.banner-logo {
+    width:300;
+}
+
+.jumbotron {
+    background-image: url("/assets/main/blurred.jpg");
+    background-size: cover;
+}
+
 
 /* icons */
 .nav-vd {
@@ -35,6 +49,7 @@ body {
   display: inline-block;
   vertical-align: bottom;
 }
+
 
 .social {
     width:35px;
@@ -48,15 +63,8 @@ body {
     padding-right:10px;
 }
 
-
 .patent-icons {
     margin-top:15%;
-}
-
-@media screen and (max-width: 767px) {
-    .patent-icons {
-        margin-top:35%;
-    }
 }
 
 .technology-icons {
@@ -82,6 +90,18 @@ body {
 .experience-icons {
     max-width:125px;
     max-height:125px;
+}
+
+.highlights-icons {
+    margin: 0 auto !important;
+    width:  500px !important;
+    height: 300px !important;
+}
+
+.books-icons {
+    margin: 0 auto !important;
+    width:  350px !important;
+    height: 400px !important;
 }
 
 /* headers */
@@ -118,11 +138,6 @@ blockquote {
     border-left: 5px solid #c76c0c;
 }
 
-/* image sizes */
-.jumbotron {
-    background-image: url("/assets/main/blurred.jpg");
-    background-size: cover;
-}
 
 /* posts */
 .tag-cloud  {

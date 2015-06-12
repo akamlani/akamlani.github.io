@@ -134,7 +134,7 @@ function create_portfolio(method_id, name, params) {
 }
 
 function create_split_layout(name, data) {
-    var params = {'classdetails': "col-xs-6 col-xs-push-1", 'classlogo': "col-xs-3 col-xs-push-1"};
+    var params = {'classdetails': "col-sm-6 col-xs-push-1", 'classlogo': "col-sm-3 col-sm-push-1 col-xs-push-3"};
     create_portfolio("split", name, params);
     var ul = document.createElement("ul");
     $.each(data, function(i, item) {
@@ -153,7 +153,7 @@ function create_split_layout(name, data) {
     var img = document.createElement("img");
     img.setAttribute('src', "/assets/portfolio/uspto_logo.png");
     img.setAttribute('title', "USPTO");
-    img.setAttribute('class', "patent-icons");
+    img.setAttribute('class', "img-responsive patent-icons");
     $("#portfolio-logo").append(img);
 }
 
@@ -212,7 +212,7 @@ function create_experience_layout(name, data) {
         var link = document.createElement("a");
         link.setAttribute("href", item.url);
         var img = document.createElement("img");
-        img.setAttribute("class", "media-object experience-icons");
+        img.setAttribute("class", "media-object img-responsive experience-icons");
         img.setAttribute("src", item.asset);
         img.setAttribute("alt", item.title);
         link.appendChild(img);
@@ -236,10 +236,6 @@ function create_experience_layout(name, data) {
         div_media.appendChild(div_text);
         $("#portfolio-details").append(div_media);
     });
-
-}
-
-function create_d3_grid(data) {
 
 }
 

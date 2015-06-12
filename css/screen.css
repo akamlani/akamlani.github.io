@@ -1,0 +1,71 @@
+
+@media screen and (max-width: 414px) {
+    .top-banner-title {
+        color:#222;
+        text-shadow: 0px 2px 3px #555;
+        font-size: 18px;
+    }
+
+    .top-banner-subtitle {
+        color: white;
+        text-shadow: 0px 2px 3px #555;
+        font-size: 16px;
+        font-style:italic;
+    }
+
+    .portfolio-title {
+        color: black;
+        text-decoration: underline;
+        font-style: italic;
+        margin-bottom: 10%;
+    }
+
+    /* icons */
+    .header-logo-icon {
+        margin-top:10%;
+    }
+
+
+    .highlights-icons {
+        margin: 0 auto !important;
+        width:  350px  !important;
+        height: 250px  !important;
+    }
+
+    .books-icons {
+        margin: 0 auto !important;
+        width:  325px  !important;
+        height: 350px  !important;
+    }
+
+    .patent-icons {
+        margin-top:5%;
+    }
+
+    .experience-icons {
+        max-width:  75px;
+        max-height: 75px;
+    }
+
+    .platform-icons {
+        max-width:  95px;
+        max-height: 95px;
+        margin-bottom: 5%;
+        padding-right: 10%;
+    }
+
+    .technology-icons {
+        max-width:  125px;
+        max-height: 125px;
+        margin-bottom: 5%;
+        padding-right: 10%;
+    }
+
+    .funding-icons {
+        max-width:  125px;
+        max-height: 125px;
+        margin-bottom: 10%;
+        padding-right: 10%;
+    }
+
+}
