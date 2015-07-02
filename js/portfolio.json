@@ -74,7 +74,7 @@
     "skills": [
         {
             "title": "Data Science",
-            "data": ["scikit-learn", "Jupyter (IPython Notebook)", "Yhat Rodeo"]
+            "data": ["scikit-learn", "Jupyter (IPython Notebook)"]
         },
         {
             "title": "Languages",
@@ -87,6 +87,10 @@
         {
             "title": "Operating Systems",
             "data": ["Linux/Unix", "QNX", "Android", "Windows Mobile/WinCE", "Nucleus Plus", "Symbian"]
+        },
+        {
+            "title": "IDE/ICE",
+            "data": ["GDB", "Eclipse", "Trace32 Lauterbauch", "QNX Momenentics", "MSFT Visual Studio", "Platform Builder", "ARM Development Suite", "Rational Rose RT", "CodeWarrior"]
         },
         {
             "title": "Web Frameworks",
@@ -103,6 +107,10 @@
         {
             "title": "Requirements Mangement",
             "data": ["Doors"]
+        },
+        {
+            "title": "Applications",
+            "data": ["Microsoft Office", "Libre Office", "Adobe"]
         }
     ],
     "projects": [
