@@ -1,3 +1,22 @@
+@media (min-width: 1200px) {
+    .highlights-icons {
+        margin: 0 auto !important;
+        width:  550px  !important;
+        height: 325px  !important;
+    }
+
+    .books-icons {
+        margin: 0 auto !important;
+        width:  400px  !important;
+        height: 500px  !important;
+    }
+}
+
+/*
+@media (min-width: 992px) and (max-width: 1199px)  {
+}
+*/
+
 
 @media screen and (max-width: 414px) {
     .top-banner-title {
