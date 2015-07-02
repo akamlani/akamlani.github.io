@@ -4,7 +4,7 @@ layout: default
 
 
 
-<div class="row" style="margin-top:5%">
+<div class="row" style="margin-top:2.5%">
     <div class="col-xs-10 col-xs-push-1" id="portfolio-grid"></div>
 </div>
 <div class="row" style="margin-top:2.5%" id="resume-selection">
@@ -280,7 +280,7 @@ d3.json("/js/tiles.json", function (data) {
         if (d.name == "Patents") { create_split_layout(d.name, user_data.patents); }
         else if (d.name == "Platforms") {create_img_layout(d.name, user_data.platforms, "platform-icons"); }
         else if (d.name == "Technologies") {create_img_layout(d.name, user_data.technologies, "technology-icons"); }
-        else if (d.name == "Funding Projects") {create_img_layout(d.name, user_data.kickstarter, "funding-icons"); }
+        else if (d.name == "Backed Projects") {create_img_layout(d.name, user_data.kickstarter, "funding-icons"); }
         else if (d.name == "Skills") {create_txt_layout(d.name, user_data.skills); }
         else if (d.name == "Projects") {create_txt_layout(d.name, user_data.projects); }
         else if (d.name == "Experience") {create_experience_layout(d.name, user_data.experience); }

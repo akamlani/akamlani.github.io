@@ -25,13 +25,9 @@ body {
 }
 
 .banner {
-    padding-top:2.5%;
-    padding-bottom:2%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
     background-image: url("/assets/main/blurred_banner.jpg");
-}
-
-.banner-logo {
-    width:300;
 }
 
 .jumbotron {
@@ -39,6 +35,9 @@ body {
     background-size: cover;
 }
 
+.cover-door {
+    background: rgba(0,0,0,0.2);
+}
 
 /* icons */
 .nav-vd {

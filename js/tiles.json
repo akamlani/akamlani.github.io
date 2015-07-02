@@ -3,10 +3,10 @@
     "value": 100,
     "children": [
         {
-            "name": "Project_Id",
+            "name": "Funding_Id",
             "value": 75,
             "children": [
-                {"name": "Projects", "value": 25}
+                {"name": "Backed Projects", "value": 25}
             ]
         },
         {
@@ -24,13 +24,6 @@
             ]
         },
         {
-            "name": "Patents_Id",
-            "value": 75,
-            "children": [
-                {"name": "Patents", "value": 25}
-            ]
-        },
-        {
             "name": "Skills_Id",
             "value": 75,
             "children": [
@@ -38,10 +31,17 @@
             ]
         },
         {
-            "name": "Funding_Id",
+            "name": "Patents_Id",
             "value": 75,
             "children": [
-                {"name": "Funding Projects", "value": 25}
+                {"name": "Patents", "value": 25}
+            ]
+        },
+        {
+            "name": "Project_Id",
+            "value": 75,
+            "children": [
+                {"name": "Projects", "value": 25}
             ]
         },
         {
