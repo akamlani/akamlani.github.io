@@ -74,7 +74,7 @@
     "skills": [
         {
             "title": "Data Science",
-            "data": ["scikit-learn", "Jupyter (IPython Notebook)"]
+            "data": ["scikit-learn", "Jupyter (IPython Notebook)", "RStudio"]
         },
         {
             "title": "Languages",
