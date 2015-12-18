@@ -78,7 +78,7 @@
         },
         {
             "title": "Languages",
-            "data": ["Python", "Javascript", "HTML", "CSS", "Squirrel", "Perl", "C++", "C", "ARM"]
+            "data": ["Python", "R", "Javascript", "HTML", "CSS", "Squirrel", "Perl", "C++", "C", "ARM"]
         },
         {
             "title": "Object Oriented Design Modeling",
