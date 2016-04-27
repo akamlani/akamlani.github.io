@@ -1,6 +1,16 @@
 {
     "experience": [
         {
+            "employer": "Inria Research Institute",
+            "title": "Project Externship Research/Part-Time",
+            "group": "STARS (Spatio-Temporal Activity Recognition Systems)",
+            "location": "Sophia Antipolis,France",
+            "dates": "Jan 2016-March 2016",
+            "url": "https://team.inria.fr/stars/",
+            "headline": "Improve upon computer vision Semantic Scene interpretation per preventive care and diagnosis for the elderly",
+            "asset": "https://team.inria.fr/stars/files/2011/12/stars.jpg"
+        },
+        {
             "employer": "Nagra Kudelski Group",
             "title": "Software Expert",
             "group": "Group Innovation",
