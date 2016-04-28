@@ -5,13 +5,13 @@ simple_search: http://google.com/search
 description: Personal Site of Ari R. Kamlani
 url: http://arikamlani.com
 
-author: 
+author:
    name: Ari R. Kamlani
    email: akamlani@gmail.com
 
 safe: false
 lsi: false
-highlighter: pygments
+highlighter: rouge
 permalink: /blog/:year/:month/:day/:title
 markdown: rdiscount
 
