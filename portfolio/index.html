@@ -1,0 +1,312 @@
+---
+layout: default
+---
+
+
+
+<div class="row" style="margin-top:2.5%">
+    <div class="col-xs-10 col-xs-push-1" id="portfolio-grid"></div>
+</div>
+<div class="row" style="margin-top:2.5%" id="resume-selection">
+    <div class="col-xs-10 col-xs-push-1" style="font-size:16px;" id="resume-details">
+        <span class="glyphicon glyphicon-console">portfolio &nbsp;</span>
+        <span style="font-style:italic">For more in depth details, please view my
+        <a href="/docs/ResumeAKamlani.pdf">Resume </a>in PDF format
+        </span>
+    </div>
+</div>
+<div class="row" style="margin-top:2%" id="portfolio-selection">
+    <div class="col-xs-7 col-xs-push-1" id="portfolio-details"></div>
+    <div class="col-xs-3 col-xs-push-1" id="portfolio-logo"></div>
+</div>
+
+
+<script language="javascript" type="text/javascript">
+var user_data;
+//Margins: http://bl.ocks.org/mbostock/3019563
+var w = 960, h = 250;
+//var margin = {top: 0, right: 0, bottom: 0, left: 0};
+//var width  = w - margin.left - margin.right;
+//var height = h - margin.top - margin.bottom;
+var color_maps  = d3.scale.category10();
+
+
+function create_layout(param_width, param_height) {
+    var treemap = d3.layout.treemap()
+                           .size([param_width, param_height])
+                           .sticky(true);
+
+    return treemap;
+}
+
+function create_container(selector, param_width, param_height) {
+    var dimensions = "0 0 " + param_width + " " + param_height;
+    var container  = d3.select(selector)
+                    .append("svg:svg")
+                    //.attr("viewBox", "0 0 960 350")
+                    .attr("viewBox", dimensions)
+                    .attr("preserveAspectRatio", "xMidYMid")
+                    //.attr("preserveAspectRatio", "xMinYMin meet")
+                    .attr("id", "svg-portfolio")
+                    .attr("width",  param_width)
+                    .attr("height", param_height)
+                    //group svg elements together to transform whole group of shapes
+                    .append("g")
+                    //define new coordinate system
+                    .attr("transform", "translate(.5,.5)");
+    return container;
+}
+
+function create_shape(selector, data_binding, shape_string) {
+    var shape = selector.selectAll(shape_string)
+                        .data(data_binding)
+                        .enter()
+                        .append(shape_string);
+    return shape;
+}
+
+function attach_grid_attributes(grid, shape_string, color_map) {
+    //rect attributes
+    var obj = grid
+             .append(shape_string)
+             .attr("x",        function(d){ return d.x  })
+             .attr("y",        function(d){ return d.y  })
+             .attr("width",    function(d){ return d.dx })
+             .attr("height",   function(d){ return d.dy })
+             .attr("fill",     function(d) { return d.children?null:color_map(d.parent.name) } )
+             .attr("stroke",   "white");
+    return obj;
+}
+
+function attach_attributes(shape_object, shape_string) {
+    //circle attributes
+    var obj = shape_object
+              .attr("cx",       function(d){return d.cx})
+              .attr("cy",       function(d){return d.cy})
+              .attr("r",        function(d){return d.radii})
+              .style("fill",    "lightblue");
+    return obj;
+}
+
+
+function attach_style(grid, color_map) {
+    var obj = grid
+              .style("fill", function(d) { return d.children?null:color_map(d.parent.name) } );
+    return obj;
+}
+
+function attach_events(shape_object) {
+    obj = shape_object
+         .on("mouseover", function(){d3.select(this).style("fill", "green");})
+         .on("mouseout",  function(){d3.select(this).style("fill", function(d){return d[1]}) })
+         .on("click",     function(){d3.select(this).style("fill", "blue"); });
+    return obj;
+}
+
+function create_portfolio(method_id, name, params) {
+    var heading_data = document.createElement("h4");
+    heading_data.setAttribute("class", "portfolio-title");
+    heading_data.innerHTML = name;
+
+    if(method_id == "split") {
+        var div_details = document.createElement("div");
+        div_details.setAttribute("class", params.classdetails);
+        div_details.setAttribute("id", "portfolio-details");
+        div_details.appendChild(heading_data);
+        var div_logo = document.createElement("div");
+        div_logo.setAttribute("class", params.classlogo);
+        div_logo.setAttribute("id", "portfolio-logo");
+        $("#portfolio-selection").append(div_details);
+        $("#portfolio-selection").append(div_logo);
+    }
+    else {
+        var method_class;
+        if ( method_id == "nologo" ) { method_class = params.classdetails; }
+        if ( method_id == "logo")  { method_class = params.classlogo; }
+        var div = document.createElement("div");
+        div.setAttribute("class", method_class);
+        div.setAttribute("id", "portfolio-details");
+        div.appendChild(heading_data);
+        $("#portfolio-selection").append(div);
+    }
+
+
+}
+
+function create_split_layout(name, data) {
+    var params = {'classdetails': "col-sm-6 col-xs-push-1", 'classlogo': "col-sm-3 col-sm-push-1 col-xs-push-3"};
+    create_portfolio("split", name, params);
+    var ul = document.createElement("ul");
+    $.each(data, function(i, item) {
+        var li = document.createElement("li");
+        li.setAttribute('style', 'font-style:italic;font-size:18px');
+        li.innerHTML = item.title;
+        var par = document.createElement("p");
+        par.setAttribute('style', 'font-size:16px');
+        par.innerHTML = "Application #: " + item.appnum + "<br>" +
+                        "Date: " + item.date + "<br>" +
+                        "Status: " + item.status;
+        li.appendChild(par);
+        ul.appendChild(li);
+    });
+    $("#portfolio-details").append(ul);
+    var img = document.createElement("img");
+    img.setAttribute('src', "/assets/portfolio/uspto_logo.png");
+    img.setAttribute('title', "USPTO");
+    img.setAttribute('class', "img-responsive patent-icons");
+    $("#portfolio-logo").append(img);
+}
+
+function create_img_layout(name, data, icon_class) {
+    var params = {'classlogo': "col-xs-10 col-xs-push-1"};
+    create_portfolio("logo", name, params);
+    $.each(data, function(i, item) {
+        var img = document.createElement("img");
+        img.setAttribute("class", icon_class);
+        img.setAttribute("src", item.asset);
+        img.setAttribute("title", item.title);
+        var a = document.createElement("a");
+        a.setAttribute("href", item.url);
+        a.appendChild(img);
+        $("#portfolio-details").append(a);
+    });
+}
+
+function create_txt_layout(name, data) {
+    var params = {'classdetails': "col-xs-10 col-xs-push-1"};
+    create_portfolio("nologo", name, params);
+    var ul = document.createElement("ul");
+    $.each(data, function(i, item) {
+        var li = document.createElement("li");
+        li.setAttribute('style', 'font-style:italic;font-size:18px');
+        if(item.url) {
+            var a = document.createElement("a");
+            a.setAttribute("href", item.url);
+            a.innerHTML = item.title;
+            li.appendChild(a);
+        }
+        else { li.innerHTML = item.title; }
+        var par = document.createElement("p");
+        par.setAttribute('style', 'font-size:16px');
+        if(item.data) { par.innerHTML = item.data.join(', '); }
+        else { par.innerHTML = item.headline; }
+        li.appendChild(par);
+        ul.appendChild(li);
+    });
+    $("#portfolio-details").append(ul);
+}
+
+
+function create_experience_layout(name, data) {
+    var params = {'classdetails': "col-xs-8 col-xs-push-1"};
+    create_portfolio("nologo", name, params);
+    $.each(data, function(i, item) {
+        var div_media = document.createElement("div");
+        div_media.setAttribute("class", "media");
+        var div_icon = document.createElement("div");
+        div_icon.setAttribute("class", "media-left media-top");
+        var div_text = document.createElement("div");
+        div_text.setAttribute("class", "media-body");
+        div_text.setAttribute("style", "padding-left:3.5%;padding-bottom:3.5%");
+        //image
+        var link = document.createElement("a");
+        link.setAttribute("href", item.url);
+        var img = document.createElement("img");
+        img.setAttribute("class", "media-object img-responsive experience-icons");
+        img.setAttribute("src", item.asset);
+        img.setAttribute("alt", item.title);
+        link.appendChild(img);
+        div_icon.appendChild(link);
+        div_media.appendChild(div_icon);
+        // body section
+        var heading = document.createElement("h4");
+        heading.setAttribute("class", "media-heading");
+        heading.setAttribute('style', 'font-style:italic');
+        heading.innerHTML = item.employer;
+        var body_link = document.createElement("a");
+        body_link.setAttribute("href", item.url);
+        body_link.appendChild(heading);
+        var par = document.createElement("p");
+        par.setAttribute('style', 'font-size:16px');
+        par.innerHTML = item.location + ' &diams; ' + item.dates + "<br>" +
+                        item.title + ' &dash; ' + item.group + "<br>" +
+                        item.headline;
+        div_text.appendChild(body_link);
+        div_text.appendChild(par);
+        div_media.appendChild(div_text);
+        $("#portfolio-details").append(div_media);
+    });
+
+}
+
+$.getJSON("/js/portfolio.json", function (portfolio) {
+    user_data = portfolio;
+});
+
+d3.json("/js/tiles.json", function (data) {
+    var canvas  = create_container('#portfolio-grid', w, h);
+    var treemap = create_layout(w, h);
+    var nodes = treemap.nodes(data);
+    var cells = canvas.selectAll(".cell")
+                      .data(nodes)
+                      .enter()
+                      .append("g")
+                      .attr("class", "cell");
+
+    attach_grid_attributes(cells, "rect", color_maps);
+    cells.append("text")
+       .attr("x", function(d){ return d.x + d.dx /2 })
+       .attr("y", function(d){ return d.y + d.dy /2 })
+       .attr("text-anchor", "middle")
+       .text(function(d){ return d.children?null:d.name })
+       .style("font-size", "16px")
+       .style("font-style", "italic")
+       .style("fill", "white");
+       //.style("fill", d3.rgb(103, 186, 175));
+
+    //for initial view: show Experience (this will be cleared on first click)
+    $("#portfolio-selection").empty();
+    create_experience_layout("Experience", user_data.experience);
+
+    d3.selectAll(".cell").on("mouseover", function(d) {
+        $(".cell").stop().fadeTo(300, 0.2);
+        $(this).stop().fadeTo(0, 1.0);
+    });
+    d3.selectAll(".cell").on("mouseout", function(d) {
+        $(".cell").stop().fadeTo("fast", 1.0);
+    });
+    d3.selectAll(".cell").on("click", function(d) {
+        $("#portfolio-selection").empty();
+        if (d.name == "Patents") { create_split_layout(d.name, user_data.patents); }
+        else if (d.name == "Platforms") {create_img_layout(d.name, user_data.platforms, "platform-icons"); }
+        else if (d.name == "Technologies") {create_img_layout(d.name, user_data.technologies, "technology-icons"); }
+        else if (d.name == "Backed Projects") {create_img_layout(d.name, user_data.kickstarter, "funding-icons"); }
+        else if (d.name == "Skills") {create_txt_layout(d.name, user_data.skills); }
+        else if (d.name == "Projects") {create_txt_layout(d.name, user_data.projects); }
+        else if (d.name == "Experience") {create_experience_layout(d.name, user_data.experience); }
+
+        //automatic scroll
+        $('html, body').animate( { scrollTop: $("#portfolio-selection").offset().top }, 1000);
+
+
+    });
+
+    var chart = $("#svg-portfolio")
+        aspect = chart.width()/chart.height(),
+        container = chart.parent();
+
+    $(window).on("resize", function() {
+        var targetWidth = container.width();
+        chart.attr("width", targetWidth);
+        chart.attr("height", Math.round(targetWidth / aspect));
+    }).trigger("resize");
+
+});
+</script>
+
+
+
+
+
+
+
