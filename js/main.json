@@ -7,12 +7,6 @@
             "description": "Improving Performance and Stabilization of Sensor Tracking for Nascar Trucks"
         },
         {
-            "asset": "/assets/portfolio/openfda_logo.jpg",
-            "title": "OpenFDA",
-            "headline": "Datascience Analysis of Multiple Drugs & Reactions Taken",
-            "description": "Datascience Analysis of Multiple Drugs & Reaction Occurences"
-        },
-        {
             "asset": "/assets/portfolio/snapdragon.jpeg",
             "title": "Qualcomm SnapDragon",
             "headline": "Reference Designs for Smartphones",

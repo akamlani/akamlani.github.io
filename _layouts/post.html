@@ -3,9 +3,9 @@ layout: default
 ---
 
 <div id="post" class="row">
-<div class="col-xs-9 col-xs-push-1" style="padding-top:5%">
-
-<h5 style="text-decoration:underline" align="left">{{ page.title }} | {{ page.date | date_to_string  }}</h5>
+<div class="col-xs-8 col-xs-push-1" style="padding-top:5%">
+<div class="post-date"> {{ page.date | date_to_string  }} </div>
+<h5 style="text-decoration:underline" align="left" class="post-title">{{ page.title }}</h5>
 
 {{ content }}
 
@@ -14,3 +14,6 @@ layout: default
 </div>
 {% include comments.html %}
 </div>
+
+
+
