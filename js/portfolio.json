@@ -84,11 +84,11 @@
     "skills": [
         {
             "title": "Data Science",
-            "data": ["scikit-learn", "Jupyter (IPython Notebook)", "RStudio"]
+            "data": ["scikit-learn", "Jupyter (IPython Notebook)", "RStudio", "Apache Spark"]
         },
         {
             "title": "Languages",
-            "data": ["Python", "R", "Javascript", "HTML", "CSS", "Squirrel", "Perl", "C++", "C", "ARM"]
+            "data": ["Python", "R", "Javascript", "HTML", "CSS", "Squirrel", "Perl", "C++", "C", "Scala", "ARM"]
         },
         {
             "title": "Object Oriented Design Modeling",
