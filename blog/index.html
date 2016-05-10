@@ -9,7 +9,7 @@ layout: default
         <div class="tag-cloud">
             {% for tag in site.tags %}
                 <a class="tag-instance" style="color:grey"
-                href="/tags/{{ tag | first | slugize }}/">{{ tag | first }}</a>
+                href="/tags/{{ tag | first | slugize }}/">#{{ tag | first }}</a>
             {% endfor %}
         </div>
     </div>
