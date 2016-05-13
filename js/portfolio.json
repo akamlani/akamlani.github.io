@@ -84,7 +84,7 @@
     "skills": [
         {
             "title": "Data Science",
-            "data": ["scikit-learn", "Jupyter (IPython Notebook)", "RStudio", "Apache Spark"]
+            "data": ["scikit-learn", "Jupyter (IPython Notebook)", "RStudio", "Apache Spark", "SAS Enterprise Miner"]
         },
         {
             "title": "Languages",
@@ -100,7 +100,7 @@
         },
         {
             "title": "IDE/ICE",
-            "data": ["GDB", "Eclipse", "Trace32 Lauterbauch", "QNX Momenentics", "MSFT Visual Studio", "Platform Builder", "ARM Development Suite", "Rational Rose RT", "CodeWarrior"]
+            "data": ["GDB", "Eclipse", "IntelliJ", "Trace32 Lauterbauch", "QNX Momenentics", "MSFT Visual Studio", "Platform Builder", "ARM Development Suite", "Rational Rose RT", "CodeWarrior"]
         },
         {
             "title": "Web Frameworks",
