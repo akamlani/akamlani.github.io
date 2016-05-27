@@ -87,4 +87,23 @@
         padding-right: 10%;
     }
 
+    .banner-box {
+        max-height:100px;
+        margin-top:35.0%;
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .banner-box-add {
+        background-color:rgba(88, 100, 109, 0.5);
+        min-height:125px;
+    }
+
+    .banner-box-img {
+        min-height:125px;
+    }
+
+
+
 }
