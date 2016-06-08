@@ -84,7 +84,7 @@
     "skills": [
         {
             "title": "Data Science",
-            "data": ["Apache Spark", "SAS Enterprise Miner", "scikit-learn", "Jupyter (IPython Notebook)", "Yhat Rodeo", "Zeppelin" "RStudio"]
+            "data": ["Apache Spark", "SAS Enterprise Miner", "scikit-learn", "Jupyter (IPython Notebook)", "Yhat Rodeo", "Zeppelin", "RStudio"]
         },
         {
             "title": "Languages",
