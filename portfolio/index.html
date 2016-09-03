@@ -239,69 +239,82 @@ function create_experience_layout(name, data) {
 
 }
 
-$.getJSON("/js/portfolio.json", function (portfolio) {
-    user_data = portfolio;
-});
-
-d3.json("/js/tiles.json", function (data) {
-    var canvas  = create_container('#portfolio-grid', w, h);
-    var treemap = create_layout(w, h);
-    var nodes = treemap.nodes(data);
-    var cells = canvas.selectAll(".cell")
-                      .data(nodes)
-                      .enter()
-                      .append("g")
-                      .attr("class", "cell");
-
-    attach_grid_attributes(cells, "rect", color_maps);
-    cells.append("text")
-       .attr("x", function(d){ return d.x + d.dx /2 })
-       .attr("y", function(d){ return d.y + d.dy /2 })
-       .attr("text-anchor", "middle")
-       .text(function(d){ return d.children?null:d.name })
-       .style("font-size", "16px")
-       .style("font-style", "italic")
-       .style("fill", "white");
-       //.style("fill", d3.rgb(103, 186, 175));
-
-    //for initial view: show Experience (this will be cleared on first click)
-    $("#portfolio-selection").empty();
-    create_experience_layout("Experience", user_data.experience);
-
-    d3.selectAll(".cell").on("mouseover", function(d) {
-        $(".cell").stop().fadeTo(300, 0.2);
-        $(this).stop().fadeTo(0, 1.0);
+$(document).ready(function() {
+    //$.getJSON("/js/portfolio.json", function (portfolio) {
+    //    user_data = portfolio;
+    //});
+    //load portfolio data: perform snchronousrequest to get portfolio data
+    $.ajax({
+          dataType: "json",
+          url: "/js/portfolio.json",
+          async: false,
+          success: function (response) {
+            user_data = response;
+        }
     });
-    d3.selectAll(".cell").on("mouseout", function(d) {
-        $(".cell").stop().fadeTo("fast", 1.0);
-    });
-    d3.selectAll(".cell").on("click", function(d) {
+    //create and manage tiles
+    d3.json("/js/tiles.json", function (data) {
+        var canvas  = create_container('#portfolio-grid', w, h);
+        var treemap = create_layout(w, h);
+        var nodes = treemap.nodes(data);
+        var cells = canvas.selectAll(".cell")
+                          .data(nodes)
+                          .enter()
+                          .append("g")
+                          .attr("class", "cell");
+
+        attach_grid_attributes(cells, "rect", color_maps);
+        cells.append("text")
+           .attr("x", function(d){ return d.x + d.dx /2 })
+           .attr("y", function(d){ return d.y + d.dy /2 })
+           .attr("text-anchor", "middle")
+           .text(function(d){ return d.children?null:d.name })
+           .style("font-size", "16px")
+           .style("font-style", "italic")
+           .style("fill", "white");
+           //.style("fill", d3.rgb(103, 186, 175));
+
+        //for initial view: show Experience (this will be cleared on first click)
         $("#portfolio-selection").empty();
-        if (d.name == "Patents") { create_split_layout(d.name, user_data.patents); }
-        else if (d.name == "Platforms") {create_img_layout(d.name, user_data.platforms, "platform-icons"); }
-        else if (d.name == "Technologies") {create_img_layout(d.name, user_data.technologies, "technology-icons"); }
-        else if (d.name == "Backed Projects") {create_img_layout(d.name, user_data.kickstarter, "funding-icons"); }
-        else if (d.name == "Skills") {create_txt_layout(d.name, user_data.skills); }
-        else if (d.name == "Projects") {create_txt_layout(d.name, user_data.projects); }
-        else if (d.name == "Experience") {create_experience_layout(d.name, user_data.experience); }
+        create_experience_layout("Experience", user_data.experience);
 
-        //automatic scroll
-        $('html, body').animate( { scrollTop: $("#portfolio-selection").offset().top }, 1000);
+        d3.selectAll(".cell").on("mouseover", function(d) {
+            $(".cell").stop().fadeTo(300, 0.2);
+            $(this).stop().fadeTo(0, 1.0);
+        });
+        d3.selectAll(".cell").on("mouseout", function(d) {
+            $(".cell").stop().fadeTo("fast", 1.0);
+        });
+        d3.selectAll(".cell").on("click", function(d) {
+            $("#portfolio-selection").empty();
+            if (d.name == "Patents") { create_split_layout(d.name, user_data.patents); }
+            else if (d.name == "Platforms") {create_img_layout(d.name, user_data.platforms, "platform-icons"); }
+            else if (d.name == "Technologies") {create_img_layout(d.name, user_data.technologies, "technology-icons"); }
+            else if (d.name == "Backed Projects") {create_img_layout(d.name, user_data.kickstarter, "funding-icons"); }
+            else if (d.name == "Skills") {create_txt_layout(d.name, user_data.skills); }
+            else if (d.name == "Projects") {create_txt_layout(d.name, user_data.projects); }
+            else if (d.name == "Experience") {create_experience_layout(d.name, user_data.experience); }
 
+            //automatic scroll
+            $('html, body').animate( { scrollTop: $("#portfolio-selection").offset().top }, 1000);
+
+
+        });
+
+        var chart = $("#svg-portfolio")
+            aspect = chart.width()/chart.height(),
+            container = chart.parent();
+
+        $(window).on("resize", function() {
+            var targetWidth = container.width();
+            chart.attr("width", targetWidth);
+            chart.attr("height", Math.round(targetWidth / aspect));
+        }).trigger("resize");
 
     });
 
-    var chart = $("#svg-portfolio")
-        aspect = chart.width()/chart.height(),
-        container = chart.parent();
-
-    $(window).on("resize", function() {
-        var targetWidth = container.width();
-        chart.attr("width", targetWidth);
-        chart.attr("height", Math.round(targetWidth / aspect));
-    }).trigger("resize");
-
 });
+
 </script>
 
 
