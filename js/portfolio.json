@@ -125,6 +125,12 @@
     ],
     "projects": [
         {
+            "title": "Self-Driving Cars",
+            "url": "http://github.com/akamlani/selfdrivingcar",
+            "headline":"Self-Driving Cars Computer Vision/Deep Learning",
+            "description": ""
+        },
+        {
             "title": "Cooper Hewitt",
             "url": "http://github.com/akamlani/cooperhewitt",
             "asset": "/assets/portfolio/cooperhewitt.jpg",
