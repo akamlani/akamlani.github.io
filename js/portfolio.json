@@ -1,11 +1,21 @@
 {
     "experience": [
         {
+            "employer": "Tyto",
+            "title": "Data Science & Engineering Consultant",
+            "group": "Product",
+            "location": "San Mateo, CA. US",
+            "dates": "March 2017-Present",
+            "url": "https://tyto.com",
+            "headline": "Detection and Localization per Access Control for the Connected Home",
+            "asset": "https://tyto.com/img/symbol.png"
+        },
+        {
             "employer": "Inria Research Institute",
-            "title": "Project Externship Research/Part-Time",
+            "title": "Research Assistant",
             "group": "STARS (Spatio-Temporal Activity Recognition Systems)",
             "location": "Sophia Antipolis,France",
-            "dates": "Jan 2016-March 2016",
+            "dates": "Jan 2016-April 2016",
             "url": "https://team.inria.fr/stars/",
             "headline": "Improve computer vision semantic scene interpretation per preventive care and diagnosis for the elderly",
             "asset": "https://team.inria.fr/stars/files/2011/12/stars.jpg"
@@ -83,8 +93,8 @@
     ],
     "skills": [
         {
-            "title": "Data Science",
-            "data": ["Apache Spark", "SAS Enterprise Miner", "scikit-learn", "Jupyter (IPython Notebook)", "Yhat Rodeo", "Zeppelin", "RStudio"]
+            "title": "Data Science/Frameworks",
+            "data": ["Apache Spark", "Tensorflow", "Keras", "Sklearn"]
         },
         {
             "title": "Languages",
