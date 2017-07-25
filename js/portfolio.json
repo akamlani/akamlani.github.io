@@ -1,6 +1,16 @@
 {
     "experience": [
         {
+            "employer": "Techstars",
+            "title": "Technologist in Residence",
+            "group": "IoT Division",
+            "location": "New York City, NY. US",
+            "dates": "July 2017-Present",
+            "url": "http://www.techstars.com/programs/iot-program/",
+            "headline": "Advise Accelerator Companies in delivering a Robust & Scalable Solution",
+            "asset": "/assets/portfolio/techstars.png"
+        },
+        {
             "employer": "Skymind",
             "title": "Deep Learning Consultant/Advisor",
             "group": "Training",
