@@ -1,6 +1,16 @@
 {
     "experience": [
         {
+            "employer": "J.P. Morgan Chase",
+            "title": "Data Scientist",
+            "group": "Digital Intelligence",
+            "location": "New York city, NY. US",
+            "dates": "Nov 2017-Present",
+            "url": "https://www.jpmorganchase.com/",
+            "headline": "Driving Business Decisions via Scalable Intelligence",
+            "asset": "/assets/portfolio/jpmc.png"
+        },
+        {
             "employer": "Skymind",
             "title": "Deep Learning Consultant/Advisor",
             "group": "Training/Field Engineering",
