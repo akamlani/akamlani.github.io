@@ -124,11 +124,11 @@
     "skills": [
         {
             "title": "Data Science/Frameworks",
-            "data": ["Apache Spark", "Tensorflow", "Keras", "Sklearn"]
+            "data": ["Apache Spark", "DL4J", "Tensorflow", "Keras", "Sklearn"]
         },
         {
             "title": "Languages",
-            "data": ["Python", "R", "Scala", "Java", "C++", "C", "Javascript", "HTML", "CSS", "Squirrel", "ARM"]
+            "data": ["Scala", "Java", "Python", "R", "C++", "C", "Javascript", "HTML", "CSS", "Squirrel", "ARM"]
         },
         {
             "title": "Object Oriented Design Modeling",
@@ -140,7 +140,7 @@
         },
         {
             "title": "IDE/ICE",
-            "data": ["GDB", "Eclipse", "IntelliJ", "Trace32 Lauterbauch", "QNX Momenentics", "MSFT Visual Studio", "Platform Builder", "ARM Development Suite", "Rational Rose RT", "CodeWarrior"]
+            "data": ["IntelliJ", "Eclipse", "GDB", "Trace32 Lauterbauch", "QNX Momenentics", "MSFT Visual Studio", "Platform Builder", "ARM Development Suite", "Rational Rose RT", "CodeWarrior"]
         },
         {
             "title": "Web Frameworks",
@@ -221,14 +221,14 @@
     "patents": [
         {
             "title": "Interference Reduction in Wireless Communications",
-            "appnum": "13/887,039",
-            "date": "May 3, 2013",
-            "status": "Filed"
+            "appnum": "9,357,404",
+            "date": "May 2016",
+            "status": "Issued"
         },
         {
             "title": "Device Localization Based On a Learning Model",
             "appnum": "14/311,077",
-            "date": "June 20, 2014",
+            "date": "June 2014",
             "status": "Filed"
         }
     ],
