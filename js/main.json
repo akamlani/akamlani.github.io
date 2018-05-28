@@ -1,6 +1,12 @@
 {
     "highlights": [
         {
+            "asset": "/assets/portfolio/techstars.png",
+            "title": "Techstars",
+            "headline": "Techstars IoT Technology Advisor",
+            "descripton": "Advising several venture startups in their pilot and product offerings"
+        },
+        {
             "asset": "/assets/portfolio/nascar_trucks.jpg",
             "title": "Nascar Trucks",
             "headline": "Performance Sensor Tracking",

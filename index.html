@@ -30,21 +30,20 @@ layout: default
     <h5 class="topic-title" align="center"><strong>Professional Expertise</strong></h5>
     <div class="col-md-offset-1 col-xs-offset-1">
         <div itemprop="description">
-        <p><strong>Data Scientist | Technology Strategist | Group Innovation</strong></p>
+        <p><strong>Data Scientist | Technology Strategist | Thought Leader </strong></p>
         </div>
+        <p>Experienced Technology Advisor Practictioner specializing in Machine Learning, Deep Learning, and AI.</p>
+        <p>Industry Domain expertise encompasses Finance, IoT/M2M, Consumer Devices, and Media Broadcasting providing: 
         <ul style="color:black">
-            <li>AI, Deep Learning, Data Science/Machine Learning</li>
-            <li>Self-Driving/Autonomous Vehicles</li>
-            <li>Strategic Consulting</li>
-            <li>Research and Innovation</li>
+            <li>Strategic Technology Consulting</li>
             <li>Proof of Concepts (POC)</li>
-            <li>Systems Architecture</li>
-            <li>Open Source</li>
-            <li>RF, Wireless</li>
-            <li>Embedded Software</li>
-            <li>Software Development</li>
+            <li>Scaling from Research to Production</li>
+            <li>Research and Innovation</li>   
+            <li>Storytelling Narratives</li>
+            <li>Speaking Engagements</li>
+            <li>Training Education</li>              
         </ul>
-        <p>With a Diverse Set of Skills & Experiences...</p>
+        <p><i>With a Diverse Set of Skills & Experiences...</i></p>
     </div>
 </div>
 
@@ -209,12 +208,12 @@ layout: default
     }
 
     function parse_highlights(data) {
-        var params = {'dimensions': 'highlights', 'show_carousel_data': 0, 'show_data': 1}
+        var params   = {'dimensions': 'highlights', 'show_carousel_data': 0, 'show_data': 1}
         var id_field = "highlights-carousel";
         $("#" + id_field).carousel("pause").removeData();
         $.each(data, function (i, obj) {
             attach_carousel_links(id_field, '#card_id_highlights', i);
-            attach_carousel_data(id_field, '#card_inner_highlights', obj, params);
+            attach_carousel_data(id_field,  '#card_inner_highlights', obj, params);
         });
         $('#card_inner_highlights .item').first().addClass('active');
         $('#card_id_highlights > li').first().addClass('active');

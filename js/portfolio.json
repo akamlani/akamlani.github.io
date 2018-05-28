@@ -4,8 +4,8 @@
             "employer": "J.P. Morgan Chase",
             "title": "Data Scientist",
             "group": "Digital Intelligence",
-            "location": "New York city, NY. US",
-            "dates": "Nov 2017-Present",
+            "location": "Manhattan, NY. US",
+            "dates": "November 2017-Present",
             "url": "https://www.jpmorganchase.com/",
             "headline": "Driving Business Decisions via Scalable Intelligence",
             "asset": "/assets/portfolio/jpmc.png"
@@ -13,7 +13,7 @@
         {
             "employer": "Skymind",
             "title": "Deep Learning Consultant/Advisor",
-            "group": "Training/Field Engineering",
+            "group": "Field Engineering, Training Education",
             "location": "San Francisco, CA. US",
             "dates": "May 2017-Present",
             "url": "https://skymind.ai",
@@ -24,10 +24,10 @@
             "employer": "Techstars",
             "title": "Technologist in Residence",
             "group": "IoT Division",
-            "location": "New York City, NY. US",
+            "location": "Manhattan, NY. US",
             "dates": "July 2017-October 2017",
             "url": "http://www.techstars.com/programs/iot-program/",
-            "headline": "Advise Accelerator Companies in delivering a Robust & Scalable Solution",
+            "headline": "Advise Accelerator Companies in delivering a Robust & Scalable Product Offering",
             "asset": "/assets/portfolio/techstars.png"
         },
         {
@@ -35,19 +35,19 @@
             "title": "Data Science & Engineering Consultant",
             "group": "Product",
             "location": "San Mateo, CA. US",
-            "dates": "March 2017-Present",
-            "url": "https://meetotto.com/",
+            "dates": "March 2017-June 2017",
+            "url": "https://www.crunchbase.com/organization/tyto-life",
             "headline": "Detection and Localization per Access Control for the Connected Home",
-            "asset": "https://pbs.twimg.com/profile_images/900406648811814913/v4jSYzXY_400x400.jpg"
+            "asset": "/assets/portfolio/otto.jpg"
         },
         {
             "employer": "Inria Research Institute",
             "title": "Research Assistant",
             "group": "STARS (Spatio-Temporal Activity Recognition Systems)",
-            "location": "Sophia Antipolis,France",
-            "dates": "Jan 2016-April 2016",
+            "location": "Sophia Antipolis, France",
+            "dates": "January 2016-April 2016",
             "url": "https://team.inria.fr/stars/",
-            "headline": "Improve computer vision semantic scene interpretation per preventive care and diagnosis for the elderly",
+            "headline": "Enhancing Computer Vision semantic Scene Interpretation for the Elderly",
             "asset": "https://team.inria.fr/stars/files/2011/12/stars.jpg"
         },
         {
@@ -55,9 +55,9 @@
             "title": "Software Expert",
             "group": "Group Innovation",
             "location": "San Francisco, CA. US",
-            "dates": "2012-May 2015",
+            "dates": "September 2012-May 2015",
             "url": "https://www.nagra.com/",
-            "headline": "Technologist within R&D Innovation Group responsible for future Technology and Application Advancement. Research and projects typically focused 3-5 years ahead.",
+            "headline": "Think Tank R&D Technology Innovation and Application Advancement",
             "asset": "https://www.nagra.com/sites/default/themes/nagra/images/global/kudelski-group@2x.jpg"
         },
         {
@@ -65,9 +65,9 @@
             "title": "Embedded Software Consultant",
             "group": "Office of CTO",
             "location": "Mountain View, CA. US",
-            "dates": "2011-2012",
+            "dates": "October 2011-April 2012",
             "url": "http://www.sportvision.com/",
-            "headline": "Embedded Software Consultant for Motorsports (NASCAR Trucks) division, reporting to office of CTO",
+            "headline": "Special Projects Software Consultant for Motorsports (NASCAR Trucks) Division",
             "asset": "/assets/portfolio/sportvision.jpg"
         },
         {
@@ -75,7 +75,7 @@
             "title": "Principal Engineer",
             "group": "Systems Engineering",
             "location": "Sunnyvale, CA. US",
-            "dates": "2011-2011",
+            "dates": "February 2011-October 2011",  
             "url": "http://www.broadcom.com/",
             "headline": "Systems Software Architecture for WiMAX and LTE software reference designs and customer platforms",
             "asset": "/assets/portfolio/broadcom.png"
@@ -85,7 +85,7 @@
             "title": "Staff Engineer",
             "group": "Computing and Consumer Division",
             "location": "Raleigh, NC. US",
-            "dates": "2007-2010",
+            "dates": "August 2007-January 2010",
             "url": "http://www.qualcomm.com/",
             "headline": "BSP Reference Design Software for QSD8650/8250 SnapDragon ARM Cortex architecture processors",
             "asset": "/assets/portfolio/qualcomm.png"
@@ -95,7 +95,7 @@
             "title": "Principal Engineer",
             "group": "Product and Services Division",
             "location": "Morrisville, NC. US",
-            "dates": "2003-2007",
+            "dates": "July 2003-August 2007",
             "url": "https://www.crunchbase.com/organization/taproot-systems",
             "headline": "Technical Lead and Architecture of Wi-Fi, BSP Reference Designs, and Customer Designs",
             "asset": "/assets/portfolio/taprootsystems.jpg"
@@ -105,8 +105,8 @@
             "title": "Senior Engineer",
             "group": "Platforms Division",
             "location": "Suwanee, GA. US",
-            "dates": "2000-2003",
-            "url": "",
+            "dates": "April 2000-July 2003",
+            "url": "https://www.panasonic.com/en",
             "headline": "Smartphone and Feature Phone embedded software design",
             "asset": "/assets/portfolio/panasonic.png"
         },
@@ -115,11 +115,83 @@
             "title": "RF Performance Engineer",
             "group": "Systems Performance",
             "location": "Plymouth Meeting, PA. US",
-            "dates": "1999-2000",
+            "dates": "September 1999-February 2000",
             "url": "http://www.verizon.com",
-            "headline": "Wireless network performance for base stations in the Northeastern region",
+            "headline": "Wireless Carrier Network Performance for base stations in the Northeastern region",
             "asset": "/assets/portfolio/verizon.png"
         }
+    ],
+    "patents": [
+        {
+            "title": "Interference Reduction in Wireless Communications",
+            "appnum": "9,357,404",
+            "dates": "May 2016",
+            "status": "Issued",
+            "asset": "/assets/portfolio/uspto_logo.png"
+        },
+        {
+            "title": "Device Localization Based On a Learning Model",
+            "appnum": "14/311,077",
+            "dates": "June 2014",
+            "status": "Filed",
+            "asset": "/assets/portfolio/uspto_logo.png"
+        }
+    ],
+    "education": [
+        {
+            "name": "Udacity",
+            "url": "http://udacity.com",
+            "location": "Online",
+            "major": "Self-Driving Cars (SDC)",
+            "type": "Nanodegree Program",
+            "dates": "Nov 2016-April 2017",
+            "asset": "/assets/portfolio/udacity.svg"
+        },
+        {
+            "name": "Galvanize",
+            "url": "https://www.galvanize.com",
+            "location": "San Francisco, CA.",
+            "major": "Data Science Bootcamp",
+            "type": "Certification",
+            "dates": "June 2017-August 2017",
+            "asset": "/assets/portfolio/galvanize.png"
+        },
+        {
+            "name": "Data ScienceTech Institute (DSTI)",
+            "url": "https://www.datasciencetech.institute",
+            "location": "Paris, France",
+            "major": "Data Science",
+            "type":  "Masters (Select Courses)",
+            "dates": "October 2015-May 2016",
+            "asset": "/assets/portfolio/dsti.png"
+        },
+        {
+            "name": "General Assembly",
+            "url": "http://generalassemb.ly/education/data-science",
+            "location": "San Francisco, CA.",
+            "major": "Data Science",
+            "type": "Certification Part-Time Course",
+            "dates": "October 2014-December 2014",
+            "asset": "/assets/portfolio/generalassembly.png"
+        },
+        {
+            "name": "Lehigh University",
+            "url":  "http://www.lehigh.edu",
+            "location": "Bethlehem, PA.",
+            "major": "Electrical Engineering (EE)",
+            "type": "Bachelors of Science (B.S)",
+            "dates": "August 1995-June 1999",
+            "asset": "/assets/portfolio/lehigh.png"
+        }
+    ],
+    "events": [
+        {
+            "name": "Round The World Travel Expedition",
+            "title": "Globe Trekker",
+            "dates": "January 2010-September 2010",
+            "asset": "/assets/portfolio/globe.png" 
+        }
+
     ],
     "skills": [
         {
@@ -212,26 +284,6 @@
             "headline": "Battery Discharge Analyis w/Electric Imp and Keen.io Service"
         }
     ],
-    "research": [
-        {
-            "title": "User Innovation",
-            "headline": "Improving upon Painpoints experienced by 'users'"
-        }
-    ],
-    "patents": [
-        {
-            "title": "Interference Reduction in Wireless Communications",
-            "appnum": "9,357,404",
-            "date": "May 2016",
-            "status": "Issued"
-        },
-        {
-            "title": "Device Localization Based On a Learning Model",
-            "appnum": "14/311,077",
-            "date": "June 2014",
-            "status": "Filed"
-        }
-    ],
     "kickstarter": [
         {
             "title": "The Leaders Guide by Eric Ries",
@@ -317,11 +369,5 @@
             "url": "https://www.qualcomm.com/products/snapdragon",
             "asset": "/assets/portfolio/qualcomm_snapdragon.png"
         }
-    ],
-    "visualizations": [
-    ],
-    "case studies": [
-    ],
-    "research": [
     ]
 }

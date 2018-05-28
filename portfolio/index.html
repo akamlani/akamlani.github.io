@@ -3,204 +3,506 @@ layout: default
 ---
 
 
+<div class="row" style="margin-top:2.5%">
+  <!--svg timeline axis -->
+  <div class="col-xs-11">
+    <div id="portfolio-timeline"></div>
+  </div>
+</div>
+
+<div class="row" id="resume-selection">
+  <!-- prompt for resume -->
+  <div class="col-xs-10 col-xs-push-1" style="font-size:16px;" id="portfolio-resume-prompt">
+    <span class="glyphicon glyphicon-console">portfolio &nbsp;</span>
+    <span style="font-style:italic">For more in depth details, please view my
+      <a href="/docs/ResumeAKamlani.pdf">Resume </a>in PDF format
+    </span>
+  </div>
+</div>
 
 <div class="row" style="margin-top:2.5%">
-    <div class="col-xs-10 col-xs-push-1" id="portfolio-grid"></div>
-</div>
-<div class="row" style="margin-top:2.5%" id="resume-selection">
-    <div class="col-xs-10 col-xs-push-1" style="font-size:16px;" id="resume-details">
-        <span class="glyphicon glyphicon-console">portfolio &nbsp;</span>
-        <span style="font-style:italic">For more in depth details, please view my
-        <a href="/docs/ResumeAKamlani.pdf">Resume </a>in PDF format
-        </span>
-    </div>
-</div>
-<div class="row" style="margin-top:2%" id="portfolio-selection">
-    <div class="col-xs-7 col-xs-push-1" id="portfolio-details"></div>
-    <div class="col-xs-3 col-xs-push-1" id="portfolio-logo"></div>
+  <!-- insert relevant information regarding mouseover section -->
+  <div class="col-xs-8 col-xs-push-1" id="portfolio-expanded">
+    <h4><i>Experience</i></h4>
+    <div class="col-xs-12" id="portfolio-details"></div>
+    
+  </div>
 </div>
 
 
 <script language="javascript" type="text/javascript">
-var user_data;
-//Margins: http://bl.ocks.org/mbostock/3019563
-var w = 960, h = 250;
-//var margin = {top: 0, right: 0, bottom: 0, left: 0};
-//var width  = w - margin.left - margin.right;
-//var height = h - margin.top - margin.bottom;
-var color_maps  = d3.scale.category10();
+  $(document).ready(function() {
+    var windowWidth  = document.getElementById('portfolio-timeline').clientWidth;
+    var config = {
+      width:  windowWidth,
+      height: (960/2),
+      url: "/js/portfolio.json",
+      margin: {
+        top:    300, 
+        right:  100, 
+        bottom: 100, 
+        left:   0
+      }
+    };
+
+    //perform loading and processing
+    var svg   = create(config);
+    var graph = graphCreate(config, svg);
+    var ldr   = load(svg, graph);
 
 
-function create_layout(param_width, param_height) {
-    var treemap = d3.layout.treemap()
-                           .size([param_width, param_height])
-                           .sticky(true);
+    //entry point for loading data
+    function load(svg, container) {
+      d3.json(config.url).then(function(data) {
+        loadData(config, svg, graph, data);
+      });  
+    }
 
-    return treemap;
-}
+    //for resize
+    var chart  = $("#portfolio-timeline")
+        aspect = chart.width()/chart.height(),
+        container = chart.parent();
 
-function create_container(selector, param_width, param_height) {
-    var dimensions = "0 0 " + param_width + " " + param_height;
-    var container  = d3.select(selector)
-                    .append("svg:svg")
-                    //.attr("viewBox", "0 0 960 350")
-                    .attr("viewBox", dimensions)
-                    .attr("preserveAspectRatio", "xMidYMid")
-                    //.attr("preserveAspectRatio", "xMinYMin meet")
-                    .attr("id", "svg-portfolio")
-                    .attr("width",  param_width)
-                    .attr("height", param_height)
-                    //group svg elements together to transform whole group of shapes
-                    .append("g")
-                    //define new coordinate system
-                    .attr("transform", "translate(.5,.5)");
-    return container;
-}
-
-function create_shape(selector, data_binding, shape_string) {
-    var shape = selector.selectAll(shape_string)
-                        .data(data_binding)
-                        .enter()
-                        .append(shape_string);
-    return shape;
-}
-
-function attach_grid_attributes(grid, shape_string, color_map) {
-    //rect attributes
-    var obj = grid
-             .append(shape_string)
-             .attr("x",        function(d){ return d.x  })
-             .attr("y",        function(d){ return d.y  })
-             .attr("width",    function(d){ return d.dx })
-             .attr("height",   function(d){ return d.dy })
-             .attr("fill",     function(d) { return d.children?null:color_map(d.parent.name) } )
-             .attr("stroke",   "white");
-    return obj;
-}
-
-function attach_attributes(shape_object, shape_string) {
-    //circle attributes
-    var obj = shape_object
-              .attr("cx",       function(d){return d.cx})
-              .attr("cy",       function(d){return d.cy})
-              .attr("r",        function(d){return d.radii})
-              .style("fill",    "lightblue");
-    return obj;
-}
+    $(window).on("resize", function() {
+        var targetWidth = container.width();
+        chart.attr("width", targetWidth);
+        chart.attr("height", Math.round(targetWidth / aspect));
+    }).trigger("resize");
 
 
-function attach_style(grid, color_map) {
-    var obj = grid
-              .style("fill", function(d) { return d.children?null:color_map(d.parent.name) } );
-    return obj;
-}
+  });
 
-function attach_events(shape_object) {
-    obj = shape_object
-         .on("mouseover", function(){d3.select(this).style("fill", "green");})
-         .on("mouseout",  function(){d3.select(this).style("fill", function(d){return d[1]}) })
-         .on("click",     function(){d3.select(this).style("fill", "blue"); });
-    return obj;
-}
 
-function create_portfolio(method_id, name, params) {
-    var heading_data = document.createElement("h4");
-    heading_data.setAttribute("class", "portfolio-title");
-    heading_data.innerHTML = name;
+  //create initial canvas
+  function create(cfg) {
+    var dimensions = "0 0 " + cfg.width + " " + cfg.height;
+    var svg = d3.select("#portfolio-timeline")
+        .append("svg:svg")
+        .attr("id", "svg-portfolio") 
+        .attr("viewBox", dimensions)                        //stretch to fit a given set of graphics stretch to fit particular container element 
+        .attr("preserveAspectRatio", "xMidYMid")            //if viewbox => whether or not to enforce uniform scaling (non-uniform: stretch )   
+        .attr("width",  cfg.width+cfg.margin.right)
+        .attr("height", cfg.height)
+    
+    return svg;  
+  }    
 
-    if(method_id == "split") {
-        var div_details = document.createElement("div");
-        div_details.setAttribute("class", params.classdetails);
-        div_details.setAttribute("id", "portfolio-details");
-        div_details.appendChild(heading_data);
-        var div_logo = document.createElement("div");
-        div_logo.setAttribute("class", params.classlogo);
-        div_logo.setAttribute("id", "portfolio-logo");
-        $("#portfolio-selection").append(div_details);
-        $("#portfolio-selection").append(div_logo);
+  //create outer container
+  function graphCreate(cfg, svg) {
+    //outer grouping for transalation of canvas
+    var graphContainer = svg
+          .append("g")
+          .attr("class", "graph-container")
+          .attr("transform", "translate(" + [cfg.margin.left, cfg.margin.top] + ")");
+
+    return graphContainer;
+  }
+
+  //create diameter per ticks
+  function calculateDiameter(data, x) {
+    data.forEach(function(d) {
+      d.diameter = x(d.endDateFmt) - x(d.startDateFmt);
+    });
+    data.sort(function(a,b){
+      return b.diameter - a.diameter;
+    });
+  }
+
+  //acquire path command to draw: get the dimensions of a given diamter and position 
+  function getPath(diameter, position) {
+    var radius = diameter/2;
+    var height = position * (100 + radius * 0.7);
+    return "M0,0 q "+radius+" "+height+" "+diameter+" 0 z";
+  }
+
+  //set attributes
+  function setId(data, typeId) {
+    //select appropriate default id 
+    var mostRecentStartDate = d3.max(data, function(d) { return new Date(d.startDate); });
+    data.forEach(function(d) {
+      if (typeId      === "experience")    { d.id = d.employer+"-"+d.startYear+"-"+d.endYear; }
+      else if (typeId === "patents")       { d.id = d.appnum+"-"+d.startYear; }
+      else { d.id = d.name+"-"+d.startYear+"-"+d.endYear; }
+
+      if( mostRecentStartDate.valueOf() === new Date(d.startDate).valueOf() ) {
+        d.activeDefaultId = d.id;         
+      }
+    });
+  }
+
+  //parse and normalize dates
+  function normalize(data) {
+    data.forEach(function(d) {
+      //test if range of dates present
+      if (! d.dates.includes("-") ) {
+        //for date indicator 
+        var [sMonth, sYear] = d.dates.split(" ")
+        d.startDate  = d.dates;
+        d.startMonth = sMonth, d.startYear = sYear;
+        d.startMonthNum = moment().month(d.startMonth).format("M")-1;
+        d.startDateFmt  = new Date(d.startYear, d.startMonthNum);
+      }
+      //if range of dates present 
+      else if (d.dates.includes("-")) {
+        var [start, end]    = d.dates.split("-");
+        var [sMonth, sYear] = start.split(" ")
+        var [eMonth, eYear] = end.split(" ");
+        if(end.toLowerCase().includes("present")) {
+          var date  = new Date();
+          var month = moment().format("MMM");
+          var year  = date.getFullYear();
+          eMonth = month, eYear = String(year);
+        }
+        d.startDate  = start;
+        d.endDate    = end;
+        d.startMonth = sMonth, d.startYear = sYear;
+        d.endMonth   = eMonth, d.endYear   = eYear;
+        //Date Format: 0-indexed
+        d.startMonthNum = moment().month(d.startMonth).format("M")-1;
+        d.endMonthNum   = moment().month(d.endMonth).format("M")-1;
+        d.startDateFmt  = new Date(d.startYear, d.startMonthNum);
+        d.endDateFmt    = new Date(d.endYear,   d.endMonthNum);
+      }
+    });
+  }
+ 
+  //create xAxis
+  function createXAxis(data, cfg, container, startMonth, startYear, endMonth, endYear) {
+    //create scale to be used for axis 
+    var xAxisScale = d3.scaleTime()
+              .domain([new Date(startYear, startMonth), new Date(endYear, endMonth) ])      //data to map to viewport
+              .range([20, cfg.width-20]);                                                   //viewport
+
+    //create the axis: grouping for x-axis translation of ticks and transformations
+    var xAxis = d3.axisBottom()
+                  .scale(xAxisScale)
+                  .tickFormat(d3.timeFormat("%Y")); 
+  
+    //group the axis: group elemement for axis elements and translation of coordinates on axis
+    var xAxisGroup = container.append("g")
+            .attr("class", "x axis")
+            .attr("transform", "translate(0," + 0 + ")")
+            .call(xAxis);
+ 
+    xAxisGroup.selectAll("text")
+        .style("text-anchor", "end")
+        .attr("transform", "rotate(-60)");  
+
+ 
+    return {x: xAxisScale, xAxis: xAxis, xAxisGroup: xAxisGroup};      
+  }
+
+  //set default y-axis
+  function createYAxis(cfg, svg, container) {
+    var yAxis = d3.scaleLinear()
+                  .domain([0, cfg.height])
+                  .range([cfg.height, 0]);                 
+
+    svg.append("g")
+       .attr("class", "y axis")
+       .call(yAxis);
+
+    return {y: yAxis};
+  }
+
+
+  //load the data source
+  function loadData(cfg, svg, graph, data) {
+    //format dates correctly
+    normalize(data.experience);
+    normalize(data.education);
+    normalize(data.patents);
+    normalize(data.events);
+    //configure axis time span
+    var startMonth = 0;
+    var endMonth   = new Date().getMonth();
+    var startYear  = d3.min([ d3.min(data.experience,  function(d) { return d.startYear; }),
+                              d3.min(data.education,   function(d) { return d.startYear; }) ]);
+    var endYear    = d3.max([ d3.max(data.experience,  function(d) { return d.endYear;   }),
+                              d3.max(data.education,   function(d) { return d.endYear;   }) ]);
+    var xObj       = createXAxis(data, cfg, graph, startMonth, startYear, endMonth, endYear);
+    var yObj       = createYAxis(cfg, svg, graph);
+    //set corresponding Id to reference 
+    setId(data.experience, "experience");
+    setId(data.education,  "education");
+    setId(data.patents,    "patents");
+    setId(data.events,     "events");
+    //calculate diameter for curves to render
+    calculateDiameter(data.experience, xObj.x);
+    calculateDiameter(data.education,  xObj.x);
+    calculateDiameter(data.events,     xObj.x);
+    var containerText = createTextArea(cfg, svg, data.experience);   
+
+    //attach default experience data to text area
+    //the default layout is to represent the most active experience
+    data.experience.forEach(function(d) {
+      if(d.activeDefaultId === d.id) {
+        var containerUrl = addUrl(containerText, "texturl", d.url);
+        addContent(containerUrl,  "16px",  "normal",  "normal", "translate("+[0,0] +")", "name",     d.employer);
+        addContent(containerText, "14px",  "normal",  "normal", "translate("+[0,25]+")", "title",    d.title    + " | " + d.group);       //' \u25b6 '
+        addContent(containerText, "14px",  "lighter", "italic", "translate("+[0,50]+")", "dates",    d.location + " | " + d.dates);       //' \u2666 '
+        addContent(containerText, "14px",  "lighter", "normal", "translate("+[0,75]+")", "headline", d.headline);
+        //get coordinates of midpoint of x for image asset to display
+        var midpoint = calculateTickMidpoint(xObj.x, d);
+        addAsset(graph, d.url, d.asset, midpoint, -150);
+        //set the default opacity for this current element: must like a mouseover      
+      }
+    });
+  
+    //render timeline for experience
+    renderContourContent(svg, graph, data.experience, "experience", -1, cfg.height/8, xObj.x);
+    //render timeline for education 
+    renderContourContent(svg, graph, data.education,  "education",  1,  cfg.height/8, xObj.x);
+    //render timeline for events 
+    renderContourContent(svg, graph, data.events,     "events",     1,  cfg.height/8, xObj.x);
+    //render timeline for patents
+    renderBlockContent(svg, graph,   data.patents,    "patents",    xObj.x);
+
+    //sort the experience by start date 
+    data.experience = data.experience.sort(function(a, b){
+      return d3.descending(a.endDateFmt, b.endDateFmt);
+    });
+    //render detail content 
+    renderContentLayout(data.experience);
+  }
+
+
+  //calculate midpoint relative to tick
+  function calculateTickMidpoint(x, d) {
+    //get coordinates of midpoint of x for image asset to display
+    //if we do not have an end-date: this would the location of the startDate
+    var tickStart = x(new Date("1995"));
+    var midPoint  = d.endDateFmt === undefined ? 0.0: (x(d.endDateFmt) - x(d.startDateFmt) ) / 2;
+    
+    var xTrPoint  = x(d.startDateFmt) + midPoint;
+    var offsets   = $('#portfolio-timeline').offset();
+    return xTrPoint-tickStart;
+  }
+
+  //create area for description area to attach
+  function createTextArea(cfg, container, data) {
+    //creates grouping for each experience node 
+    //.classed(className,   true)
+    return container
+             .append("g")
+             .attr("id", "textarea")
+             .classed("describe",  true)
+             .attr("fill-opacity", 1.0)
+             .attr("transform", "translate("+[cfg.width*0.1, cfg.height/16] + ")");
+  }
+
+  //load respective url 
+  function addUrl(container, id, url) {
+    return container.append("a") 
+                    .attr("id", id)
+                    .attr("xlink:href", url)
+                    .attr("cursor", "pointer")
+                    .attr("stroke", "#337ab7");
+  }
+
+  //load respective image
+  function addAsset(container, url, asset, x, y) {
+    var containerUrl = addUrl(container, "asseturl", url);
+
+    return containerUrl.append("svg:image")
+      .attr("id", "asset")
+      .attr('width',  64)
+      .attr('height', 64)
+      .attr("xlink:href", asset)
+      .attr("transform", "translate("+[x,y]+")");
+  }
+
+  //load respective text data provided
+  function addContent(container, size, weight, style, position, selector, text) {
+    return container.append('text')
+      .attr("id", selector)
+      .style("font-size",    size)
+      .style("font-weight",  weight)
+      .style("font-family",  "sans-serif") 
+      .style("font-style",   style)
+      .text(text)
+      .attr("transform",    position);
+  }
+
+  //on a transition select relative content and update the text section  
+  function showContent(svg, className, x, d) {
+    //require to know type of data we are operating on to match corresponding content 
+    var meta = {'url': d.url};
+    if (className === "education"){
+      meta['name']   = d.name;
+      meta['focus']  = d.type + ' | ' + d.major; 
+      meta['dates']  = d.location + ' | ' + d.dates;
+    }
+    else if (className === "experience") {
+      meta['name']   = d.employer;
+      meta['focus']  = d.title + ' | ' + d.group;
+      meta['dates']  = d.location + ' | ' + d.dates;
+    }
+    else if (className === "events") {
+      meta['name']   = d.name;
+      meta['focus']  = d.title;
+      meta['dates']  = d.dates;
+      meta['url']    = undefined;
+    }
+    else if (className === "patents") {
+      meta['name']   = 'Patent: ' + d.title;
+      meta['focus']  = d.appnum + ' | ' + d.status;
+      meta['dates']  = d.dates;
+      meta['url']    = undefined;
+    }
+
+    //specific handling for url representation  
+    //if url present: add at according location 
+    var containerText = svg.selectAll("#" + 'textarea');
+    svg.selectAll("#" + "texturl").remove(); 
+    svg.selectAll("#" + "name").remove();    
+    if (meta.url === undefined) {
+      addContent(containerText,  "16px",  "normal",  "normal", "translate("+[0,0] +")", "name",  meta.name);
     }
     else {
-        var method_class;
-        if ( method_id == "nologo" ) { method_class = params.classdetails; }
-        if ( method_id == "logo")  { method_class = params.classlogo; }
-        var div = document.createElement("div");
-        div.setAttribute("class", method_class);
-        div.setAttribute("id", "portfolio-details");
-        div.appendChild(heading_data);
-        $("#portfolio-selection").append(div);
+      var containerUrl  = addUrl(containerText, "texturl", meta.url);
+      addContent(containerUrl,  "16px",  "normal",  "normal", "translate("+[0,0] +")", "name",  meta.name);
     }
 
+    svg.selectAll("#" + "title")
+       .transition()
+       .text(meta.focus);   
+    svg.selectAll("#" + "dates")
+       .transition()
+       .text(meta.dates);
+    svg.selectAll("#" + "headline")
+       .transition()
+       .text(d.headline);    
+    
+    //overlay the asset much like a tooltip 
+    var midpoint = calculateTickMidpoint(x, d);
+    svg.selectAll("#asseturl")
+       .transition()
+       .attr("xlink:href", d.url);
 
-}
+    svg.selectAll("#" + "asset")
+       .transition()
+       .attr("xlink:href", d.asset)
+       .attr("transform", "translate("+[midpoint,-150]+")");
+  }
 
-function create_split_layout(name, data) {
-    var params = {'classdetails': "col-sm-6 col-xs-push-1", 'classlogo': "col-sm-3 col-sm-push-1 col-xs-push-3"};
-    create_portfolio("split", name, params);
-    var ul = document.createElement("ul");
-    $.each(data, function(i, item) {
-        var li = document.createElement("li");
-        li.setAttribute('style', 'font-style:italic;font-size:18px');
-        li.innerHTML = item.title;
-        var par = document.createElement("p");
-        par.setAttribute('style', 'font-size:16px');
-        par.innerHTML = "Application #: " + item.appnum + "<br>" +
-                        "Date: " + item.date + "<br>" +
-                        "Status: " + item.status;
-        li.appendChild(par);
-        ul.appendChild(li);
-    });
-    $("#portfolio-details").append(ul);
-    var img = document.createElement("img");
-    img.setAttribute('src', "/assets/portfolio/uspto_logo.png");
-    img.setAttribute('title', "USPTO");
-    img.setAttribute('class', "img-responsive patent-icons");
-    $("#portfolio-logo").append(img);
-}
+  //render block content 
+  function renderBlockContent(svg, container, dataSrc, className, x) {
+    var rectangle = container
+      .selectAll("rect." + className)
+      .data(dataSrc)
+      .enter()
+      .append("rect")
+        .attr("stroke-width", 2)
+        .attr("fill", "teal")
+        .attr("x", function(d) {
+          return x(d.startDateFmt);
+        })
+        .attr("y", 0)
+        .attr("width", 10)
+        .attr("height", 75)
+        .on('mouseover', function(d){
+            container.selectAll("path.item").transition()
+                .attr("stroke-width", "1")
+                .attr("fill-opacity", .2);
 
-function create_img_layout(name, data, icon_class) {
-    var params = {'classlogo': "col-xs-10 col-xs-push-1"};
-    create_portfolio("logo", name, params);
-    $.each(data, function(i, item) {
-        var img = document.createElement("img");
-        img.setAttribute("class", icon_class);
-        img.setAttribute("src", item.asset);
-        img.setAttribute("title", item.title);
-        var a = document.createElement("a");
-        a.setAttribute("href", item.url);
-        a.appendChild(img);
-        $("#portfolio-details").append(a);
-    });
-}
+            container.selectAll("rect").transition()
+              .attr("stroke-width", "1")
+              .attr("fill-opacity", .2);
 
-function create_txt_layout(name, data) {
-    var params = {'classdetails': "col-xs-10 col-xs-push-1"};
-    create_portfolio("nologo", name, params);
-    var ul = document.createElement("ul");
-    $.each(data, function(i, item) {
-        var li = document.createElement("li");
-        li.setAttribute('style', 'font-style:italic;font-size:18px');
-        if(item.url) {
-            var a = document.createElement("a");
-            a.setAttribute("href", item.url);
-            a.innerHTML = item.title;
-            li.appendChild(a);
-        }
-        else { li.innerHTML = item.title; }
-        var par = document.createElement("p");
-        par.setAttribute('style', 'font-size:16px');
-        if(item.data) { par.innerHTML = item.data.join(', '); }
-        else { par.innerHTML = item.headline; }
-        li.appendChild(par);
-        ul.appendChild(li);
-    });
-    $("#portfolio-details").append(ul);
-}
+            d3.select(this).transition()
+              .attr("stroke-width", "2")
+              .attr("fill-opacity", 1);
+            //add text below bar of patent | tooltip
+            showContent(svg, className, x, d);
+        })
+        .on('mouseout', function(d){
+            container 
+              .selectAll("rect")
+              .transition()
+              .attr("stroke-width", "2")
+              .attr("fill-opacity", 0.5);
+
+            container 
+              .selectAll("path.item")
+              .transition()
+              .attr("stroke-width", "2")
+              .attr("fill-opacity", 0.5);
+        });
+  }
+
+  //render individual data source curves 
+  function renderContourContent(svg, container, dataSrc, className, position, topPosition, x) {
+    var color = d3.scaleOrdinal(d3.schemeCategory10);
+    container
+        .selectAll("path."+className)                                                     
+        .data(dataSrc)
+        .enter()
+          .append("path")
+            .classed(className, true)
+            .classed('item',    true)
+            .classed("link",    true)            
+            .attr("id", function(d) {
+              return d.id;
+            })
+            .attr("fill-opacity", 0.6) 
+            .attr("fill",   function (d, i) {
+              return color(i); 
+            })                                                                            
+            .attr("stroke", "#AAAAAA")            
+            .attr("transform", function(d, i) {
+              return "translate(" + [x(d.startDateFmt),  0] + ")";
+            })
+            .attr("d", function(d, i) {
+              //Path element: 
+              //M(Move to: x,y) | Q | A | Z
+              //L(Line: x, y):  from current to new psotion 
+              //H(Line: h):     draw horizontal line
+              //V(Line: v):     draw vertical line
+              //Z(Close Path):  straight line from current position to first point of path 
+              //C(Cubic Curve): C x1 y1, x2 y2 (start -> end control points)
+              //Q(Quadratic Curve): Q x1 y1, x y
+              //S(Shortcut on Cubic Curve)
+              //T(Shortcut on Quadratic Curve)
+              //A(arcs):        A rx ry x-axis-rotation large-arc-flag sweep-flag x y 
+              return getPath(d.diameter, position);
+            })
+            .on('mouseover', function(d){
+              container.selectAll("rect").transition()
+                .attr("stroke-width", "1")
+                .attr("fill-opacity", .2);
+
+              container.selectAll("path.item").transition()
+                .attr("stroke-width", "1")
+                .attr("fill-opacity", .2);
+    
+              d3.select(this).transition()
+                .attr("stroke-width", "2")
+                .attr("fill-opacity", 1);
+              
+              //show timeline content 
+              showContent(svg, className, x, d);
+            })
+            .on('mouseout', function(d){
+              container 
+                .selectAll("rect")
+                .transition()
+                .attr("stroke-width", "2")
+                .attr("fill-opacity", 0.5);
+
+              container 
+                .selectAll("path.item")
+                .transition()
+                .attr("stroke-width", "2")
+                .attr("fill-opacity", 0.5);
+            });
+
+  }
 
 
-function create_experience_layout(name, data) {
-    var params = {'classdetails': "col-xs-8 col-xs-push-1"};
-    create_portfolio("nologo", name, params);
-    $.each(data, function(i, item) {
+  //render experience content
+  function renderContentLayout(dataSrc) {
+    $.each(dataSrc, function(i, item) {
         var div_media = document.createElement("div");
         div_media.setAttribute("class", "media");
         var div_icon = document.createElement("div");
@@ -229,7 +531,7 @@ function create_experience_layout(name, data) {
         var par = document.createElement("p");
         par.setAttribute('style', 'font-size:16px');
         par.innerHTML = item.location + ' &diams; ' + item.dates + "<br>" +
-                        item.title + ' &dash; ' + item.group + "<br>" +
+                        item.title    + ' &dash; '  + item.group + "<br>" +
                         item.headline;
         div_text.appendChild(body_link);
         div_text.appendChild(par);
@@ -237,82 +539,11 @@ function create_experience_layout(name, data) {
         $("#portfolio-details").append(div_media);
     });
 
-}
-
-$(document).ready(function() {
-    //$.getJSON("/js/portfolio.json", function (portfolio) {
-    //    user_data = portfolio;
-    //});
-    //load portfolio data: perform snchronousrequest to get portfolio data
-    $.ajax({
-          dataType: "json",
-          url: "/js/portfolio.json",
-          async: false,
-          success: function (response) {
-            user_data = response;
-        }
-    });
-    //create and manage tiles
-    d3.json("/js/tiles.json", function (data) {
-        var canvas  = create_container('#portfolio-grid', w, h);
-        var treemap = create_layout(w, h);
-        var nodes = treemap.nodes(data);
-        var cells = canvas.selectAll(".cell")
-                          .data(nodes)
-                          .enter()
-                          .append("g")
-                          .attr("class", "cell");
-
-        attach_grid_attributes(cells, "rect", color_maps);
-        cells.append("text")
-           .attr("x", function(d){ return d.x + d.dx /2 })
-           .attr("y", function(d){ return d.y + d.dy /2 })
-           .attr("text-anchor", "middle")
-           .text(function(d){ return d.children?null:d.name })
-           .style("font-size", "16px")
-           .style("font-style", "italic")
-           .style("fill", "white");
-           //.style("fill", d3.rgb(103, 186, 175));
-
-        //for initial view: show Experience (this will be cleared on first click)
-        $("#portfolio-selection").empty();
-        create_experience_layout("Experience", user_data.experience);
-
-        d3.selectAll(".cell").on("mouseover", function(d) {
-            $(".cell").stop().fadeTo(300, 0.2);
-            $(this).stop().fadeTo(0, 1.0);
-        });
-        d3.selectAll(".cell").on("mouseout", function(d) {
-            $(".cell").stop().fadeTo("fast", 1.0);
-        });
-        d3.selectAll(".cell").on("click", function(d) {
-            $("#portfolio-selection").empty();
-            if (d.name == "Patents") { create_split_layout(d.name, user_data.patents); }
-            else if (d.name == "Platforms") {create_img_layout(d.name, user_data.platforms, "platform-icons"); }
-            else if (d.name == "Technologies") {create_img_layout(d.name, user_data.technologies, "technology-icons"); }
-            else if (d.name == "Backed Projects") {create_img_layout(d.name, user_data.kickstarter, "funding-icons"); }
-            else if (d.name == "Skills") {create_txt_layout(d.name, user_data.skills); }
-            else if (d.name == "Projects") {create_txt_layout(d.name, user_data.projects); }
-            else if (d.name == "Experience") {create_experience_layout(d.name, user_data.experience); }
-
-            //automatic scroll
-            $('html, body').animate( { scrollTop: $("#portfolio-selection").offset().top }, 1000);
+  }
+  
 
 
-        });
 
-        var chart = $("#svg-portfolio")
-            aspect = chart.width()/chart.height(),
-            container = chart.parent();
 
-        $(window).on("resize", function() {
-            var targetWidth = container.width();
-            chart.attr("width", targetWidth);
-            chart.attr("height", Math.round(targetWidth / aspect));
-        }).trigger("resize");
-
-    });
-
-});
 
 </script>
