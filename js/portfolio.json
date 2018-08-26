@@ -1,14 +1,25 @@
 {
     "experience": [
         {
-            "employer": "J.P. Morgan Chase",
-            "title": "Data Scientist",
-            "group": "Digital Intelligence",
+            "employer": "ThoughtWorks",
+            "title": "Principal Data Scientist",
+            "type":  "FT",
+            "group": "Client Engagements",
             "location": "Manhattan, NY. US",
-            "dates": "November 2017-Present",
-            "url": "https://www.jpmorganchase.com/",
-            "headline": "Driving Business Decisions via Scalable Intelligence",
-            "asset": "/assets/portfolio/jpmc.png"
+            "dates": "August 2018-Present",
+            "url": "https://www.thoughtworks.com/",
+            "headline": "Augmenting and Empowering Intelligence",
+            "asset": "/assets/portfolio/thoughtworks.png"
+        },
+        {
+            "employer": "Major League Baseball Advanced Media (MLBAM)",
+            "title": "Computer Vision Consultant/Advisor",
+            "group": "Research Division",
+            "location": "Manhattan, NY. US",
+            "dates": "August 2018-Present",
+            "url": "https://www.mlb.com/",
+            "headline": "Driving Data-Driven Insights for tracking a complete play",
+            "asset": "/assets/portfolio/mlbam.png"
         },
         {
             "employer": "Skymind",
@@ -19,6 +30,16 @@
             "url": "https://skymind.ai",
             "headline": "Feasilbity Studies, PoCs, Training Workshops",
             "asset": "/assets/portfolio/skymind.png"
+        },
+        {
+            "employer": "J.P. Morgan Chase",
+            "title": "Data Scientist",
+            "group": "Digital Intelligence",
+            "location": "Manhattan, NY. US",
+            "dates": "November 2017-August 2018",
+            "url": "https://www.jpmorganchase.com/",
+            "headline": "Driving Business Decisions via Scalable Intelligence",
+            "asset": "/assets/portfolio/jpmc.png"
         },
         {
             "employer": "Techstars",

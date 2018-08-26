@@ -125,7 +125,9 @@ layout: default
       else { d.id = d.name+"-"+d.startYear+"-"+d.endYear; }
 
       if( mostRecentStartDate.valueOf() === new Date(d.startDate).valueOf() ) {
-        d.activeDefaultId = d.id;         
+        if (d.type == "FT") {
+          d.activeDefaultId = d.id;    
+        }
       }
     });
   }
