@@ -6,20 +6,10 @@
             "type":  "FT",
             "group": "Client Engagements",
             "location": "Manhattan, NY. US",
-            "dates": "August 2018-Present",
+            "dates": "September 2018-Present",
             "url": "https://www.thoughtworks.com/",
             "headline": "Augmenting and Empowering Intelligence",
             "asset": "/assets/portfolio/thoughtworks.png"
-        },
-        {
-            "employer": "Major League Baseball Advanced Media (MLBAM)",
-            "title": "Computer Vision Consultant/Advisor",
-            "group": "Research Division",
-            "location": "Manhattan, NY. US",
-            "dates": "August 2018-Present",
-            "url": "https://www.mlb.com/",
-            "headline": "Driving Data-Driven Insights for tracking a complete play",
-            "asset": "/assets/portfolio/mlbam.png"
         },
         {
             "employer": "Skymind",
