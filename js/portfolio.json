@@ -4,7 +4,7 @@
             "employer": "ThoughtWorks",
             "title": "Principal Data Scientist",
             "type":  "FT",
-            "group": "Client Engagements",
+            "group": "Professional Services",
             "location": "Manhattan, NY. US",
             "dates": "September 2018-Janurary 2020",
             "url": "https://www.thoughtworks.com/",
@@ -12,13 +12,13 @@
             "asset": "/assets/portfolio/thoughtworks.png"
         },
         {
-            "employer": "Skymind",
-            "title": "Deep Learning Consultant/Advisor",
-            "group": "Field Engineering, Training Education",
+            "employer": "Pathmind (formerly Skymind)",
+            "title": "Deep Learning Engineer (Consultant)",
+            "group": "Solutions Architecture",
             "location": "San Francisco, CA. US",
             "dates": "May 2017-October 2019",
-            "url": "https://skymind.ai",
-            "headline": "Feasilbity Studies, PoCs, Training Workshops",
+            "url": "https://skymind.com",
+            "headline": "Deep Learning for the Enterprise",
             "asset": "/assets/portfolio/skymind.png"
         },
         {
