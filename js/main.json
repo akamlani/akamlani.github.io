@@ -17,18 +17,6 @@
             "title": "Qualcomm SnapDragon",
             "headline": "Reference Designs for Smartphones",
             "description": "Reference Designs for Smartphones"
-        },
-        {
-            "asset": "/assets/portfolio/wifi_alliance.png",
-            "title": "Wi-Fi Alliance",
-            "headline": "Wi-Fi Stack for Smartphones",
-            "description": "Wi-Fi Stack for Smartphones"
-        },
-        {
-            "asset": "/assets/portfolio/rfid_alliance.jpg",
-            "title": "Next Gen UHF RFID",
-            "headline": "POC Low Cost Long Range RFID",
-            "description": "Achieving Active RFID range with a BAP RFID at a minimized cost"
         }
     ],
 
