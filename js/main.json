@@ -41,6 +41,11 @@
 
     "books": [
         {
+            "title": "Stories that Stick",
+            "url": "https://www.amazon.com/Stories-That-Stick-Storytelling-Captivate-ebook/dp/B07KF2328Z",
+            "asset": "https://m.media-amazon.com/images/I/41pyozoWtNL.jpg"
+        },
+        {
             "title": "Abundance",
             "url": "http://www.amazon.com/Abundance-Future-Better-Than-Think/dp/1451614217/",
             "asset": "http://ecx.images-amazon.com/images/I/51wCZoVxdSL.jpg"
@@ -84,11 +89,6 @@
             "title": "The Signal and the Noise",
             "url": "http://www.amazon.com/The-Signal-Noise-Many-Predictions/dp/159420411X",
             "asset": "http://ecx.images-amazon.com/images/I/51S-UVpM0RL.jpg"
-        },
-        {
-            "title": "Python for Data Analysis",
-            "url": "http://www.amazon.com/Python-Data-Analysis-Wrangling-IPython/dp/1449319793",
-            "asset": "http://ecx.images-amazon.com/images/I/51smfdODNfL.jpg"
         },
         {
             "title": "Steve Jobs",
