@@ -1,6 +1,17 @@
 {
     "experience": [
         {
+            "employer": "IEEE Standards Association",
+            "title": "Committee Member",
+            "type":  "Committee",
+            "group": "IEEE Ethics of Autonomous and Intelligent Systems (A/IS)",
+            "location": "Global",
+            "dates": "October 2020-Present",
+            "url": "https://ethicsinaction.ieee.org/",
+            "headline": "AI Product strategy in launching the IEEE AI Experts two-sided marketplace network",
+            "asset": "/assets/portfolio/ieee.jpg"
+        },
+        {
             "employer": "ThoughtWorks",
             "title": "Principal Data Scientist",
             "type":  "FT",

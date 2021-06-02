@@ -1,6 +1,18 @@
 {
     "highlights": [
         {
+            "asset": "/assets/portfolio/ieee.jpg",
+            "title": "IEEE Standard Association (S/A)",
+            "headline": "Committee Member for Experts Network",
+            "descripton": "IEEE Ethics of Autonomous and Intelligent Systems (A/IS)"
+        },
+        {
+            "asset": "/assets/portfolio/rutgers.jpg",
+            "title": "Rutgers Center for Innovation Edcuation",
+            "headline": "Advisory Corporate Board Member, Big Data Strategy",
+            "descripton": "Adjunct Professor and Advisory Board Member for Big Data Strategy Program"
+        },
+        {
             "asset": "/assets/portfolio/techstars.png",
             "title": "Techstars",
             "headline": "Techstars IoT Technology Advisor",
@@ -19,7 +31,6 @@
             "description": "Reference Designs for Smartphones"
         }
     ],
-
     "coursework": {
         "courses": [
             {"title": "Design Thinking Lab"},
@@ -44,6 +55,16 @@
             "title": "Stories that Stick",
             "url": "https://www.amazon.com/Stories-That-Stick-Storytelling-Captivate-ebook/dp/B07KF2328Z",
             "asset": "https://m.media-amazon.com/images/I/41pyozoWtNL.jpg"
+        },
+        {
+            "title": "The Book of Why",
+            "url": "https://www.amazon.com/Book-Why-Science-Cause-Effect-ebook/dp/B075CR9QBJ/",
+            "asset": "https://m.media-amazon.com/images/I/41qPCkft9JL.jpg"
+        },
+        {
+            "title": "Thinking Fast and Slow",
+            "url": "https://www.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman-ebook/dp/B00555X8O",
+            "asset": "https://m.media-amazon.com/images/I/41shZGS-G+L.jpg"
         },
         {
             "title": "Abundance",
@@ -84,11 +105,6 @@
             "title": "A Whole New Mind",
             "url": "http://www.amazon.com/Whole-New-Mind-Right-Brainers-Future/dp/1594481717",
             "asset": "http://ecx.images-amazon.com/images/I/510jyMCbgIL.jpg"
-        },
-        {
-            "title": "The Signal and the Noise",
-            "url": "http://www.amazon.com/The-Signal-Noise-Many-Predictions/dp/159420411X",
-            "asset": "http://ecx.images-amazon.com/images/I/51S-UVpM0RL.jpg"
         },
         {
             "title": "Steve Jobs",
