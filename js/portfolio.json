@@ -14,12 +14,11 @@
         {
             "employer": "ThoughtWorks",
             "title": "Principal Data Scientist",
-            "type":  "FT",
             "group": "Professional Services",
             "location": "Manhattan, NY. US",
             "dates": "September 2018-January 2020",
             "url": "https://www.thoughtworks.com/",
-            "headline": "Augmenting and Empowering Intelligence",
+            "headline": "Augmenting and Empowering Machine Intelligence and Infrastructure",
             "asset": "/assets/portfolio/thoughtworks.png"
         },
         {
@@ -28,8 +27,8 @@
             "group": "Solutions Architecture",
             "location": "San Francisco, CA. US",
             "dates": "May 2017-October 2019",
-            "url": "https://skymind.com",
-            "headline": "Deep Learning for the Enterprise",
+            "url": "https://pathmind.com",
+            "headline": "Deep Learning for the Enterprise + Deep Reinforcement Learning (DRL) SaaS",
             "asset": "/assets/portfolio/skymind.png"
         },
         {
@@ -148,27 +147,18 @@
             "title": "Interference Reduction in Wireless Communications",
             "appnum": "9,357,404",
             "dates": "May 2016",
-            "status": "Issued",
+            "status": "Patent Issued",
             "asset": "/assets/portfolio/uspto_logo.png"
         },
         {
             "title": "Device Localization Based On a Learning Model",
             "appnum": "14/311,077",
-            "dates": "June 2014",
-            "status": "Filed",
+            "dates": "June 2017",
+            "status": "Patent Issued",
             "asset": "/assets/portfolio/uspto_logo.png"
         }
     ],
     "education": [
-        {
-            "name": "Udacity",
-            "url": "http://udacity.com",
-            "location": "Online",
-            "major": "Self-Driving Cars (SDC)",
-            "type": "Nanodegree Program",
-            "dates": "November 2016-April 2017",
-            "asset": "/assets/portfolio/udacity.svg"
-        },
         {
             "name": "Galvanize",
             "url": "https://www.galvanize.com",
@@ -186,15 +176,6 @@
             "type":  "Masters (Select Courses)",
             "dates": "October 2015-May 2016",
             "asset": "/assets/portfolio/dsti.png"
-        },
-        {
-            "name": "General Assembly",
-            "url": "http://generalassemb.ly/education/data-science",
-            "location": "San Francisco, CA.",
-            "major": "Data Science",
-            "type": "Certification Part-Time Course",
-            "dates": "October 2014-December 2014",
-            "asset": "/assets/portfolio/generalassembly.png"
         },
         {
             "name": "Lehigh University",

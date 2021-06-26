@@ -125,9 +125,7 @@ layout: default
       else { d.id = d.name+"-"+d.startYear+"-"+d.endYear; }
 
       if( mostRecentStartDate.valueOf() === new Date(d.startDate).valueOf() ) {
-        if (d.type == "FT") {
-          d.activeDefaultId = d.id;    
-        }
+        d.activeDefaultId = d.id;    
       }
     });
   }
@@ -234,7 +232,6 @@ layout: default
     calculateDiameter(data.education,  xObj.x);
     calculateDiameter(data.events,     xObj.x);
     var containerText = createTextArea(cfg, svg, data.experience);   
-
     //attach default experience data to text area
     //the default layout is to represent the most active experience
     data.experience.forEach(function(d) {
@@ -247,7 +244,7 @@ layout: default
         //get coordinates of midpoint of x for image asset to display
         var midpoint = calculateTickMidpoint(xObj.x, d);
         addAsset(graph, d.url, d.asset, midpoint, -150);
-        //set the default opacity for this current element: must like a mouseover      
+        //set the default opacity for this current element: must like a mouseover   
       }
     });
   
@@ -333,23 +330,23 @@ layout: default
     if (className === "education"){
       meta['name']   = d.name;
       meta['focus']  = d.type + ' | ' + d.major; 
-      meta['dates']  = d.location + ' | ' + d.dates;
+      meta['dates']  = d.location + ' | ' + d.startYear + '-' + d.endYear;
     }
     else if (className === "experience") {
       meta['name']   = d.employer;
       meta['focus']  = d.title + ' | ' + d.group;
-      meta['dates']  = d.location + ' | ' + d.dates;
+      meta['dates']  = d.location + ' | ' + d.startYear + '-' + d.endYear;
     }
     else if (className === "events") {
       meta['name']   = d.name;
       meta['focus']  = d.title;
-      meta['dates']  = d.dates;
+      meta['dates']  = d.startYear + '-' + d.endYear;
       meta['url']    = undefined;
     }
     else if (className === "patents") {
       meta['name']   = 'Patent: ' + d.title;
       meta['focus']  = d.appnum + ' | ' + d.status;
-      meta['dates']  = d.dates;
+      meta['dates']  = d.startYear;
       meta['url']    = undefined;
     }
 
@@ -375,7 +372,7 @@ layout: default
     svg.selectAll("#" + "headline")
        .transition()
        .text(d.headline);    
-    
+
     //overlay the asset much like a tooltip 
     var midpoint = calculateTickMidpoint(x, d);
     svg.selectAll("#asseturl")
@@ -481,7 +478,6 @@ layout: default
               d3.select(this).transition()
                 .attr("stroke-width", "2")
                 .attr("fill-opacity", 1);
-              
               //show timeline content 
               showContent(svg, className, x, d);
             })
@@ -532,7 +528,7 @@ layout: default
         body_link.appendChild(heading);
         var par = document.createElement("p");
         par.setAttribute('style', 'font-size:16px');
-        par.innerHTML = item.location + ' &diams; ' + item.dates + "<br>" +
+        par.innerHTML = item.location + ' &diams; ' + item.startYear + '-' + item.endYear + "<br>" +
                         item.title    + ' &dash; '  + item.group + "<br>" +
                         item.headline;
         div_text.appendChild(body_link);
