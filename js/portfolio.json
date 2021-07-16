@@ -1,6 +1,16 @@
 {
     "experience": [
         {
+            "employer": "Beyond Limits",
+            "title": "Senior Data Scientist",
+            "group": "AI Solutions, CTO Office",
+            "location": "Los Angeles, CA.",
+            "dates": "July 2021-Present",
+            "url": "https://beyond.ai/",
+            "headline": "Industrial Grade Artificial Intelligence",
+            "asset": "/assets/portfolio/beyondlimits.jpeg"
+        },
+        {
             "employer": "IEEE Standards Association",
             "title": "Committee Member",
             "type":  "Committee",
