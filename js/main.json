@@ -53,62 +53,62 @@
     "books": [
         {
             "title": "Stories that Stick",
-            "url": "https://www.amazon.com/Stories-That-Stick-Storytelling-Captivate-ebook/dp/B07KF2328Z",
-            "asset": "https://m.media-amazon.com/images/I/41pyozoWtNL.jpg"
+            "url":   "https://www.amazon.com/Stories-That-Stick-Storytelling-Captivate-ebook/dp/B07KF2328Z",
+            "asset": "http://m.media-amazon.com/images/I/41pyozoWtNL.jpg"
         },
         {
             "title": "The Book of Why",
-            "url": "https://www.amazon.com/Book-Why-Science-Cause-Effect-ebook/dp/B075CR9QBJ/",
-            "asset": "https://m.media-amazon.com/images/I/41qPCkft9JL.jpg"
+            "url":   "https://www.amazon.com/Book-Why-Science-Cause-Effect-ebook/dp/B075CR9QBJ/",
+            "asset": "http://m.media-amazon.com/images/I/41qPCkft9JL.jpg"
         },
         {
             "title": "Thinking Fast and Slow",
-            "url": "https://www.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman-ebook/dp/B00555X8O",
-            "asset": "https://m.media-amazon.com/images/I/41shZGS-G+L.jpg"
+            "url":   "https://www.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman-ebook/dp/B00555X8O",
+            "asset": "http://m.media-amazon.com/images/I/41shZGS-G+L.jpg"
         },
         {
             "title": "Abundance",
-            "url": "http://www.amazon.com/Abundance-Future-Better-Than-Think/dp/1451614217/",
+            "url":   "https://www.amazon.com/Abundance-Future-Better-Than-Think/dp/1451614217/",
             "asset": "http://ecx.images-amazon.com/images/I/51wCZoVxdSL.jpg"
         },
         {
             "title": "Change By Design",
-            "url": "http://www.amazon.com/Change-Design-Transforms-Organizations-Innovation/dp/0061766089",
+            "url":   "https://www.amazon.com/Change-Design-Transforms-Organizations-Innovation/dp/0061766089",
             "asset": "http://ecx.images-amazon.com/images/I/415Dg4tlBBL.jpg"
         },
         {
             "title": "Creative Confidence",
-            "url": "http://www.amazon.com/Creative-Confidence-Unleashing-Potential-Within/dp/038534936X",
+            "url":   "https://www.amazon.com/Creative-Confidence-Unleashing-Potential-Within/dp/038534936X",
             "asset": "http://ecx.images-amazon.com/images/I/81MYu9bX1YL._SL1500_.jpg"
         },
         {
             "title": "Democratizing Innovation",
-            "url": "http://www.amazon.com/Democratizing-Innovation-Eric-von-Hippel-ebook/dp/B001C4PTLS/",
+            "url":   "https://www.amazon.com/Democratizing-Innovation-Eric-von-Hippel-ebook/dp/B001C4PTLS/",
             "asset": "http://ecx.images-amazon.com/images/I/5170056r4zL.jpg"
         },
         {
             "title": "On Intelligence",
-            "url": "http://www.amazon.com/On-Intelligence-Jeff-Hawkins/dp/0805078533",
+            "url":   "https://www.amazon.com/On-Intelligence-Jeff-Hawkins/dp/0805078533",
             "asset": "http://ecx.images-amazon.com/images/I/41RX7302GNL.jpg"
         },
         {
             "title": "The Singularity Is Near",
-            "url": "http://www.amazon.com/The-Singularity-Is-Near-Transcend/dp/0143037889",
+            "url":   "https://www.amazon.com/The-Singularity-Is-Near-Transcend/dp/0143037889",
             "asset": "http://ecx.images-amazon.com/images/I/416MhqJ2SWL.jpg"
         },
         {
             "title": "How To Create A Mind",
-            "url": "http://www.amazon.com/How-Create-Mind-Thought-Revealed/dp/0143124048",
+            "url":   "https://www.amazon.com/How-Create-Mind-Thought-Revealed/dp/0143124048",
             "asset": "http://www.howtocreateamind.com/images/how-to-create-a-mind.png"
         },
         {
             "title": "A Whole New Mind",
-            "url": "http://www.amazon.com/Whole-New-Mind-Right-Brainers-Future/dp/1594481717",
+            "url":   "https://www.amazon.com/Whole-New-Mind-Right-Brainers-Future/dp/1594481717",
             "asset": "http://ecx.images-amazon.com/images/I/510jyMCbgIL.jpg"
         },
         {
             "title": "Steve Jobs",
-            "url": "http://www.amazon.com/Steve-Jobs-Walter-Isaacson/dp/1451648537/",
+            "url":   "https://www.amazon.com/Steve-Jobs-Walter-Isaacson/dp/1451648537/",
             "asset": "http://ecx.images-amazon.com/images/I/417jkYxrKWL.jpg"
         }
     ]

@@ -7,13 +7,13 @@
             "mobile": "+1 (919) 522-2242",
             "email": "akamlani@gmail.com",
             "location": "San Franscisco, CA. 94133",
-            "github": "http://github.com/akamlani",
-            "linkedin": "http://linkedin.com/in/akamlani",
-            "twitter":  "http://twitter.com/akamlani",
-            "facebook": "http://facebook.com/ari.kamlani"
+            "github":   "https://github.com/akamlani",
+            "linkedin": "https://linkedin.com/in/akamlani",
+            "twitter":  "https://twitter.com/akamlani",
+            "facebook": "https://facebook.com/ari.kamlani"
         },
         "assets": [
-            {"bio": "/images/akamlani_photo.jpg"},
+            {"bio":    "/images/akamlani_photo.jpg"},
             {"qrcode": "images/akamlani_scan.me.jpg"}
         ]
     },
@@ -21,7 +21,7 @@
         "schools":
             {
                 "name": "Lehigh University",
-                "url": "http://www.lehigh.edu",
+                "url":  "https://www.lehigh.edu",
                 "location": "Bethlehem, PA.",
                 "major": "B.S. in Electrical Engineering (EE)",
                 "dates": "1995-1999"
@@ -29,7 +29,7 @@
         "programs":
             {
                 "name": "General Assembly",
-                "url": "http://generalassemb.ly/education/data-science",
+                "url": "https://generalassemb.ly/education/data-science",
                 "location": "San Francisco, CA.",
                 "class": "Data Science",
                 "dates": "Oct-Dec 2014",

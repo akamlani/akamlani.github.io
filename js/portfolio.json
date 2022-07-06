@@ -57,7 +57,7 @@
             "group": "IoT Division",
             "location": "Manhattan, NY. US",
             "dates": "July 2017-October 2017",
-            "url": "http://www.techstars.com/programs/iot-program/",
+            "url": "https://www.techstars.com/programs/iot-program/",
             "headline": "Advise Accelerator Companies in delivering a Robust & Scalable Product Offering",
             "asset": "/assets/portfolio/techstars.png"
         },
@@ -97,7 +97,7 @@
             "group": "Office of CTO",
             "location": "Mountain View, CA. US",
             "dates": "October 2011-April 2012",
-            "url": "http://www.sportvision.com/",
+            "url": "https://www.sportvision.com/",
             "headline": "Special Projects Software Consultant for Motorsports (NASCAR Trucks) Division",
             "asset": "/assets/portfolio/sportvision.jpg"
         },
@@ -107,7 +107,7 @@
             "group": "Systems Engineering",
             "location": "Sunnyvale, CA. US",
             "dates": "February 2011-October 2011",  
-            "url": "http://www.broadcom.com/",
+            "url": "https://www.broadcom.com/",
             "headline": "Systems Software Architecture for WiMAX and LTE software reference designs and customer platforms",
             "asset": "/assets/portfolio/broadcom.png"
         },
@@ -117,7 +117,7 @@
             "group": "Computing and Consumer Division",
             "location": "Raleigh, NC. US",
             "dates": "August 2007-January 2010",
-            "url": "http://www.qualcomm.com/",
+            "url": "https://www.qualcomm.com/",
             "headline": "BSP Reference Design Software for QSD8650/8250 SnapDragon ARM Cortex architecture processors",
             "asset": "/assets/portfolio/qualcomm.png"
         },
@@ -147,7 +147,7 @@
             "group": "Systems Performance",
             "location": "Plymouth Meeting, PA. US",
             "dates": "September 1999-February 2000",
-            "url": "http://www.verizon.com",
+            "url": "https://www.verizon.com",
             "headline": "Wireless Carrier Network Performance for base stations in the Northeastern region",
             "asset": "/assets/portfolio/verizon.png"
         }
@@ -189,7 +189,7 @@
         },
         {
             "name": "Lehigh University",
-            "url":  "http://www.lehigh.edu",
+            "url":  "https://www.lehigh.edu",
             "location": "Bethlehem, PA.",
             "major": "Electrical Engineering (EE)",
             "type": "Bachelors of Science (B.S)",
@@ -251,20 +251,20 @@
     "projects": [
         {
             "title": "Self-Driving Cars",
-            "url": "http://github.com/akamlani/selfdrivingcar",
+            "url": "https://github.com/akamlani/selfdrivingcar",
             "headline":"Self-Driving Cars Computer Vision/Deep Learning",
             "description": ""
         },
         {
             "title": "Cooper Hewitt",
-            "url": "http://github.com/akamlani/cooperhewitt",
+            "url": "https://github.com/akamlani/cooperhewitt",
             "asset": "/assets/portfolio/cooperhewitt.jpg",
             "headline":"Patterns in human behavior using the 'Pen'",
             "description": ""
         },
         {
             "title": "OpenFDA",
-            "url": "http://github.com/akamlani/openfda",
+            "url": "https://github.com/akamlani/openfda",
             "asset": "/assets/portfolio/openfda.png",
             "headline":"Multiple Drug Reaction Data Science Analysis",
             "description": ""
@@ -300,86 +300,86 @@
     "kickstarter": [
         {
             "title": "The Leaders Guide by Eric Ries",
-            "url": "http://www.kickstarter.com/projects/881308232/only-on-kickstarter-the-leaders-guide-by-eric-ries",
+            "url":   "https://www.kickstarter.com/projects/881308232/only-on-kickstarter-the-leaders-guide-by-eric-ries",
             "asset": "/assets/portfolio/theleadersguide.png"
         },
         {
             "title": "Build & Imagine",
-            "url": "http://www.kickstarter.com/projects/lauriep/build-and-imagine-with-constructible-play-sets-for",
+            "url":   "https://www.kickstarter.com/projects/lauriep/build-and-imagine-with-constructible-play-sets-for",
             "asset": "https://www.buildandimagine.com/wp-content/uploads/2015/01/logo_500x150.png"
         },
         {
             "title": "SmartScope",
-            "url": "http://www.kickstarter.com/projects/751733865/smartscope-reinventing-the-oscilloscope",
+            "url":   "https://www.kickstarter.com/projects/751733865/smartscope-reinventing-the-oscilloscope",
             "asset": "https://www.lab-nation.com/assets/showroom/showroom1-7bae6d5806914f8ddc18106c3d4237bf.png"
         },
         {
             "title": "LoGi FPGA",
-            "url": "http://www.kickstarter.com/projects/1575992013/logi-fpga-development-board-for-raspberry-pi-beagl",
-            "asset": "http://valentfx.com/wp-content/themes/s5_corporate_response/images/s5_logo.png"
+            "url":   "https://www.kickstarter.com/projects/1575992013/logi-fpga-development-board-for-raspberry-pi-beagl",
+            "asset": "https://valentfx.com/wp-content/themes/s5_corporate_response/images/s5_logo.png"
         },
         {
             "title": "Wipebook",
-            "url": "http://www.kickstarter.com/projects/1470156778/wipebook",
-            "asset": "http://cdn.shopify.com/s/files/1/0210/5194/t/15/assets/logo.png"
+            "url":   "https://www.kickstarter.com/projects/1470156778/wipebook",
+            "asset": "https://cdn.shopify.com/s/files/1/0210/5194/t/15/assets/logo.png"
         }
     ],
     "technologies": [
         {
             "title": "Wi-Fi",
-            "url": "http://www.wi-fi.org/",
+            "url":   "https://www.wi-fi.org/",
             "asset": "/assets/portfolio/wifi_alliance.png"
         },
         {
             "title": "Bluetooth",
-            "url": "http://www.bluetooth.org/",
+            "url":   "https://www.bluetooth.org/",
             "asset": "/assets/portfolio/bluetooth.jpg"
         },
         {
             "title": "RFID",
-            "url": "http://www.gs1.org/gsmp/kc/epcglobal/",
+            "url":   "https://www.gs1.org/gsmp/kc/epcglobal/",
             "asset": "/assets/portfolio/rfid_alliance.jpg"
         },
         {
             "title": "UWB",
-            "url": "http://standards.ieee.org/about/get/802/802.15.html",
+            "url":   "https://standards.ieee.org/about/get/802/802.15.html",
             "asset": "/assets/portfolio/uwb_forum.gif"
         },
         {
             "title": "LTE",
-            "url": "http://www.3gpp.org/technologies/keywords-acronyms/98-lte/",
+            "url":   "https://www.3gpp.org/technologies/keywords-acronyms/98-lte/",
             "asset": "/assets/portfolio/lte.png"
         },
         {
             "title": "GPS",
-            "url": "http://www.gps.gov/",
+            "url":   "https://www.gps.gov/",
             "asset": "/assets/portfolio/gps.png"
         }
     ],
     "platforms": [
         {
             "title": "Electric Imp",
-            "url": "https://electricimp.com/",
+            "url":   "https://electricimp.com/",
             "asset": "/assets/portfolio/electricimp.jpg"
         },
         {
             "title": "TI BeagleBone/BeagleBoard",
-            "url": "http://beagleboard.org/BLACK",
+            "url":   "https://beagleboard.org/BLACK",
             "asset": "/assets/portfolio/beaglebone.png"
         },
         {
             "title": "Raspberry Pi",
-            "url": "https://www.raspberrypi.org/",
+            "url":   "https://www.raspberrypi.org/",
             "asset": "/assets/portfolio/raspberrypi.png"
         },
         {
             "title": "Gumstix",
-            "url": "https://www.gumstix.com/",
+            "url":   "https://www.gumstix.com/",
             "asset": "/assets/portfolio/gumstix.png"
         },
         {
             "title": "Qualcomm Snapdragon",
-            "url": "https://www.qualcomm.com/products/snapdragon",
+            "url":   "https://www.qualcomm.com/products/snapdragon",
             "asset": "/assets/portfolio/qualcomm_snapdragon.png"
         }
     ]
