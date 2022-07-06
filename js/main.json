@@ -53,18 +53,18 @@
     "books": [
         {
             "title": "Stories that Stick",
-            "url":   "https://www.amazon.com/Stories-That-Stick-Storytelling-Captivate-ebook/dp/B07KF2328Z",
-            "asset": "http://m.media-amazon.com/images/I/41pyozoWtNL.jpg"
+            "url":   "https://www.amazon.com/Stories-That-Stick-Storytelling-Captivate/dp/140021193X/",
+            "asset": "https://images-na.ssl-images-amazon.com/images/I/71Z1+qofLxL.jpg"
         },
         {
             "title": "The Book of Why",
             "url":   "https://www.amazon.com/Book-Why-Science-Cause-Effect-ebook/dp/B075CR9QBJ/",
-            "asset": "http://m.media-amazon.com/images/I/41qPCkft9JL.jpg"
+            "asset": "https://images-na.ssl-images-amazon.com/images/I/71TnPu87AqL.jpg"
         },
         {
             "title": "Thinking Fast and Slow",
-            "url":   "https://www.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman-ebook/dp/B00555X8O",
-            "asset": "http://m.media-amazon.com/images/I/41shZGS-G+L.jpg"
+            "url":   "https://www.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman/dp/0374275637/",
+            "asset": "https://images-na.ssl-images-amazon.com/images/I/61n7jZ8xQ6L.jpg"
         },
         {
             "title": "Abundance",
