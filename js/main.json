@@ -69,47 +69,42 @@
         {
             "title": "Abundance",
             "url":   "https://www.amazon.com/Abundance-Future-Better-Than-Think/dp/1451614217/",
-            "asset": "http://ecx.images-amazon.com/images/I/51wCZoVxdSL.jpg"
+            "asset": "https://images-na.ssl-images-amazon.com/images/I/51wCZoVxdSL.jpg"
         },
         {
             "title": "Change By Design",
             "url":   "https://www.amazon.com/Change-Design-Transforms-Organizations-Innovation/dp/0061766089",
-            "asset": "http://ecx.images-amazon.com/images/I/415Dg4tlBBL.jpg"
+            "asset": "https://images-na.ssl-images-amazon.com/images/I/41-aaVMQaFL.jpg"
         },
         {
             "title": "Creative Confidence",
             "url":   "https://www.amazon.com/Creative-Confidence-Unleashing-Potential-Within/dp/038534936X",
-            "asset": "http://ecx.images-amazon.com/images/I/81MYu9bX1YL._SL1500_.jpg"
+            "asset": "https://images-na.ssl-images-amazon.com/images/I/816C08X4elL.jpg"
         },
         {
             "title": "Democratizing Innovation",
-            "url":   "https://www.amazon.com/Democratizing-Innovation-Eric-von-Hippel-ebook/dp/B001C4PTLS/",
-            "asset": "http://ecx.images-amazon.com/images/I/5170056r4zL.jpg"
+            "url":   "https://www.amazon.com/Democratizing-Innovation-Press-Eric-Hippel-ebook/dp/B001C4PTLS",
+            "asset": "https://images-na.ssl-images-amazon.com/images/I/51TOxb3g9rL._SX334_BO1,204,203,200_.jpg"
         },
         {
             "title": "On Intelligence",
             "url":   "https://www.amazon.com/On-Intelligence-Jeff-Hawkins/dp/0805078533",
-            "asset": "http://ecx.images-amazon.com/images/I/41RX7302GNL.jpg"
+            "asset": "https://images-na.ssl-images-amazon.com/images/I/618iosBydOL.jpg"
         },
         {
             "title": "The Singularity Is Near",
             "url":   "https://www.amazon.com/The-Singularity-Is-Near-Transcend/dp/0143037889",
-            "asset": "http://ecx.images-amazon.com/images/I/416MhqJ2SWL.jpg"
+            "asset": "https://images-na.ssl-images-amazon.com/images/I/91U0P8IwjjL.jpg"
         },
         {
             "title": "How To Create A Mind",
             "url":   "https://www.amazon.com/How-Create-Mind-Thought-Revealed/dp/0143124048",
-            "asset": "http://www.howtocreateamind.com/images/how-to-create-a-mind.png"
+            "asset": "https://images-na.ssl-images-amazon.com/images/I/71IVLNdExGL.jpg"
         },
         {
             "title": "A Whole New Mind",
             "url":   "https://www.amazon.com/Whole-New-Mind-Right-Brainers-Future/dp/1594481717",
-            "asset": "http://ecx.images-amazon.com/images/I/510jyMCbgIL.jpg"
-        },
-        {
-            "title": "Steve Jobs",
-            "url":   "https://www.amazon.com/Steve-Jobs-Walter-Isaacson/dp/1451648537/",
-            "asset": "http://ecx.images-amazon.com/images/I/417jkYxrKWL.jpg"
+            "asset": "https://images-na.ssl-images-amazon.com/images/I/814D0ZxuqHL.jpg"
         }
     ]
 }
