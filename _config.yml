@@ -1,12 +1,12 @@
 
-name: Ari R. Kamlani
-title: Ari R. Kamlani
+name: Ari Kamlani
+title: Ari Kamlani
 simple_search: http://google.com/search
-description: Personal Site of Ari R. Kamlani
-url: http://arikamlani.com
+description: Personal Site of Ari Kamlani
+url: https://www.arikamlani.com
 
 author:
-   name: Ari R. Kamlani
+   name: Ari Kamlani
    email: akamlani@gmail.com
 
 safe: false
@@ -19,4 +19,5 @@ languages: [en]
 
 exclude:
 - README.md
+- docs/
 
