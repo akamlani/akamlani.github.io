@@ -19,5 +19,4 @@ languages: [en]
 
 exclude:
 - README.md
-- docs/
 
